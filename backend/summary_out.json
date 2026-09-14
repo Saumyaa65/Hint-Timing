@@ -1,0 +1,17 @@
+{
+  "total_attempts": 20,
+  "total_duration_seconds": 1283.21,
+  "overall_test_improvement": 4,
+  "peak_test_improvement": 4,
+  "overall_pass_rate_improvement": 1.0,
+  "peak_pass_rate_improvement": 1.0,
+  "number_of_repeat_executions": 4,
+  "number_of_code_changes": 0,
+  "number_of_outcome_changes": 15,
+  "number_of_repeated_states": 4,
+  "number_of_error_changes": 14,
+  "stagnation_indicators": {
+    "max_stagnation_length": 1,
+    "is_currently_stagnant": false
+  }
+}

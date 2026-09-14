@@ -1,0 +1,404 @@
+/* Problem List Styles */
+.problem-list-container {
+  padding: 1.5rem;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.list-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.5rem;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  width: 240px;
+  font-size: 0.875rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.empty-state {
+  padding: 2.5rem 0;
+  text-align: center;
+  color: #6b7280;
+}
+
+.clear-filters {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.problems-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1rem;
+}
+
+.problems-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-weight: 500;
+  background-color: #f9fafb;
+}
+
+.problem-row {
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.problem-row:hover {
+  background-color: #f9fafb;
+}
+
+.problem-row td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.problem-number {
+  color: #6b7280;
+}
+
+.problem-title {
+  font-weight: 500;
+  color: #111827;
+}
+
+.problem-topic {
+  color: #6b7280;
+}
+
+.problem-difficulty span {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* Problem Detail Styles */
+.problem-detail {
+  display: flex;
+  height: 100vh;
+}
+
+.problem-info {
+  width: 40%;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: white;
+  border-right: 1px solid #e5e7eb;
+}
+
+.problem-header {
+  margin-bottom: 1.5rem;
+}
+
+.problem-header h2 {
+  margin: 0 0 0.75rem 0;
+  color: #111827;
+}
+
+.problem-meta {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.difficulty {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.topic {
+  padding: 0.25rem 0.75rem;
+  background-color: #f3f4f6;
+  border-radius: 1rem;
+  font-size: 0.813rem;
+}
+
+.problem-description {
+  font-size: 0.938rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  white-space: pre-wrap;
+}
+
+.example-section {
+  margin-bottom: 1.5rem;
+}
+
+.example-case {
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.example-header {
+  padding: 0.75rem 1rem;
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.example-content {
+  padding: 1rem;
+}
+
+.example-io {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.io-label, .explanation-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+pre {
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.875rem;
+  background-color: white;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+}
+
+.code-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.editor-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.run-button {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.submit-button {
+  background-color: #10b981;
+  color: white;
+}
+
+button.disabled {
+  background-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.language-selector select {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: white;
+}
+
+.editor-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.results-section {
+  padding: 1rem;
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: 500;
+}
+
+.status.success {
+  background-color: #10b981;
+}
+
+.status.error {
+  background-color: #ef4444;
+}
+
+.results-table {
+  margin-bottom: 1rem;
+}
+
+.results-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th {
+  text-align: left;
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 500;
+}
+
+.results-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.result-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.result-icon.success {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.result-icon.error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.error-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fee2e2;
+  border-radius: 0.375rem;
+}
+
+.error-section h4 {
+  color: #b91c1c;
+  margin: 0 0 0.5rem 0;
+}
+
+.error-section ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.error-section li {
+  margin-bottom: 0.25rem;
+}
+
+.line-number {
+  opacity: 0.7;
+  margin-left: 0.5rem;
+}
+
+.notification {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.notification.success {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.notification.error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.notification button {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .problem-detail {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .problem-info {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .code-section {
+    flex: none;
+    height: 60vh;
+  }
+}

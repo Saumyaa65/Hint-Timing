@@ -1,0 +1,1020 @@
+{
+  "export_metadata": {
+    "system": "Personalized Contextual Hint Generation System - Research Framework",
+    "export_timestamp": "2026-09-13T19:55:23.538001Z",
+    "version": "TASK_2D_EXPERIMENTAL_V1"
+  },
+  "experiment_data": {
+    "user_id": "user_3JH0gS2vXtbFlXI4VTQhLXXJG2m",
+    "problem_id": "find-the-number-of-even-elements-in-an-array",
+    "problem_title": "Find the number of even elements in an array.",
+    "trajectory_length": 20,
+    "prefix_results": [
+      {
+        "attempt": 1,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 1,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_EXECUTION_ERROR"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #1 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 1,
+          "state": "UNCERTAIN",
+          "confidence": 0.2,
+          "positive_signals": [],
+          "negative_signals": [],
+          "uncertainty_signals": [
+            "UNCERTAIN_SHORT_TRAJECTORY"
+          ],
+          "reasoning": "Assessed as UNCERTAIN at attempt 1 (confidence: 0.2). Factors: Trajectory prefix contains insufficient attempts (< 2) to observe a process trend.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 1,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 2,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 2,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_EXECUTION_ERROR"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 2,
+          "state": "UNCERTAIN",
+          "confidence": 0.35,
+          "positive_signals": [
+            "P3_EXPLORATION"
+          ],
+          "negative_signals": [],
+          "uncertainty_signals": [
+            "UNCERTAIN_NO_EVALUATION_FEEDBACK"
+          ],
+          "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Code was modified, but no test suite evaluation feedback is available for trajectory assessment.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 2,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 3,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 3,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #3 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 3,
+          "state": "PRODUCTIVE",
+          "confidence": 0.49,
+          "positive_signals": [
+            "P2_ERROR_EVOLUTION",
+            "P3_EXPLORATION"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as PRODUCTIVE struggle at attempt 3 (confidence: 0.49). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 3,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 4,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 4,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_EXECUTION_ERROR"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #4 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 4,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.61,
+          "positive_signals": [],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 4 (confidence: 0.61). Primary evidence: 4 consecutive failing attempts recorded without test score improvement.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 4,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 5,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 5,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #5 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 5,
+          "state": "PRODUCTIVE",
+          "confidence": 0.61,
+          "positive_signals": [
+            "P2_ERROR_EVOLUTION",
+            "P3_EXPLORATION"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as PRODUCTIVE struggle at attempt 5 (confidence: 0.61). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 5,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 6,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 6,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #6 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 6,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.95,
+          "positive_signals": [],
+          "negative_signals": [
+            "U1_REPEATED_EXECUTION",
+            "U3_REPEATED_STATE",
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 6 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 6 consecutive failing attempts recorded without test score improvement.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 6,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 7,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 7,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_EXECUTION_ERROR"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #7 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 7,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.62,
+          "positive_signals": [
+            "P4_STAGNATION_ESCAPE"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS",
+            "U6_REVERSION_CYCLIC"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 7 (confidence: 0.62). Primary evidence: 7 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 7,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 8,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 8,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #8 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 8,
+          "state": "PRODUCTIVE",
+          "confidence": 0.75,
+          "positive_signals": [
+            "P2_ERROR_EVOLUTION",
+            "P3_EXPLORATION",
+            "P4_STAGNATION_ESCAPE"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as PRODUCTIVE struggle at attempt 8 (confidence: 0.75). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 8,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 9,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 9,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #9 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 9,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.95,
+          "positive_signals": [],
+          "negative_signals": [
+            "U1_REPEATED_EXECUTION",
+            "U3_REPEATED_STATE",
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 9 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 9 consecutive failing attempts recorded without test score improvement.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 9,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 10,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 10,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_EXECUTION_ERROR"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #10 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 10,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.62,
+          "positive_signals": [
+            "P4_STAGNATION_ESCAPE"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS",
+            "U6_REVERSION_CYCLIC"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 10 (confidence: 0.62). Primary evidence: 10 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 10,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 11,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 11,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #11 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 11,
+          "state": "PRODUCTIVE",
+          "confidence": 0.75,
+          "positive_signals": [
+            "P2_ERROR_EVOLUTION",
+            "P3_EXPLORATION",
+            "P4_STAGNATION_ESCAPE"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as PRODUCTIVE struggle at attempt 11 (confidence: 0.75). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 11,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 12,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 12,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #12 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 12,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.95,
+          "positive_signals": [],
+          "negative_signals": [
+            "U1_REPEATED_EXECUTION",
+            "U3_REPEATED_STATE",
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 12 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 12 consecutive failing attempts recorded without test score improvement.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 12,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 13,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 13,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_EXECUTION_ERROR"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #13 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 13,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.62,
+          "positive_signals": [
+            "P4_STAGNATION_ESCAPE"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS",
+            "U6_REVERSION_CYCLIC"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 13 (confidence: 0.62). Primary evidence: 13 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 13,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 14,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 14,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #14 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 14,
+          "state": "PRODUCTIVE",
+          "confidence": 0.75,
+          "positive_signals": [
+            "P2_ERROR_EVOLUTION",
+            "P3_EXPLORATION",
+            "P4_STAGNATION_ESCAPE"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as PRODUCTIVE struggle at attempt 14 (confidence: 0.75). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 14,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 15,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 15,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #15 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 15,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.95,
+          "positive_signals": [],
+          "negative_signals": [
+            "U1_REPEATED_EXECUTION",
+            "U3_REPEATED_STATE",
+            "U5_REPEATED_FAILED_ATTEMPTS"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 15 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 15 consecutive failing attempts recorded without test score improvement.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 15,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 16,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 16,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_EXECUTION_ERROR"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #16 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 16,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.62,
+          "positive_signals": [
+            "P4_STAGNATION_ESCAPE"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS",
+            "U6_REVERSION_CYCLIC"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 16 (confidence: 0.62). Primary evidence: 16 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 16,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 17,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 17,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #17 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 17,
+          "state": "UNCERTAIN",
+          "confidence": 0.35,
+          "positive_signals": [
+            "P2_ERROR_EVOLUTION",
+            "P4_STAGNATION_ESCAPE"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS",
+            "U6_REVERSION_CYCLIC"
+          ],
+          "uncertainty_signals": [
+            "UNCERTAIN_CONFLICTING_EVIDENCE"
+          ],
+          "reasoning": "Assessed as UNCERTAIN at attempt 17 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 17,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 18,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 18,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_EXECUTION_ERROR"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #18 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 18,
+          "state": "UNPRODUCTIVE",
+          "confidence": 0.62,
+          "positive_signals": [
+            "P4_STAGNATION_ESCAPE"
+          ],
+          "negative_signals": [
+            "U5_REPEATED_FAILED_ATTEMPTS",
+            "U6_REVERSION_CYCLIC"
+          ],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 18 (confidence: 0.62). Primary evidence: 18 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress.",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 18,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 19,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 19,
+          "state": "PRODUCTIVE",
+          "confidence": 0.9,
+          "positive_signals": [
+            "SNAPSHOT_ALL_TESTS_PASSED"
+          ],
+          "negative_signals": [],
+          "uncertainty_signals": [],
+          "reasoning": "Latest attempt #19 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved).",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 19,
+          "state": "PRODUCTIVE",
+          "confidence": 0.95,
+          "positive_signals": [
+            "P1_PERFORMANCE_IMPROVEMENT",
+            "P2_ERROR_EVOLUTION",
+            "P3_EXPLORATION",
+            "P4_STAGNATION_ESCAPE",
+            "P5_OVERALL_TRAJECTORY_PROGRESS"
+          ],
+          "negative_signals": [],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as PRODUCTIVE struggle at attempt 19 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+4 tests passed, +100.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+4 tests gained from initial attempt).",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 19,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      },
+      {
+        "attempt": 20,
+        "snapshot": {
+          "method": "Snapshot Baseline",
+          "assessment_attempt": 20,
+          "state": "UNCERTAIN",
+          "confidence": 0.5,
+          "positive_signals": [],
+          "negative_signals": [
+            "SNAPSHOT_ZERO_TESTS_PASSED"
+          ],
+          "uncertainty_signals": [
+            "SNAPSHOT_NO_HISTORICAL_TREND"
+          ],
+          "reasoning": "Latest attempt #20 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation.",
+          "error": null
+        },
+        "rule_based": {
+          "method": "Rule-Based Baseline",
+          "assessment_attempt": 20,
+          "state": "PRODUCTIVE",
+          "confidence": 0.95,
+          "positive_signals": [
+            "P4_STAGNATION_ESCAPE",
+            "P5_OVERALL_TRAJECTORY_PROGRESS"
+          ],
+          "negative_signals": [],
+          "uncertainty_signals": [],
+          "reasoning": "Assessed as PRODUCTIVE struggle at attempt 20 (confidence: 0.95). Primary evidence: Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+4 tests gained from initial attempt).",
+          "error": null
+        },
+        "llm": {
+          "method": "LLM Trajectory Reasoning",
+          "assessment_attempt": 20,
+          "state": "SKIPPED",
+          "confidence": 0.0,
+          "reasoning": "LLM execution omitted in fast mode."
+        }
+      }
+    ],
+    "agreement_summary": {
+      "total_evaluated_attempts": 20,
+      "agreement_rates": {
+        "snapshot_vs_rule": 0.2,
+        "snapshot_vs_llm": 0.0,
+        "rule_vs_llm": 0.0,
+        "all_three_consensus": 0.0
+      },
+      "disagreement_count": 20,
+      "disagreement_locations": [
+        {
+          "attempt": 1,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNCERTAIN",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Rule (UNCERTAIN) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 2,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNCERTAIN",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Rule (UNCERTAIN) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 3,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "PRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (PRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (PRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 4,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 5,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "PRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (PRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (PRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 6,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 7,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 8,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "PRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (PRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (PRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 9,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 10,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 11,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "PRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (PRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (PRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 12,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 13,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 14,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "PRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (PRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (PRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 15,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 16,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 17,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNCERTAIN",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Rule (UNCERTAIN) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 18,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "UNPRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (UNPRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (UNPRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 19,
+          "states": {
+            "snapshot": "PRODUCTIVE",
+            "rule_based": "PRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Rule (PRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        },
+        {
+          "attempt": 20,
+          "states": {
+            "snapshot": "UNCERTAIN",
+            "rule_based": "PRODUCTIVE",
+            "llm": "SKIPPED"
+          },
+          "explanation": "Snapshot (UNCERTAIN) vs Rule (PRODUCTIVE): Snapshot evaluates only latest attempt, missing trajectory progression/stagnation. | Rule (PRODUCTIVE) vs LLM (SKIPPED): Rule-based heuristics and LLM trajectory reasoning evaluated conflicting signals differently."
+        }
+      ],
+      "note": "METHOD AGREEMENT ONLY. Agreement indicates operational state alignment across algorithms, NOT empirical gold-standard validation."
+    }
+  }
+}

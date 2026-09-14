@@ -1,0 +1,76 @@
+{
+  "prefix_t3": {
+    "state": "PRODUCTIVE",
+    "confidence": 0.49,
+    "assessment_attempt": 3,
+    "evidence": {
+      "progression_weight": 1.2,
+      "stagnation_weight": 0.7,
+      "conflict_margin": 0.5
+    },
+    "positive_signals": [
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [
+      "U5_REPEATED_FAILED_ATTEMPTS"
+    ],
+    "uncertainty_signals": [],
+    "signal_details": {
+      "productive": [
+        {
+          "id": "P2_ERROR_EVOLUTION",
+          "weight": 0.8,
+          "description": "Execution error was resolved in the latest attempt."
+        },
+        {
+          "id": "P3_EXPLORATION",
+          "weight": 0.4,
+          "description": "Active code exploration observed without performance regression."
+        }
+      ],
+      "unproductive": [
+        {
+          "id": "U5_REPEATED_FAILED_ATTEMPTS",
+          "weight": 0.7,
+          "description": "3 consecutive failing attempts recorded without test score improvement."
+        }
+      ],
+      "uncertainty": []
+    },
+    "reasoning": "Assessed as PRODUCTIVE struggle at attempt 3 (confidence: 0.49). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression."
+  },
+  "full_trajectory": {
+    "state": "PRODUCTIVE",
+    "confidence": 0.95,
+    "assessment_attempt": 20,
+    "evidence": {
+      "progression_weight": 1.8,
+      "stagnation_weight": 0,
+      "conflict_margin": 1.8
+    },
+    "positive_signals": [
+      "P4_STAGNATION_ESCAPE",
+      "P5_OVERALL_TRAJECTORY_PROGRESS"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "signal_details": {
+      "productive": [
+        {
+          "id": "P4_STAGNATION_ESCAPE",
+          "weight": 0.9,
+          "description": "Successfully escaped prior stagnation loop into a new evaluation state or test improvement."
+        },
+        {
+          "id": "P5_OVERALL_TRAJECTORY_PROGRESS",
+          "weight": 0.9,
+          "description": "Cumulative trajectory prefix demonstrates net test progress (+4 tests gained from initial attempt)."
+        }
+      ],
+      "unproductive": [],
+      "uncertainty": []
+    },
+    "reasoning": "Assessed as PRODUCTIVE struggle at attempt 20 (confidence: 0.95). Primary evidence: Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+4 tests gained from initial attempt)."
+  }
+}
