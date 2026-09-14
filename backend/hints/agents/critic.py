@@ -6,7 +6,7 @@ class HintCritic(BaseAgent):
     """Evaluates the quality and safety of generated hints."""
     
     def __init__(self):
-        super().__init__(model_name='nvidia/nemotron-3-super-120b-a12b:free', temperature=0.2)
+        super().__init__(model_name='nvidia/nemotron-3-ultra-550b-a55b:free', temperature=0.2)
         self.chain = self._build_chain()
 
     def _build_chain(self):

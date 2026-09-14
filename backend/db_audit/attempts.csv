@@ -1,0 +1,2951 @@
+id,user_id,problem_id_fk,problem_id_str,problem_title,session_id,source,language,status,code,execution_time,evaluation_details,created_at,updated_at
+1,123,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,failed,print(1),,,2026-06-04T10:10:04.319202+00:00,2026-06-04T10:10:04.319202+00:00
+2,123,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,failed,print(1),,,2026-06-04T10:14:55.829336+00:00,2026-06-04T10:14:55.829336+00:00
+3,123,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,failed,print(1),,,2026-06-04T10:21:16.642222+00:00,2026-06-04T10:21:16.642854+00:00
+4,1,11,rotate-an-array-to-the-left-by-k-positions,Rotate an array to the left by k positions.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-04T10:22:38.592268+00:00,2026-06-04T10:22:38.592268+00:00
+5,1,11,rotate-an-array-to-the-left-by-k-positions,Rotate an array to the left by k positions.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-06T03:23:52.385651+00:00,2026-06-06T03:23:52.385651+00:00
+6,1,11,rotate-an-array-to-the-left-by-k-positions,Rotate an array to the left by k positions.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-06T03:32:32.957821+00:00,2026-06-06T03:32:32.957821+00:00
+7,1,11,rotate-an-array-to-the-left-by-k-positions,Rotate an array to the left by k positions.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-06T03:32:57.635210+00:00,2026-06-06T03:32:57.635210+00:00
+8,1,2,find-the-maximum-element-in-an-array,Find the maximum element in an array.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-06T04:01:30.584494+00:00,2026-06-06T04:01:30.584494+00:00
+9,1,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,failed,"def findthesumofallelementsinanarr():
+    n = int(input())
+    arr = list(map(int, input().split()))
+    print(sum(arr))",,,2026-06-09T10:18:16.646009+00:00,2026-06-09T10:18:16.646009+00:00
+10,1,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,failed,"def findthesumofallelementsinanarr():
+    n = int(input())
+    arr = list(map(int, input().split()))
+    return sum(arr)",,,2026-06-09T10:18:33.809345+00:00,2026-06-09T10:18:33.809345+00:00
+11,1,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,failed,"def findthesumofallelementsinanarr():
+    n = int(input())
+    arr = list(map(int, input().split()))
+    return sum(arr)",,,2026-06-09T10:19:06.746063+00:00,2026-06-09T10:19:06.746063+00:00
+12,1,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,failed,"def findthesumofallelementsinanarr():
+    n = int(input())
+    arr = list(map(int, input().split()))
+    return sum(arr)",,,2026-06-09T10:19:15.474226+00:00,2026-06-09T10:19:15.474226+00:00
+13,1,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,failed,"def findthesumofallelementsinanarr(arr):
+    return sum(arr)
+
+if __name__ == '__main__':
+    # Read N (we don't strictly need it in Python, but it's part of the input format)
+    n = int(input())
+    
+    # Read the array elements
+    arr = list(map(int, input().split()))
+    
+    # Calculate and print the sum
+    result = findthesumofallelementsinanarr(arr)
+    print(result)",,,2026-06-09T10:23:42.034385+00:00,2026-06-09T10:23:42.034385+00:00
+14,1,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,failed,"def findthesumofallelementsinanarr(arr):
+    return sum(arr)
+
+if __name__ == '__main__':
+    # Read N (we don't strictly need it in Python, but it's part of the input format)
+    n = int(input())
+    
+    # Read the array elements
+    arr = list(map(int, input().split()))
+    
+    # Calculate and print the sum
+    result = findthesumofallelementsinanarr(arr)
+    print(result)",,,2026-06-09T10:24:29.597020+00:00,2026-06-09T10:24:29.597020+00:00
+15,1,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,success,"def findthesumofallelementsinanarr(arr):
+    return sum(arr)
+
+if __name__ == '__main__':
+    # Read N (we don't strictly need it in Python, but it's part of the input format)
+    n = int(input())
+    
+    # Read the array elements
+    arr = list(map(int, input().split()))
+    
+    # Calculate and print the sum
+    result = findthesumofallelementsinanarr(arr)
+    print(result)",,,2026-06-09T10:25:42.685707+00:00,2026-06-09T10:25:42.685707+00:00
+16,1,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,javascript,success,"def findthesumofallelementsinanarr(arr):
+    return sum(arr)
+
+if __name__ == '__main__':
+    # Read N (we don't strictly need it in Python, but it's part of the input format)
+    n = int(input())
+    
+    # Read the array elements
+    arr = list(map(int, input().split()))
+    
+    # Calculate and print the sum
+    result = findthesumofallelementsinanarr(arr)
+    print(result)",,,2026-06-09T10:25:49.376076+00:00,2026-06-09T10:25:49.376076+00:00
+17,1,4,reverse-an-array-in-place,Reverse an array in place.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-09T13:57:47.601449+00:00,2026-06-09T13:57:47.602527+00:00
+18,1,4,reverse-an-array-in-place,Reverse an array in place.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-09T13:57:49.560847+00:00,2026-06-09T13:57:49.560847+00:00
+19,1,4,reverse-an-array-in-place,Reverse an array in place.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-09T13:57:51.555933+00:00,2026-06-09T13:57:51.555933+00:00
+20,1,4,reverse-an-array-in-place,Reverse an array in place.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-09T13:57:55.727149+00:00,2026-06-09T13:57:55.727149+00:00
+21,1,1265,check-if-an-array-can-be-rearranged-such-that-every-element-is-smaller-than-the-element-that-follows-it-using-a-sorting-technique,Check if an array can be rearranged such that every element is smaller than the element that follows it using a sorting technique.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-09T13:59:07.910673+00:00,2026-06-09T13:59:07.910673+00:00
+22,1,1265,check-if-an-array-can-be-rearranged-such-that-every-element-is-smaller-than-the-element-that-follows-it-using-a-sorting-technique,Check if an array can be rearranged such that every element is smaller than the element that follows it using a sorting technique.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-09T13:59:13.399446+00:00,2026-06-09T13:59:13.404391+00:00
+23,1,1265,check-if-an-array-can-be-rearranged-such-that-every-element-is-smaller-than-the-element-that-follows-it-using-a-sorting-technique,Check if an array can be rearranged such that every element is smaller than the element that follows it using a sorting technique.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-09T13:59:15.173105+00:00,2026-06-09T13:59:15.173105+00:00
+24,1,1265,check-if-an-array-can-be-rearranged-such-that-every-element-is-smaller-than-the-element-that-follows-it-using-a-sorting-technique,Check if an array can be rearranged such that every element is smaller than the element that follows it using a sorting technique.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,,2026-06-09T13:59:19.590056+00:00,2026-06-09T13:59:19.590056+00:00
+25,1,1265,check-if-an-array-can-be-rearranged-such-that-every-element-is-smaller-than-the-element-that-follows-it-using-a-sorting-technique,Check if an array can be rearranged such that every element is smaller than the element that follows it using a sorting technique.,,SUBMIT,javascript,failed,"function solution(input) {
+    // Read input
+    const lines = input.trim().split('\n');
+    const n = parseInt(lines[0]);
+    const arr = lines[1].split(' ').map(Number);
+
+    // Your code here
+
+    return result;
+}",,"{""is_correct"": false, ""suggestions"": [""Implement the algorithm: sort the array and verify that no two adjacent elements are equal (or that arr[i] < arr[i+1] for all i)."", ""Handle edge cases such as arrays of length 0 or 1, which should return true."", ""Ensure the function returns a string \""true\"" or \""false\"" (or boolean) as specified by the output format.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Missing implementation of the core algorithm (sorting and duplicate check)."", ""diagnosis_summary"": ""The student only read the input and left the solution logic unimplemented, so the function returns undefined instead of the required boolean result.""}",2026-06-09T14:18:19.718932+00:00,2026-06-09T14:18:19.718932+00:00
+26,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,18,find-the-sum-of-all-positive-numbers-in-an-array,Find the sum of all positive numbers in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            s=s+x;
+        }
+        System.out.print(s);
+    }
+}",1.64s,"{""errors"": [{""line"": null, ""message"": ""Execution service error (HTTP 401).""}], ""results"": [], ""success"": false, ""execution_time"": ""1.64s""}",2026-09-13T17:16:18.734725+00:00,2026-09-13T17:16:18.734758+00:00
+27,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,18,find-the-sum-of-all-positive-numbers-in-an-array,Find the sum of all positive numbers in an array.,,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            s=s+x;
+        }
+        System.out.print(s);
+    }
+}",2.62s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""15"", ""passed"": true, ""expected"": ""15""}, {""input"": ""5\n-1 -2 -3 -4 -5"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""5\n1 -2 3 -4 5"", ""output"": ""9"", ""passed"": true, ""expected"": ""9""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""2.62s""}",2026-09-13T17:29:21.533626+00:00,2026-09-13T17:29:21.533712+00:00
+28,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,18,find-the-sum-of-all-positive-numbers-in-an-array,Find the sum of all positive numbers in an array.,,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            s=s+x;
+        }
+        System.out.print(s);
+    }
+}",2.54s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""15"", ""passed"": true, ""expected"": ""15""}, {""input"": ""5\n-1 -2 -3 -4 -5"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""5\n1 -2 3 -4 5"", ""output"": ""9"", ""passed"": true, ""expected"": ""9""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""2.54s""}",2026-09-13T17:35:25.122461+00:00,2026-09-13T17:35:25.122476+00:00
+29,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,18,find-the-sum-of-all-positive-numbers-in-an-array,Find the sum of all positive numbers in an array.,,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            s=s+x;
+        }
+        System.out.print(s);
+    }
+}",2.48s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""15"", ""passed"": true, ""expected"": ""15""}, {""input"": ""5\n-1 -2 -3 -4 -5"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""5\n1 -2 3 -4 5"", ""output"": ""9"", ""passed"": true, ""expected"": ""9""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""2.48s""}",2026-09-13T17:35:39.139044+00:00,2026-09-13T17:35:39.139055+00:00
+30,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,18,find-the-sum-of-all-positive-numbers-in-an-array,Find the sum of all positive numbers in an array.,,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            s=s+x;
+        }
+        System.out.print(s);
+    }
+}",2.57s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""15"", ""passed"": true, ""expected"": ""15""}, {""input"": ""5\n-1 -2 -3 -4 -5"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""5\n1 -2 3 -4 5"", ""output"": ""9"", ""passed"": true, ""expected"": ""9""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""2.57s""}",2026-09-13T17:37:37.171039+00:00,2026-09-13T17:37:37.171063+00:00
+31,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,18,find-the-sum-of-all-positive-numbers-in-an-array,Find the sum of all positive numbers in an array.,,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            s=s+x;
+        }
+        System.out.print(s);
+    }
+}",2.52s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""15"", ""passed"": true, ""expected"": ""15""}, {""input"": ""5\n-1 -2 -3 -4 -5"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""5\n1 -2 3 -4 5"", ""output"": ""9"", ""passed"": true, ""expected"": ""9""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""2.52s""}",2026-09-13T17:37:46.886826+00:00,2026-09-13T17:37:46.886846+00:00
+32,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,,SUBMIT,java,failed,"class Main {
+    public static void main(String[] args) {
+        System.out.println(42);
+    }
+}
+",2.20s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""42"", ""passed"": false, ""expected"": ""15""}, {""input"": ""3\n-1 0 1"", ""output"": ""42"", ""passed"": false, ""expected"": ""0""}, {""input"": ""1\n100"", ""output"": ""42"", ""passed"": false, ""expected"": ""100""}, {""input"": ""4\n-2 -3 -4 -5"", ""output"": ""42"", ""passed"": false, ""expected"": ""-14""}], ""success"": false, ""execution_time"": ""2.20s""}",2026-09-13T17:42:28.829407+00:00,2026-09-13T17:42:28.829417+00:00
+33,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,18,find-the-sum-of-all-positive-numbers-in-an-array,Find the sum of all positive numbers in an array.,,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            s=s+x;
+        }
+        System.out.print(s);
+    }
+}",2.92s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""15"", ""passed"": true, ""expected"": ""15""}, {""input"": ""5\n-1 -2 -3 -4 -5"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""5\n1 -2 3 -4 5"", ""output"": ""9"", ""passed"": true, ""expected"": ""9""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""2.92s""}",2026-09-13T17:43:43.446845+00:00,2026-09-13T17:43:43.446867+00:00
+34,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,18,find-the-sum-of-all-positive-numbers-in-an-array,Find the sum of all positive numbers in an array.,,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            s=s+x;
+        }
+        System.out.print(s);
+    }
+}",2.70s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""15"", ""passed"": true, ""expected"": ""15""}, {""input"": ""5\n-1 -2 -3 -4 -5"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""5\n1 -2 3 -4 5"", ""output"": ""9"", ""passed"": true, ""expected"": ""9""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""2.70s""}",2026-09-13T17:48:14.905770+00:00,2026-09-13T17:48:14.905781+00:00
+35,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2!=0)
+            s=s+x;
+        }
+        System.out.print(s+1);
+    }
+}",0.74s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\ASUS\\AppData\\Local\\Temp\\hintcode_1mv17z51\\Main.java:7: error: cannot find symbol\n        int s=1,n=sc.nextInt();\n                  ^\n  symbol:   variable sc\n  location: cla""}], ""results"": [], ""success"": false, ""execution_time"": ""0.74s""}",2026-09-13T18:51:08.189191+00:00,2026-09-13T18:51:08.189643+00:00
+36,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2!=0)
+            s=s+x;
+        }
+        System.out.print(s+1);
+    }
+}",0.48s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\ASUS\\AppData\\Local\\Temp\\hintcode_22nuo806\\Main.java:8: error: cannot find symbol\n        for(i=0;i<n;i++)\n            ^\n  symbol:   variable i\n  location: class Main\nC:\\Use""}], ""results"": [], ""success"": false, ""execution_time"": ""0.48s""}",2026-09-13T18:51:41.873353+00:00,2026-09-13T18:51:41.873379+00:00
+37,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2!=0)
+            s=s+x;
+        }
+        System.out.print(s+1);
+    }
+}",2.44s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""11"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""2"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""18"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""2"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.44s""}",2026-09-13T18:52:12.466689+00:00,2026-09-13T18:52:12.466706+00:00
+38,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2!=0)
+            s=s+x;
+        }
+        System.out.print(s+1);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Introduce a counter variable initialized to 0 and increment it when `element % 2 == 0`."", ""Remove the summation logic and the erroneous final adjustment; simply print the counter after processing all elements."", ""Test with edge cases (e.g., all odds, all evens, presence of zero) to verify the counting logic.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Counting vs. accumulating and correct parity test"", ""diagnosis_summary"": ""The student incorrectly sums odd numbers (starting from 1) and then adds 1, instead of maintaining a separate counter that increments for each even element. The condition checks for odd numbers and the accumulator is misused, so the output does not represent the count of even numbers.""}",2026-09-13T18:52:51.251741+00:00,2026-09-13T18:52:51.251772+00:00
+39,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s=s+x;
+        }
+        System.out.print(s+1);
+    }
+}",2.49s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""8"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""62"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""32"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.49s""}",2026-09-13T18:53:57.781566+00:00,2026-09-13T18:53:57.781581+00:00
+40,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s=s+x;
+        }
+        System.out.print(s+1);
+    }
+}",2.41s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""8"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""62"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""32"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.41s""}",2026-09-13T18:54:15.814517+00:00,2026-09-13T18:54:15.814533+00:00
+41,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s=s+x;
+        }
+        System.out.print(s+1);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Use a separate counter variable initialized to 0 and increment it by 1 for each even element."", ""Remove the summation logic and the extra additions; simply print the counter after the loop."", ""Test with edge cases such as all odd numbers, all even numbers, and presence of zero to verify the count.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Counting vs. accumulating values"", ""diagnosis_summary"": ""The student incorrectly sums the even numbers instead of counting them, and also initializes the accumulator to 1 and adds an extra 1 at the end, leading to off\u2011by\u2011one errors.""}",2026-09-13T18:55:29.978204+00:00,2026-09-13T18:55:29.978219+00:00
+42,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+1);
+    }
+}",2.41s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""4"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""5"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""8"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.41s""}",2026-09-13T18:56:22.646088+00:00,2026-09-13T18:56:22.646107+00:00
+43,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+1);
+    }
+}",2.45s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""4"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""5"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""8"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.45s""}",2026-09-13T18:56:33.945661+00:00,2026-09-13T18:56:33.945673+00:00
+44,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=1,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+1);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Initialize counters to zero when counting occurrences."", ""Avoid extra adjustments after the loop; print the counter directly."", ""Test with edge cases (e.g., all odd, all even, empty input) to catch off\u2011by\u2011one errors.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Counter initialization and off\u2011by\u2011one handling"", ""diagnosis_summary"": ""The student starts the counter at 1 instead of 0 and then adds another 1 when printing, causing the output to always be the correct count plus two.""}",2026-09-13T18:57:04.225336+00:00,2026-09-13T18:57:04.225354+00:00
+45,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+1);
+    }
+}",2.45s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""3"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""4"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""7"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.45s""}",2026-09-13T18:57:33.759938+00:00,2026-09-13T18:57:33.759950+00:00
+46,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+1);
+    }
+}",2.44s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""3"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""4"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""7"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.44s""}",2026-09-13T18:57:52.042315+00:00,2026-09-13T18:57:52.042326+00:00
+47,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+1);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Remove the unnecessary '+1' when printing the result."", ""Test the program with edge cases such as an array containing no even numbers (e.g., all odd) to verify the output is zero."", ""Compare the implementation closely with the provided pseudocode to ensure each step matches exactly.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Off-by-one error in counting"", ""diagnosis_summary"": ""The student correctly counts even numbers but then adds 1 to the result before printing, causing the output to be one greater than the actual count for all inputs.""}",2026-09-13T19:00:21.884014+00:00,2026-09-13T19:00:21.884024+00:00
+48,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+2);
+    }
+}",2.48s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""4"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""5"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""8"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.48s""}",2026-09-13T19:00:57.371102+00:00,2026-09-13T19:00:57.371123+00:00
+53,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+2);
+    }
+}",2.74s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""4"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""5"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""8"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.74s""}",2026-09-13T19:07:48.645514+00:00,2026-09-13T19:07:48.645531+00:00
+54,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+2);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Remove the unnecessary '+ 2' when printing the result."", ""Verify the algorithm against the provided pseudocode and test with the example inputs to ensure the output matches exactly."", ""Practice tracing code with simple inputs to spot off\u2011by\u2011constant mistakes.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Incorrect accumulation / off\u2011by\u2011constant error"", ""diagnosis_summary"": ""The student correctly counts even numbers but then adds 2 to the count before printing, causing every output to be two higher than the expected result.""}",2026-09-13T19:08:14.320270+00:00,2026-09-13T19:08:14.320288+00:00
+55,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+2);
+    }
+}",2.51s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""4"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""5"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""8"", ""passed"": false, ""expected"": ""6""}], ""success"": false, ""execution_time"": ""2.51s""}",2026-09-13T19:09:01.392955+00:00,2026-09-13T19:09:01.392977+00:00
+56,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s+2);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Verify the required output by re\u2011reading the problem statement and comparing with example cases."", ""Remove any hard\u2011coded adjustments to the computed result; print the raw count directly."", ""Test the program with the provided examples and edge cases (e.g., all odds, all evens, zero) to ensure correctness.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Incorrect output adjustment (adding a constant to the result)"", ""diagnosis_summary"": ""The student correctly counts even numbers but mistakenly adds 2 to the count before printing, causing all outputs to be off by +2.""}",2026-09-13T19:11:23.366656+00:00,2026-09-13T19:11:23.366675+00:00
+57,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s);
+    }
+}",2.43s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""2"", ""passed"": true, ""expected"": ""2""}, {""input"": ""3\n10 20 30"", ""output"": ""3"", ""passed"": true, ""expected"": ""3""}, {""input"": ""4\n1 3 5 7"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""6\n0 2 4 6 8 10"", ""output"": ""6"", ""passed"": true, ""expected"": ""6""}], ""success"": true, ""execution_time"": ""2.43s""}",2026-09-13T19:11:50.211569+00:00,2026-09-13T19:11:50.211591+00:00
+58,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,13,find-the-number-of-even-elements-in-an-array,Find the number of even elements in an array.,,SUBMIT,javascript,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int s=0,n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x%2==0)
+            s++;
+        }
+        System.out.print(s);
+    }
+}",,"{""is_correct"": true, ""suggestions"": [""Practice validating input (e.g., ensuring N matches the number of provided integers)."", ""Consider closing the Scanner to avoid resource leaks in larger programs."", ""Test with boundary values such as N=1, N=1000, and arrays containing only zeros or only odd numbers.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""None"", ""diagnosis_summary"": ""The student's code correctly reads the array, counts elements divisible by 2, and prints the result. No logical, syntactic, or edge\u2011case errors are present for the given constraints.""}",2026-09-13T19:12:31.396917+00:00,2026-09-13T19:12:31.396937+00:00
+59,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1;
+        for(int i=0;i<=n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            c++;
+        }
+        System.out.print(c+1);
+    }
+}",0.69s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\ASUS\\AppData\\Local\\Temp\\hintcode_p8aik18u\\Main.java:7: error: cannot find symbol\n        int n=sc.nextInt();\n              ^\n  symbol:   variable sc\n  location: class Main""}], ""results"": [], ""success"": false, ""execution_time"": ""0.69s""}",2026-09-14T13:18:50.433004+00:00,2026-09-14T13:18:50.433137+00:00
+60,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,HINT_REQUEST,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1;
+        for(int i=0;i<=n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            c++;
+        }
+        System.out.print(c+1);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Use the declared Scanner variable name consistently (e.g., `scanner.nextInt()`)."", ""Loop exactly N times: `for (int i = 0; i < n; i++)`."", ""Increment a counter when the read number is less than zero (`if (x < 0) count++;`), then print the counter directly.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Understanding how to count elements that satisfy a condition and setting correct loop bounds."", ""diagnosis_summary"": ""The code uses an undefined variable (`sc`), initializes the counter incorrectly, checks for positive numbers instead of negative, loops one extra time (i <= n), and adds an unnecessary offset before printing, resulting in compilation/runtime errors and wrong output.""}",2026-09-14T13:19:44.623020+00:00,2026-09-14T13:19:44.623048+00:00
+61,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            c++;
+        }
+        System.out.print(c+1);
+    }
+}",2.88s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""5"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""2"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""6"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""2"", ""passed"": false, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""2.88s""}",2026-09-14T13:20:26.086751+00:00,2026-09-14T13:20:26.086774+00:00
+62,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            c++;
+        }
+        System.out.print(c+1);
+    }
+}",2.97s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""4"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""1"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""5"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""1"", ""passed"": false, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""2.97s""}",2026-09-14T13:21:34.024229+00:00,2026-09-14T13:21:34.024253+00:00
+63,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            c++;
+        }
+        System.out.print(c+3);
+    }
+}",3.15s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""6"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""3"", ""passed"": true, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""7"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""3"", ""passed"": true, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""3.15s""}",2026-09-14T13:22:13.771042+00:00,2026-09-14T13:22:13.771071+00:00
+64,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            c++;
+        }
+        System.out.print(c+3);
+    }
+}",3.14s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""6"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""3"", ""passed"": true, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""7"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""3"", ""passed"": true, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""3.14s""}",2026-09-14T13:22:28.405005+00:00,2026-09-14T13:22:28.405028+00:00
+65,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,HINT_REQUEST,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x>0)
+            c++;
+        }
+        System.out.print(c+3);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Review how to correctly test for negative numbers (x < 0) in a conditional statement."", ""Practice writing simple counting loops that accumulate based on a condition without adding unrelated constants."", ""Validate the solution with the provided examples to ensure the output matches expected counts.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Condition for counting negative numbers and unnecessary constant addition"", ""diagnosis_summary"": ""The student increments the counter for positive values (x > 0) instead of negative ones, and then adds a fixed constant 3 to the result, which does not correspond to the required count of negative numbers.""}",2026-09-14T13:23:28.827337+00:00,2026-09-14T13:23:28.827361+00:00
+66,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,RUN,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x<0)
+            c++;
+        }
+        System.out.print(c);
+    }
+}",3.05s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""2"", ""passed"": true, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""3"", ""passed"": true, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""3"", ""passed"": true, ""expected"": ""3""}], ""success"": true, ""execution_time"": ""3.05s""}",2026-09-14T13:23:56.657484+00:00,2026-09-14T13:23:56.657508+00:00
+67,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x<0)
+            c++;
+        }
+        System.out.print(c);
+    }
+}",2.94s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""2"", ""passed"": true, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""3"", ""passed"": true, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""3"", ""passed"": true, ""expected"": ""3""}], ""success"": true, ""execution_time"": ""2.94s""}",2026-09-14T13:24:13.722464+00:00,2026-09-14T13:24:13.722487+00:00
+68,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_609d3fb5-b8fd-47be-b58b-477d5eb70157,HINT_REQUEST,javascript,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(x<0)
+            c++;
+        }
+        System.out.print(c);
+    }
+}",,"{""is_correct"": true, ""suggestions"": [""Close the Scanner resource (e.g., sc.close()) to avoid resource leaks in larger programs."", ""Consider adding a newline after the output for consistency with typical output expectations.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""None"", ""diagnosis_summary"": ""The student's code correctly reads the input, counts negative numbers, and prints the result. There are no logical, syntactic, or performance issues given the constraints.""}",2026-09-14T13:24:41.177759+00:00,2026-09-14T13:24:41.177790+00:00
+73,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,30,find-the-longest-subarray-with-consecutive-integers-in-an-array,Find the longest subarray with consecutive integers in an array.,sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1, mx=0;
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i-1]+1==arr[i])
+            {
+                c++;
+                mx=Math.max(mx,c);
+            }
+            else
+            c=1;
+        }
+        return mx;
+    }
+}",0.76s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\ASUS\\AppData\\Local\\Temp\\hintcode_du9w7oo6\\Main.java:22: error: incompatible types: unexpected return value\n        return mx;\n               ^\n1 error""}], ""results"": [], ""success"": false, ""execution_time"": ""0.76s""}",2026-09-14T16:12:57.583563+00:00,2026-09-14T16:12:57.583599+00:00
+74,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,30,find-the-longest-subarray-with-consecutive-integers-in-an-array,Find the longest subarray with consecutive integers in an array.,sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1, mx=0;
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i-1]+1==arr[i])
+            {
+                c++;
+                mx=Math.max(mx,c);
+            }
+            else
+            c=1;
+        }
+        System.out.print(mx);
+    }
+}",3.05s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""7\n2 0 2 1 4 3 1 0"", ""output"": ""0"", ""passed"": false, ""expected"": ""4""}, {""input"": ""6\n1 3 2 2 5 4"", ""output"": ""0"", ""passed"": false, ""expected"": ""4""}, {""input"": ""8\n10 12 11 13 14 15 16 17"", ""output"": ""5"", ""passed"": false, ""expected"": ""8""}], ""success"": false, ""execution_time"": ""3.05s""}",2026-09-14T16:13:34.309674+00:00,2026-09-14T16:13:34.309698+00:00
+75,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,30,find-the-longest-subarray-with-consecutive-integers-in-an-array,Find the longest subarray with consecutive integers in an array.,sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25,HINT_REQUEST,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1, mx=0;
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i-1]+1==arr[i])
+            {
+                c++;
+                mx=Math.max(mx,c);
+            }
+            else
+            c=1;
+        }
+        System.out.print(mx);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Learn how to verify if a set of numbers forms a consecutive sequence using min, max, and duplicate checks."", ""Explore sliding\u2011window techniques with a hash set to maintain uniqueness while tracking current min and max efficiently."", ""Practice problems that require checking subarray properties (like distinct elements, range) to build intuition for O(n) or O(n log n) solutions.""], ""error_pattern"": ""wrong_approach"", ""conceptual_gap"": ""Subarray order vs. value consecutiveness"", ""diagnosis_summary"": ""The student's code only looks for runs where each element is exactly one greater than the previous element in the original array order. This misses valid subarrays whose elements can be reordered to form a consecutive sequence (e.g., [2,0,2,1] -> sorted [0,1,2,2] fails due to duplicate, but [2,0,1,3] sorted [0,1,2,3] works). The correct condition requires checking min, max, and uniqueness within each subarray, not just adjacent differences.""}",2026-09-14T16:15:24.381439+00:00,2026-09-14T16:15:24.381459+00:00
+76,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,30,find-the-longest-subarray-with-consecutive-integers-in-an-array,Find the longest subarray with consecutive integers in an array.,sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1, mx=0;
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        Arrays.sort(arr);
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i-1]+1==arr[i])
+            {
+                c++;
+                mx=Math.max(mx,c);
+            }
+            else
+            c=1;
+        }
+        System.out.print(mx);
+    }
+}",0.59s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\ASUS\\AppData\\Local\\Temp\\hintcode_nbbef_wm\\Main.java:12: error: cannot find symbol\n        Arrays.sort(arr);\n        ^\n  symbol:   variable Arrays\n  location: class Main\n1 e""}], ""results"": [], ""success"": false, ""execution_time"": ""0.59s""}",2026-09-14T16:17:52.630668+00:00,2026-09-14T16:17:52.630700+00:00
+77,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,30,find-the-longest-subarray-with-consecutive-integers-in-an-array,Find the longest subarray with consecutive integers in an array.,sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25,RUN,java,failed,"import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1, mx=0;
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        Arrays.sort(arr);
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i-1]+1==arr[i])
+            {
+                c++;
+                mx=Math.max(mx,c);
+            }
+            else
+            c=1;
+        }
+        System.out.print(mx);
+    }
+}",3.03s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""7\n2 0 2 1 4 3 1 0"", ""output"": ""3"", ""passed"": false, ""expected"": ""4""}, {""input"": ""6\n1 3 2 2 5 4"", ""output"": ""4"", ""passed"": true, ""expected"": ""4""}, {""input"": ""8\n10 12 11 13 14 15 16 17"", ""output"": ""8"", ""passed"": true, ""expected"": ""8""}], ""success"": false, ""execution_time"": ""3.03s""}",2026-09-14T16:18:12.690510+00:00,2026-09-14T16:18:12.690534+00:00
+78,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,30,find-the-longest-subarray-with-consecutive-integers-in-an-array,Find the longest subarray with consecutive integers in an array.,sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25,SUBMIT,java,failed,"import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1, mx=0;
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        Arrays.sort(arr);
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i-1]+1==arr[i])
+            {
+                c++;
+                mx=Math.max(mx,c);
+            }
+            else
+            c=1;
+        }
+        System.out.print(mx);
+    }
+}",3.21s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""7\n2 0 2 1 4 3 1 0"", ""output"": ""3"", ""passed"": false, ""expected"": ""4""}, {""input"": ""6\n1 3 2 2 5 4"", ""output"": ""4"", ""passed"": true, ""expected"": ""4""}, {""input"": ""8\n10 12 11 13 14 15 16 17"", ""output"": ""8"", ""passed"": true, ""expected"": ""8""}], ""success"": false, ""execution_time"": ""3.21s""}",2026-09-14T16:18:59.328686+00:00,2026-09-14T16:18:59.328710+00:00
+79,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,30,find-the-longest-subarray-with-consecutive-integers-in-an-array,Find the longest subarray with consecutive integers in an array.,sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25,SUBMIT,java,failed,"import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int c=1, mx=0;
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        Arrays.sort(arr);
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i-1]+1==arr[i])
+            {
+                c++;
+                mx=Math.max(mx,c);
+            }
+            else
+            c=1;
+        }
+        System.out.print(mx);
+    }
+}",3.36s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""7\n2 0 2 1 4 3 1 0"", ""output"": ""3"", ""passed"": false, ""expected"": ""4""}, {""input"": ""6\n1 3 2 2 5 4"", ""output"": ""4"", ""passed"": true, ""expected"": ""4""}, {""input"": ""8\n10 12 11 13 14 15 16 17"", ""output"": ""8"", ""passed"": true, ""expected"": ""8""}], ""success"": false, ""execution_time"": ""3.36s""}",2026-09-14T16:25:03.350266+00:00,2026-09-14T16:25:03.350311+00:00
+80,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,4,reverse-an-array-in-place,Reverse an array in place.,sess_3ad01ed2-5a8f-428d-8a86-bd174c5b33ae,RUN,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int l=0, t=0,r=n-1;
+        while(l<r)
+        {
+            t=arr[l];
+            arr[l]=arr[r];
+            arr[r]=t;
+            l++;
+            r--;
+        }
+        for(int k:arr)
+        System.out.print(k+"" "");
+    }
+}",5.71s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5 4 3 2 1"", ""passed"": true, ""expected"": ""5 4 3 2 1""}, {""input"": ""6\n10 20 30 40 50 60"", ""output"": ""60 50 40 30 20 10"", ""passed"": true, ""expected"": ""60 50 40 30 20 10""}, {""input"": ""1\n7"", ""output"": ""7"", ""passed"": true, ""expected"": ""7""}, {""input"": ""4\n-1 0 1 2"", ""output"": ""2 1 0 -1"", ""passed"": true, ""expected"": ""2 1 0 -1""}], ""success"": true, ""execution_time"": ""5.71s""}",2026-09-14T16:34:25.709047+00:00,2026-09-14T16:34:25.709084+00:00
+81,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,4,reverse-an-array-in-place,Reverse an array in place.,sess_03787fdd-b97e-430b-b542-154f690c6c16,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int l=0, t=0,r=n;
+        while(l<r)
+        {
+            t=arr[l];
+            arr[l]=arr[r];
+            arr[r]=t;
+            l++;
+            r--;
+        }
+        for(int k:arr)
+        System.out.print(k+"" "");
+    }
+}",0.97s,"{""errors"": [{""line"": null, ""message"": ""Exception in thread \""main\"" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5\n\tat Main.main(Main.java:15)""}], ""results"": [], ""success"": false, ""execution_time"": ""0.97s""}",2026-09-14T16:37:21.318473+00:00,2026-09-14T16:37:21.318511+00:00
+82,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,4,reverse-an-array-in-place,Reverse an array in place.,sess_03787fdd-b97e-430b-b542-154f690c6c16,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int l=0, t=0,r=n;
+        while(l<r)
+        {
+            t=arr[l];
+            arr[l]=arr[r];
+            arr[r]=t;
+            l++;
+            r--;
+        }
+        for(int k:arr)
+        System.out.print(k+"" "");
+    }
+}",0.97s,"{""errors"": [{""line"": null, ""message"": ""Exception in thread \""main\"" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5\n\tat Main.main(Main.java:15)""}], ""results"": [], ""success"": false, ""execution_time"": ""0.97s""}",2026-09-14T16:37:50.388906+00:00,2026-09-14T16:37:50.388935+00:00
+83,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,4,reverse-an-array-in-place,Reverse an array in place.,sess_03787fdd-b97e-430b-b542-154f690c6c16,RUN,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int l=0, t=0,r=n-1;
+        while(l<r)
+        {
+            t=arr[l];
+            arr[l]=arr[r];
+            arr[r]=t;
+            l++;
+            r--;
+        }
+        for(int k:arr)
+        System.out.print(k+"" "");
+    }
+}",3.64s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5 4 3 2 1"", ""passed"": true, ""expected"": ""5 4 3 2 1""}, {""input"": ""6\n10 20 30 40 50 60"", ""output"": ""60 50 40 30 20 10"", ""passed"": true, ""expected"": ""60 50 40 30 20 10""}, {""input"": ""1\n7"", ""output"": ""7"", ""passed"": true, ""expected"": ""7""}, {""input"": ""4\n-1 0 1 2"", ""output"": ""2 1 0 -1"", ""passed"": true, ""expected"": ""2 1 0 -1""}], ""success"": true, ""execution_time"": ""3.64s""}",2026-09-14T16:38:12.988193+00:00,2026-09-14T16:38:12.988216+00:00
+84,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,4,reverse-an-array-in-place,Reverse an array in place.,sess_03787fdd-b97e-430b-b542-154f690c6c16,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int l=0, t=0,r=n-1;
+        while(l<r)
+        {
+            t=arr[l];
+            arr[l]=arr[r];
+            arr[r]=t;
+            l++;
+            r--;
+        }
+        for(int k:arr)
+        System.out.print(k+"" "");
+    }
+}",3.73s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5 4 3 2 1"", ""passed"": true, ""expected"": ""5 4 3 2 1""}, {""input"": ""6\n10 20 30 40 50 60"", ""output"": ""60 50 40 30 20 10"", ""passed"": true, ""expected"": ""60 50 40 30 20 10""}, {""input"": ""1\n7"", ""output"": ""7"", ""passed"": true, ""expected"": ""7""}, {""input"": ""4\n-1 0 1 2"", ""output"": ""2 1 0 -1"", ""passed"": true, ""expected"": ""2 1 0 -1""}], ""success"": true, ""execution_time"": ""3.73s""}",2026-09-14T16:38:30.949699+00:00,2026-09-14T16:38:30.949723+00:00
+85,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,4,reverse-an-array-in-place,Reverse an array in place.,sess_36262904-b141-47c4-b1ec-52886d9f7f19,HINT_REQUEST,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int l=0, t=0,r=n-1;
+        while(l<r)
+        {
+            t=arr[l];
+            arr[l]=arr[r];
+            arr[r]=t;
+            l++;
+            r--;
+        }
+        for(int k:arr)
+        System.out.print(k+"" "");
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Modify the printing loop to add a space only between elements, not after the last one."", ""Use a StringBuilder to construct the output string and then print it without extra trailing space."", ""Review the output specification carefully to ensure exact formatting matches the required pattern.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Proper output formatting to avoid trailing spaces"", ""diagnosis_summary"": ""The in-place reversal algorithm is correct, but the code prints a space after every element, resulting in a trailing space at the end of the line, which may not match the expected output format.""}",2026-09-14T16:45:47.747443+00:00,2026-09-14T16:45:47.747475+00:00
+86,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,4,reverse-an-array-in-place,Reverse an array in place.,sess_36262904-b141-47c4-b1ec-52886d9f7f19,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int l=0, t=0,r=n-1;
+        while(l<r)
+        {
+            t=arr[l];
+            arr[l]=arr[r];
+            arr[r]=t;
+            l++;
+            r--;
+        }
+        for(int i=0;i<n-1;i++)
+        System.out.print(arr[i]+"" "");
+        System.out.print(arr[i]);
+    }
+}",1.51s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\ASUS\\AppData\\Local\\Temp\\hintcode_u47rxtfi\\Main.java:22: error: cannot find symbol\n        System.out.print(arr[i]);\n                             ^\n  symbol:   variable i""}], ""results"": [], ""success"": false, ""execution_time"": ""1.51s""}",2026-09-14T16:46:43.631420+00:00,2026-09-14T16:46:43.631443+00:00
+87,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int rev(vector<int>&arr, int l,int r){
+    while(l>r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    reverse(0,k);
+    reverse(k+1,n-1);
+    reverse(0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    return 0;
+}",1.84s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_33na4sjv\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_33na4sjv\\code.cpp:20:16: error: 'reverse' was not declar""}], ""results"": [], ""success"": false, ""execution_time"": ""1.84s""}",2026-09-14T16:47:47.796848+00:00,2026-09-14T16:47:47.796879+00:00
+88,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,4,reverse-an-array-in-place,Reverse an array in place.,sess_36262904-b141-47c4-b1ec-52886d9f7f19,RUN,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int l=0, t=0,r=n-1;
+        while(l<r)
+        {
+            t=arr[l];
+            arr[l]=arr[r];
+            arr[r]=t;
+            l++;
+            r--;
+        }
+        int i;
+        for(i=0;i<n-1;i++)
+        System.out.print(arr[i]+"" "");
+        System.out.print(arr[i]);
+    }
+}",4.01s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5 4 3 2 1"", ""passed"": true, ""expected"": ""5 4 3 2 1""}, {""input"": ""6\n10 20 30 40 50 60"", ""output"": ""60 50 40 30 20 10"", ""passed"": true, ""expected"": ""60 50 40 30 20 10""}, {""input"": ""1\n7"", ""output"": ""7"", ""passed"": true, ""expected"": ""7""}, {""input"": ""4\n-1 0 1 2"", ""output"": ""2 1 0 -1"", ""passed"": true, ""expected"": ""2 1 0 -1""}], ""success"": true, ""execution_time"": ""4.01s""}",2026-09-14T16:48:06.946511+00:00,2026-09-14T16:48:06.946527+00:00
+89,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int rev(vector<int>&arr, int l,int r){
+    while(l>r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    rev(0,k);
+    rev(k+1,n-1);
+    rev(0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    return 0;
+}",0.58s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_xxig5lri\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_xxig5lri\\code.cpp:20:12: error: invalid initialization o""}], ""results"": [], ""success"": false, ""execution_time"": ""0.58s""}",2026-09-14T16:48:08.518480+00:00,2026-09-14T16:48:08.518510+00:00
+90,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,4,reverse-an-array-in-place,Reverse an array in place.,sess_36262904-b141-47c4-b1ec-52886d9f7f19,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int l=0, t=0,r=n-1;
+        while(l<r)
+        {
+            t=arr[l];
+            arr[l]=arr[r];
+            arr[r]=t;
+            l++;
+            r--;
+        }
+        int i;
+        for(i=0;i<n-1;i++)
+        System.out.print(arr[i]+"" "");
+        System.out.print(arr[i]);
+    }
+}",4.12s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5 4 3 2 1"", ""passed"": true, ""expected"": ""5 4 3 2 1""}, {""input"": ""6\n10 20 30 40 50 60"", ""output"": ""60 50 40 30 20 10"", ""passed"": true, ""expected"": ""60 50 40 30 20 10""}, {""input"": ""1\n7"", ""output"": ""7"", ""passed"": true, ""expected"": ""7""}, {""input"": ""4\n-1 0 1 2"", ""output"": ""2 1 0 -1"", ""passed"": true, ""expected"": ""2 1 0 -1""}], ""success"": true, ""execution_time"": ""4.12s""}",2026-09-14T16:48:24.627765+00:00,2026-09-14T16:48:24.627788+00:00
+91,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int rev(vector<int>&arr, int l,int r){
+    while(l>r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    rev(arr,0,k);
+    rev(arr,k+1,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    return 0;
+}",11.17s,"{""errors"": [{""line"": null, ""message"": ""terminate called after throwing an instance of 'std::bad_alloc'\n  what():  std::bad_alloc""}], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""1 2 3 4 5 6 7"", ""passed"": false, ""expected"": ""5 6 7 1 2 3 4""}], ""success"": false, ""execution_time"": ""11.17s""}",2026-09-14T16:49:18.834014+00:00,2026-09-14T16:49:18.834034+00:00
+92,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    rev(arr,0,k);
+    rev(arr,k+1,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    return 0;
+}",7.73s,"{""errors"": [{""line"": null, ""message"": ""terminate called after throwing an instance of 'std::bad_alloc'\n  what():  std::bad_alloc""}], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""5 6 7 1 2 3 4"", ""passed"": true, ""expected"": ""5 6 7 1 2 3 4""}], ""success"": false, ""execution_time"": ""7.73s""}",2026-09-14T16:49:44.647112+00:00,2026-09-14T16:49:44.647137+00:00
+93,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    k=k%n;
+    rev(arr,0,k);
+    rev(arr,k+1,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    return 0;
+}",6.93s,"{""errors"": [{""line"": null, ""message"": ""terminate called after throwing an instance of 'std::bad_alloc'\n  what():  std::bad_alloc""}], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""5 6 7 1 2 3 4"", ""passed"": true, ""expected"": ""5 6 7 1 2 3 4""}], ""success"": false, ""execution_time"": ""6.93s""}",2026-09-14T16:51:31.572021+00:00,2026-09-14T16:51:31.572040+00:00
+94,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    k=k%n;
+    rev(arr,0,k-1);
+    rev(arr,k,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    return 0;
+}",7.32s,"{""errors"": [{""line"": null, ""message"": ""terminate called after throwing an instance of 'std::bad_alloc'\n  what():  std::bad_alloc""}], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""4 5 6 7 1 2 3"", ""passed"": false, ""expected"": ""5 6 7 1 2 3 4""}], ""success"": false, ""execution_time"": ""7.32s""}",2026-09-14T16:53:28.219818+00:00,2026-09-14T16:53:28.219850+00:00
+95,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    k=k%n;
+    rev(arr,0,n-k-1);
+    rev(arr,n-k,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    return 0;
+}",6.89s,"{""errors"": [{""line"": null, ""message"": ""terminate called after throwing an instance of 'std::bad_alloc'\n  what():  std::bad_alloc""}], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""5 6 7 1 2 3 4"", ""passed"": true, ""expected"": ""5 6 7 1 2 3 4""}], ""success"": false, ""execution_time"": ""6.89s""}",2026-09-14T16:54:27.620223+00:00,2026-09-14T16:54:27.620236+00:00
+96,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+void rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    k=k%n;
+    rev(arr,0,n-k-1);
+    rev(arr,n-k,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    return 0;
+}",7.79s,"{""errors"": [{""line"": null, ""message"": ""terminate called after throwing an instance of 'std::bad_alloc'\n  what():  std::bad_alloc""}], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""5 6 7 1 2 3 4"", ""passed"": true, ""expected"": ""5 6 7 1 2 3 4""}], ""success"": false, ""execution_time"": ""7.79s""}",2026-09-14T16:55:26.259628+00:00,2026-09-14T16:55:26.259647+00:00
+97,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+void rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    if(n==-1) return -1;
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    k=k%n;
+    rev(arr,0,n-k-1);
+    rev(arr,n-k,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    return 0;
+}",7.49s,"{""errors"": [{""line"": null, ""message"": ""terminate called after throwing an instance of 'std::bad_alloc'\n  what():  std::bad_alloc""}], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""5 6 7 1 2 3 4"", ""passed"": true, ""expected"": ""5 6 7 1 2 3 4""}], ""success"": false, ""execution_time"": ""7.49s""}",2026-09-14T16:57:32.363903+00:00,2026-09-14T16:57:32.363936+00:00
+98,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+void rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    if(n==-1) cout<< -1;
+    else{
+
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    k=k%n;
+    rev(arr,0,n-k-1);
+    rev(arr,n-k,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    }
+    return 0;
+}",7.58s,"{""errors"": [{""line"": null, ""message"": ""terminate called after throwing an instance of 'std::bad_alloc'\n  what():  std::bad_alloc""}], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""5 6 7 1 2 3 4"", ""passed"": true, ""expected"": ""5 6 7 1 2 3 4""}], ""success"": false, ""execution_time"": ""7.58s""}",2026-09-14T16:58:23.678756+00:00,2026-09-14T16:58:23.678775+00:00
+99,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+void rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    if(n==-1) cout<< -1;
+    else{
+
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    k=k%n;
+    rev(arr,0,n-k-1);
+    rev(arr,n-k,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    }
+    return 0;
+}",9.95s,"{""errors"": [{""line"": null, ""message"": ""terminate called after throwing an instance of 'std::bad_alloc'\n  what():  std::bad_alloc""}], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""5 6 7 1 2 3 4"", ""passed"": true, ""expected"": ""5 6 7 1 2 3 4""}], ""success"": false, ""execution_time"": ""9.95s""}",2026-09-14T16:59:04.954134+00:00,2026-09-14T16:59:04.954153+00:00
+100,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,RUN,cpp,success,"#include <iostream>
+#include <vector>
+using namespace std;
+
+void rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    if(n==-1) cout<< -1;
+    else{
+    vector<int> arr(n);
+
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    k=k%n;
+    rev(arr,0,n-k-1);
+    rev(arr,n-k,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    }
+    return 0;
+}",4.59s,"{""errors"": [], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""5 6 7 1 2 3 4"", ""passed"": true, ""expected"": ""5 6 7 1 2 3 4""}, {""input"": ""-1\n1"", ""output"": ""-1"", ""passed"": true, ""expected"": ""-1""}, {""input"": ""5\n1 2 3 4 5\n0"", ""output"": ""1 2 3 4 5"", ""passed"": true, ""expected"": ""1 2 3 4 5""}, {""input"": ""4\n1 2 3 4\n2"", ""output"": ""3 4 1 2"", ""passed"": true, ""expected"": ""3 4 1 2""}], ""success"": true, ""execution_time"": ""4.59s""}",2026-09-14T17:00:17.192556+00:00,2026-09-14T17:00:17.192573+00:00
+101,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,12,rotate-an-array-to-the-right-by-k-positions,Rotate an array to the right by k positions.,sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6,SUBMIT,cpp,success,"#include <iostream>
+#include <vector>
+using namespace std;
+
+void rev(vector<int>&arr, int l,int r){
+    while(l<r){
+        swap(arr[l],arr[r]);
+        l++;
+        r--;
+    }
+}
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    if(n==-1) cout<< -1;
+    else{
+    vector<int> arr(n);
+
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int k;
+    cin>>k;
+    k=k%n;
+    rev(arr,0,n-k-1);
+    rev(arr,n-k,n-1);
+    rev(arr,0,n-1);
+
+    for(int i: arr) cout<<i<<"" "";
+    }
+    return 0;
+}",4.94s,"{""errors"": [], ""results"": [{""input"": ""7\n1 2 3 4 5 6 7\n3"", ""output"": ""5 6 7 1 2 3 4"", ""passed"": true, ""expected"": ""5 6 7 1 2 3 4""}, {""input"": ""-1\n1"", ""output"": ""-1"", ""passed"": true, ""expected"": ""-1""}, {""input"": ""5\n1 2 3 4 5\n0"", ""output"": ""1 2 3 4 5"", ""passed"": true, ""expected"": ""1 2 3 4 5""}, {""input"": ""4\n1 2 3 4\n2"", ""output"": ""3 4 1 2"", ""passed"": true, ""expected"": ""3 4 1 2""}], ""success"": true, ""execution_time"": ""4.94s""}",2026-09-14T17:00:42.615834+00:00,2026-09-14T17:00:42.615865+00:00
+102,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,36,find-the-most-frequent-number-in-an-array,Find the most frequent number in an array.,sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    map<int,int> mp;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i: arr) mp[i]++;
+    int max=0;
+    int x=-1;
+    for(auto& i: mp){
+        if(i.second>max){
+            max=i.second;
+            x=i.first;
+        }
+    }
+    cout<<x;
+    return 0;
+}",0.55s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_uzgu49e2\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_uzgu49e2\\code.cpp:7:5: error: 'map' was not declared in""}], ""results"": [], ""success"": false, ""execution_time"": ""0.55s""}",2026-09-14T17:08:40.897605+00:00,2026-09-14T17:08:40.897615+00:00
+103,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,36,find-the-most-frequent-number-in-an-array,Find the most frequent number in an array.,sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <map>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    map<int,int> mp;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i: arr) mp[i]++;
+    int max=0;
+    int x=-1;
+    for(auto& i: mp){
+        if(i.second<max){
+            max=i.second;
+            x=i.first;
+        }
+    }
+    cout<<x;
+    return 0;
+}",5.21s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 3"", ""output"": ""-1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""-1"", ""passed"": false, ""expected"": ""1""}, {""input"": ""7\n1 2 2 3 3 3 4"", ""output"": ""-1"", ""passed"": false, ""expected"": ""3""}, {""input"": ""8\n1 1 2 2 3 3 4 4"", ""output"": ""-1"", ""passed"": false, ""expected"": ""1""}], ""success"": false, ""execution_time"": ""5.21s""}",2026-09-14T17:09:11.163579+00:00,2026-09-14T17:09:11.163595+00:00
+104,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,36,find-the-most-frequent-number-in-an-array,Find the most frequent number in an array.,sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <map>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    map<int,int> mp;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i: arr) mp[i]++;
+    int max=0;
+    int x=1;
+    for(auto& i: mp){
+        if(i.second<max){
+            max=i.second;
+            x=i.first;
+        }
+    }
+    cout<<x;
+    return 0;
+}",5.06s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 3"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}, {""input"": ""7\n1 2 2 3 3 3 4"", ""output"": ""1"", ""passed"": false, ""expected"": ""3""}, {""input"": ""8\n1 1 2 2 3 3 4 4"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}], ""success"": false, ""execution_time"": ""5.06s""}",2026-09-14T17:09:50.570007+00:00,2026-09-14T17:09:50.570027+00:00
+105,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,36,find-the-most-frequent-number-in-an-array,Find the most frequent number in an array.,sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <map>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    map<int,int> mp;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i: arr) mp[i]++;
+    int max=0;
+    int x=1;
+    for(auto& i: mp){
+        if(i.second<max){
+            max=i.second;
+            x=i.first;
+        }
+    }
+    cout<<x;
+    return 0;
+}",4.97s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 3"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}, {""input"": ""7\n1 2 2 3 3 3 4"", ""output"": ""1"", ""passed"": false, ""expected"": ""3""}, {""input"": ""8\n1 1 2 2 3 3 4 4"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}], ""success"": false, ""execution_time"": ""4.97s""}",2026-09-14T17:10:07.371190+00:00,2026-09-14T17:10:07.371213+00:00
+106,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,36,find-the-most-frequent-number-in-an-array,Find the most frequent number in an array.,sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <map>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    unordered_map<int,int> mp;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i: arr) mp[i]++;
+    int max=0;
+    int x=1;
+    for(auto& i: mp){
+        if(i.second<max){
+            max=i.second;
+            x=i.first;
+        }
+    }
+    cout<<x;
+    return 0;
+}",0.56s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_7xss_712\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_7xss_712\\code.cpp:8:5: error: 'unordered_map' was not de""}], ""results"": [], ""success"": false, ""execution_time"": ""0.56s""}",2026-09-14T17:10:26.905439+00:00,2026-09-14T17:10:26.905450+00:00
+107,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,36,find-the-most-frequent-number-in-an-array,Find the most frequent number in an array.,sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <unordered_map>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    unordered_map<int,int> mp;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i: arr) mp[i]++;
+    int max=0;
+    int x=1;
+    for(auto& i: mp){
+        if(i.second<max){
+            max=i.second;
+            x=i.first;
+        }
+    }
+    cout<<x;
+    return 0;
+}",6.33s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 3"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}, {""input"": ""7\n1 2 2 3 3 3 4"", ""output"": ""1"", ""passed"": false, ""expected"": ""3""}, {""input"": ""8\n1 1 2 2 3 3 4 4"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}], ""success"": false, ""execution_time"": ""6.33s""}",2026-09-14T17:11:24.982275+00:00,2026-09-14T17:11:24.982300+00:00
+108,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,36,find-the-most-frequent-number-in-an-array,Find the most frequent number in an array.,sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <unordered_map>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    unordered_map<int,int> mp;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i: arr) mp[i]++;
+    int max=0;
+    int x=1;
+    for(auto& i: mp){
+        if(i.second<max){
+            max=i.second;
+            x=i.first;
+        }
+    }
+    cout<<x;
+    return 0;
+}",5.16s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 3"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}, {""input"": ""7\n1 2 2 3 3 3 4"", ""output"": ""1"", ""passed"": false, ""expected"": ""3""}, {""input"": ""8\n1 1 2 2 3 3 4 4"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}], ""success"": false, ""execution_time"": ""5.16s""}",2026-09-14T17:14:11.139483+00:00,2026-09-14T17:14:11.139521+00:00
+109,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,5,count-the-occurrences-of-a-given-element-in-an-array,Count the occurrences of a given element in an array.,sess_dc01ae80-4430-44d2-a011-3314a8822993,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int c=0;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+
+    int k;
+    cin>>k;
+
+    for(int i=0;i<=n;i++){
+        if(i==k) c++;
+    }
+    cout<<c;
+    return 0;
+}",4.38s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 1 4\n1"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""7\n2 2 2 2 2 2 2\n2"", ""output"": ""1"", ""passed"": false, ""expected"": ""7""}, {""input"": ""4\n1 2 3 4\n5"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n1 1 2 2 3 3\n4"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""4.38s""}",2026-09-14T17:25:00.144029+00:00,2026-09-14T17:25:00.144058+00:00
+110,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,5,count-the-occurrences-of-a-given-element-in-an-array,Count the occurrences of a given element in an array.,sess_dc01ae80-4430-44d2-a011-3314a8822993,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int count=0;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+
+    int k;
+    cin>>k;
+
+    for(int i=0;i<=n;i++){
+        if(i==k) count++;
+    }
+    cout<<count;
+    return 0;
+}",8.65s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 1 4\n1"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""7\n2 2 2 2 2 2 2\n2"", ""output"": ""1"", ""passed"": false, ""expected"": ""7""}, {""input"": ""4\n1 2 3 4\n5"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n1 1 2 2 3 3\n4"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""8.65s""}",2026-09-14T17:27:47.578396+00:00,2026-09-14T17:27:47.578411+00:00
+111,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,5,count-the-occurrences-of-a-given-element-in-an-array,Count the occurrences of a given element in an array.,sess_dc01ae80-4430-44d2-a011-3314a8822993,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int count=0;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+
+    int k;
+    cin>>k;
+
+    for(int i=0;i<=n;i++){
+        if(i==k) count++;
+    }
+    cout<<count<<endl;
+    return 0;
+}",8.45s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 1 4\n1"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""7\n2 2 2 2 2 2 2\n2"", ""output"": ""1"", ""passed"": false, ""expected"": ""7""}, {""input"": ""4\n1 2 3 4\n5"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n1 1 2 2 3 3\n4"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""8.45s""}",2026-09-14T17:28:11.137287+00:00,2026-09-14T17:28:11.137298+00:00
+112,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,5,count-the-occurrences-of-a-given-element-in-an-array,Count the occurrences of a given element in an array.,sess_dc01ae80-4430-44d2-a011-3314a8822993,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int count=0;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+
+    int k;
+    cin>>k;
+
+    for(int i=0;i<=n;i++){
+        if(i==k) count++;
+    }
+    cout<<count+1<<endl;
+    return 0;
+}",10.13s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 1 4\n1"", ""output"": ""2"", ""passed"": true, ""expected"": ""2""}, {""input"": ""7\n2 2 2 2 2 2 2\n2"", ""output"": ""2"", ""passed"": false, ""expected"": ""7""}, {""input"": ""4\n1 2 3 4\n5"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n1 1 2 2 3 3\n4"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""10.13s""}",2026-09-14T17:28:34.858146+00:00,2026-09-14T17:28:34.858165+00:00
+113,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,5,count-the-occurrences-of-a-given-element-in-an-array,Count the occurrences of a given element in an array.,sess_dc01ae80-4430-44d2-a011-3314a8822993,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int count=0;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+
+    int k;
+    cin>>k;
+
+    for(int i=0;i<=n;i++){
+        if(i==k) count++;
+    }
+    cout<< count+1 <<endl;
+    return 0;
+}",10.44s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 1 4\n1"", ""output"": ""2"", ""passed"": true, ""expected"": ""2""}, {""input"": ""7\n2 2 2 2 2 2 2\n2"", ""output"": ""2"", ""passed"": false, ""expected"": ""7""}, {""input"": ""4\n1 2 3 4\n5"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n1 1 2 2 3 3\n4"", ""output"": ""2"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""10.44s""}",2026-09-14T17:29:09.094053+00:00,2026-09-14T17:29:09.094072+00:00
+114,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,5,count-the-occurrences-of-a-given-element-in-an-array,Count the occurrences of a given element in an array.,sess_dc01ae80-4430-44d2-a011-3314a8822993,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int count=0;
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+
+    int k;
+    cin>>k;
+
+    for(int i=0;i<=n;i++){
+        if(i==k) count++;
+    }
+    cout<< count <<endl;
+    return 0;
+}",4.57s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 1 4\n1"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""7\n2 2 2 2 2 2 2\n2"", ""output"": ""1"", ""passed"": false, ""expected"": ""7""}, {""input"": ""4\n1 2 3 4\n5"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n1 1 2 2 3 3\n4"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""4.57s""}",2026-09-14T17:30:24.243187+00:00,2026-09-14T17:30:24.243207+00:00
+115,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,5,count-the-occurrences-of-a-given-element-in-an-array,Count the occurrences of a given element in an array.,sess_dc01ae80-4430-44d2-a011-3314a8822993,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int count=0;
+    int n;
+    cin>>n;
+    vector<int> vec(n);
+
+    int k;
+    cin>>k;
+
+    for(int i=0;i<=n;i++){
+        if(i==k) count++;
+    }
+    cout<< count <<endl;
+    return 0;
+}",4.65s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 1 4\n1"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""7\n2 2 2 2 2 2 2\n2"", ""output"": ""1"", ""passed"": false, ""expected"": ""7""}, {""input"": ""4\n1 2 3 4\n5"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n1 1 2 2 3 3\n4"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""4.65s""}",2026-09-14T17:31:24.665976+00:00,2026-09-14T17:31:24.666004+00:00
+116,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,5,count-the-occurrences-of-a-given-element-in-an-array,Count the occurrences of a given element in an array.,sess_dc01ae80-4430-44d2-a011-3314a8822993,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int count=0;
+    int temp = count;
+    int n;
+    cin>>n;
+    vector<int> vec(n);
+
+    int k;
+    cin>>k;
+
+    for(int i=0;i<=n;i++){
+        if(i==k) temp++;
+    }
+    cout<< temp <<endl;
+    return 0;
+}",4.66s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 1 4\n1"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""7\n2 2 2 2 2 2 2\n2"", ""output"": ""1"", ""passed"": false, ""expected"": ""7""}, {""input"": ""4\n1 2 3 4\n5"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n1 1 2 2 3 3\n4"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""4.66s""}",2026-09-14T17:32:11.778253+00:00,2026-09-14T17:32:11.778289+00:00
+117,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,5,count-the-occurrences-of-a-given-element-in-an-array,Count the occurrences of a given element in an array.,sess_dc01ae80-4430-44d2-a011-3314a8822993,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int count=0;
+    int temp = count;
+    int n;
+    cin>>n;
+    vector<int> vec(n);
+
+    int k;
+    cin>>k;
+
+    for(int i=0;i<=n;i++){
+        if(i==k) temp++;
+    }
+    cout<< temp <<endl;
+    return 0;
+}",4.60s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 1 4\n1"", ""output"": ""1"", ""passed"": false, ""expected"": ""2""}, {""input"": ""7\n2 2 2 2 2 2 2\n2"", ""output"": ""1"", ""passed"": false, ""expected"": ""7""}, {""input"": ""4\n1 2 3 4\n5"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n1 1 2 2 3 3\n4"", ""output"": ""1"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""4.60s""}",2026-09-14T17:32:52.023094+00:00,2026-09-14T17:32:52.023121+00:00
+118,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,2,find-the-maximum-element-in-an-array,Find the maximum element in an array.,sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    
+    vector<int> arr;
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int mx=0;
+    if(arr[i]<mx) mx=arr[i];
+
+    cout<<mx;
+    return 0;
+}",0.62s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_yeqiupqv\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_yeqiupqv\\code.cpp:13:12: error: 'i' was not declared in""}], ""results"": [], ""success"": false, ""execution_time"": ""0.62s""}",2026-09-14T17:40:42.083205+00:00,2026-09-14T17:40:42.083239+00:00
+119,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,2,find-the-maximum-element-in-an-array,Find the maximum element in an array.,sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int mx=0;
+    if(arr[i]<mx) mx=arr[i];
+
+    cout<<mx;
+    return 0;
+}",0.64s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_by4evp7n\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_by4evp7n\\code.cpp:13:12: error: 'i' was not declared in""}], ""results"": [], ""success"": false, ""execution_time"": ""0.64s""}",2026-09-14T17:40:54.622433+00:00,2026-09-14T17:40:54.622445+00:00
+120,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,2,find-the-maximum-element-in-an-array,Find the maximum element in an array.,sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47,RUN,cpp,success,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int mx=0;
+    for(int i=0;i<n;i++) if(arr[i]>mx) mx=arr[i];
+
+    cout<<mx;
+    return 0;
+}",4.31s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""5\n5 4 3 2 1"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""5\n1 5 3 2 4"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""4.31s""}",2026-09-14T17:41:42.257096+00:00,2026-09-14T17:41:42.257114+00:00
+121,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,2,find-the-maximum-element-in-an-array,Find the maximum element in an array.,sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47,SUBMIT,cpp,success,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int mx=0;
+    for(int i=0;i<n;i++) if(arr[i]>mx) mx=arr[i];
+
+    cout<<mx;
+    return 0;
+}",4.70s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""5\n5 4 3 2 1"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""5\n1 5 3 2 4"", ""output"": ""5"", ""passed"": true, ""expected"": ""5""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""4.70s""}",2026-09-14T17:42:03.778388+00:00,2026-09-14T17:42:03.778397+00:00
+122,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,28,sort-an-array-of-integers-in-ascending-order-using-bubble-sort,Sort an array of integers in ascending order using bubble sort.,sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]) swap(arr[i],arr[i+1]);
+        }
+    }
+
+    for(int x: arr) cout<<x<<"" "";
+    return 0;
+}",5.29s,"{""errors"": [], ""results"": [{""input"": ""5\n5 1 4 2 8"", ""output"": ""1 5 2 4 8"", ""passed"": false, ""expected"": ""1 2 4 5 8""}, {""input"": ""6\n64 34 25 12 22 11"", ""output"": ""64 34 12 25 11 22"", ""passed"": false, ""expected"": ""11 12 22 25 34 64""}, {""input"": ""4\n-5 0 5 -10"", ""output"": ""0 -5 -10 5"", ""passed"": false, ""expected"": ""-10 -5 0 5""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": false, ""execution_time"": ""5.29s""}",2026-09-14T18:01:20.990186+00:00,2026-09-14T18:01:20.990199+00:00
+123,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,28,sort-an-array-of-integers-in-ascending-order-using-bubble-sort,Sort an array of integers in ascending order using bubble sort.,sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]) swap(arr[i],arr[j]);
+        }
+    }
+
+    for(int x: arr) cout<<x<<"" "";
+    return 0;
+}",4.54s,"{""errors"": [], ""results"": [{""input"": ""5\n5 1 4 2 8"", ""output"": ""1 4 5 2 8"", ""passed"": false, ""expected"": ""1 2 4 5 8""}, {""input"": ""6\n64 34 25 12 22 11"", ""output"": ""22 34 64 12 25 11"", ""passed"": false, ""expected"": ""11 12 22 25 34 64""}, {""input"": ""4\n-5 0 5 -10"", ""output"": ""0 5 -5 -10"", ""passed"": false, ""expected"": ""-10 -5 0 5""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": false, ""execution_time"": ""4.54s""}",2026-09-14T18:01:59.601886+00:00,2026-09-14T18:01:59.601898+00:00
+124,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,28,sort-an-array-of-integers-in-ascending-order-using-bubble-sort,Sort an array of integers in ascending order using bubble sort.,sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]) swap(arr[j],arr[i+1]);
+        }
+    }
+
+    for(int x: arr) cout<<x<<"" "";
+    return 0;
+}",4.85s,"{""errors"": [], ""results"": [{""input"": ""5\n5 1 4 2 8"", ""output"": ""1 4 5 2 8"", ""passed"": false, ""expected"": ""1 2 4 5 8""}, {""input"": ""6\n64 34 25 12 22 11"", ""output"": ""12 22 34 64 25 11"", ""passed"": false, ""expected"": ""11 12 22 25 34 64""}, {""input"": ""4\n-5 0 5 -10"", ""output"": ""-5 0 5 -10"", ""passed"": false, ""expected"": ""-10 -5 0 5""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": false, ""execution_time"": ""4.85s""}",2026-09-14T18:02:40.943333+00:00,2026-09-14T18:02:40.943354+00:00
+125,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,28,sort-an-array-of-integers-in-ascending-order-using-bubble-sort,Sort an array of integers in ascending order using bubble sort.,sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792,RUN,cpp,success,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]) swap(arr[j],arr[j+1]);
+        }
+    }
+
+    for(int x: arr) cout<<x<<"" "";
+    return 0;
+}",5.13s,"{""errors"": [], ""results"": [{""input"": ""5\n5 1 4 2 8"", ""output"": ""1 2 4 5 8"", ""passed"": true, ""expected"": ""1 2 4 5 8""}, {""input"": ""6\n64 34 25 12 22 11"", ""output"": ""11 12 22 25 34 64"", ""passed"": true, ""expected"": ""11 12 22 25 34 64""}, {""input"": ""4\n-5 0 5 -10"", ""output"": ""-10 -5 0 5"", ""passed"": true, ""expected"": ""-10 -5 0 5""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""5.13s""}",2026-09-14T18:03:07.966299+00:00,2026-09-14T18:03:07.966316+00:00
+126,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,28,sort-an-array-of-integers-in-ascending-order-using-bubble-sort,Sort an array of integers in ascending order using bubble sort.,sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792,SUBMIT,cpp,success,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]) swap(arr[j],arr[j+1]);
+        }
+    }
+
+    for(int x: arr) cout<<x<<"" "";
+    return 0;
+}",6.71s,"{""errors"": [], ""results"": [{""input"": ""5\n5 1 4 2 8"", ""output"": ""1 2 4 5 8"", ""passed"": true, ""expected"": ""1 2 4 5 8""}, {""input"": ""6\n64 34 25 12 22 11"", ""output"": ""11 12 22 25 34 64"", ""passed"": true, ""expected"": ""11 12 22 25 34 64""}, {""input"": ""4\n-5 0 5 -10"", ""output"": ""-10 -5 0 5"", ""passed"": true, ""expected"": ""-10 -5 0 5""}, {""input"": ""1\n10"", ""output"": ""10"", ""passed"": true, ""expected"": ""10""}], ""success"": true, ""execution_time"": ""6.71s""}",2026-09-14T18:03:37.986907+00:00,2026-09-14T18:03:37.986925+00:00
+127,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,17,remove-duplicates-from-an-array,Remove duplicates from an array.,sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    set<int> st;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(st.find(arr[i])) continue;
+        st.insert(arr[i]);
+        arr[j]=arr[i];
+        j++;
+    }
+    return 0;
+}",0.47s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_rxc6hc7g\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_rxc6hc7g\\code.cpp:7:5: error: 'set' was not declared in""}], ""results"": [], ""success"": false, ""execution_time"": ""0.47s""}",2026-09-14T19:35:53.176566+00:00,2026-09-14T19:35:53.176583+00:00
+128,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,17,remove-duplicates-from-an-array,Remove duplicates from an array.,sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    set<int> st;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(st.find(arr[i])) continue;
+        st.insert(arr[i]);
+        arr[j]=arr[i];
+        j++;
+    }
+    return 0;
+}",0.51s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_938a2d52\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_938a2d52\\code.cpp:15:19: error: could not convert 'st.st""}], ""results"": [], ""success"": false, ""execution_time"": ""0.51s""}",2026-09-14T19:36:28.006038+00:00,2026-09-14T19:36:28.006045+00:00
+129,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,17,remove-duplicates-from-an-array,Remove duplicates from an array.,sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    set<int> st;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(st.find(arr[i]!=st.end())) continue;
+        st.insert(arr[i]);
+        arr[j]=arr[i];
+        j++;
+    }
+    return 0;
+}",0.52s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_bs62c4vo\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_bs62c4vo\\code.cpp:15:26: error: no match for 'operator!=""}], ""results"": [], ""success"": false, ""execution_time"": ""0.52s""}",2026-09-14T19:37:13.817596+00:00,2026-09-14T19:37:13.817611+00:00
+130,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,17,remove-duplicates-from-an-array,Remove duplicates from an array.,sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    set<int> st;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(st.find(arr[i])!=st.end()) continue;
+        st.insert(arr[i]);
+        arr[j]=arr[i];
+        j++;
+    }
+    return 0;
+}",4.45s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 4"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""4\n1 2 3 4""}, {""input"": ""5\n1 1 1 1 1"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""5\n1 2 3 4 5""}, {""input"": ""0"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""4.45s""}",2026-09-14T19:37:42.922623+00:00,2026-09-14T19:37:42.922644+00:00
+131,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,17,remove-duplicates-from-an-array,Remove duplicates from an array.,sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    set<int> st;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(st.find(arr[i])!=st.end()) continue;
+        st.insert(arr[i]);
+        arr[j]=arr[i];
+        j++;
+    }
+    for(int i=0;i<j;i++) cout<<arr[j]<<"" "";
+    return 0;
+}",3.84s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 4"", ""output"": ""4 4 4 4"", ""passed"": false, ""expected"": ""4\n1 2 3 4""}, {""input"": ""5\n1 1 1 1 1"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""0 0 0 0 0"", ""passed"": false, ""expected"": ""5\n1 2 3 4 5""}, {""input"": ""0"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""3.84s""}",2026-09-14T19:38:15.997367+00:00,2026-09-14T19:38:15.997389+00:00
+132,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,17,remove-duplicates-from-an-array,Remove duplicates from an array.,sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    set<int> st;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(st.find(arr[i])!=st.end()) continue;
+        st.insert(arr[i]);
+        arr[j]=arr[i];
+        j++;
+    }
+    for(int i=0;i<j;i++) cout<<arr[i]<<"" "";
+    return 0;
+}",4.06s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 4"", ""output"": ""1 2 3 4"", ""passed"": false, ""expected"": ""4\n1 2 3 4""}, {""input"": ""5\n1 1 1 1 1"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""1 2 3 4 5"", ""passed"": false, ""expected"": ""5\n1 2 3 4 5""}, {""input"": ""0"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""4.06s""}",2026-09-14T19:38:53.136726+00:00,2026-09-14T19:38:53.136739+00:00
+133,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,15,find-the-average-of-all-elements-in-an-array,Find the average of all elements in an array.,sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt(),s=0;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            s=s+x;
+        }
+        System.out.print(s/n);
+    }
+}",3.35s,"{""errors"": [{""line"": null, ""message"": ""Exception in thread \""main\"" java.util.InputMismatchException\n\tat java.base/java.util.Scanner.throwFor(Scanner.java:939)\n\tat java.base/java.util.Scanner.next(Scanner.java:1594)\n\tat java.base/java.util.Scanner.nextInt(Scanner.java:2258)\n\tat java.base/java.util.Scanner.nextInt(Scanner.java:2212)\n\tat Main.main(Main.java:10)""}], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""3"", ""passed"": false, ""expected"": ""3.00""}, {""input"": ""3\n10 20 30"", ""output"": ""20"", ""passed"": false, ""expected"": ""20.00""}], ""success"": false, ""execution_time"": ""3.35s""}",2026-09-14T19:38:58.615110+00:00,2026-09-14T19:38:58.615202+00:00
+134,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,15,find-the-average-of-all-elements-in-an-array,Find the average of all elements in an array.,sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91,HINT_REQUEST,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt(),s=0;
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            s=s+x;
+        }
+        System.out.print(s/n);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Use a floating\u2011point type (e.g., double) to store each element and the running sum."", ""Compute the average as a double (sum / n) and output it with exactly two decimal places using System.out.printf(\""%.2f\\n\"", average) or DecimalFormat."", ""Read the input values with sc.nextDouble() instead of sc.nextInt() to handle both integer and floating\u2011point numbers.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Floating-point arithmetic and formatted output"", ""diagnosis_summary"": ""The student reads all numbers as integers, accumulates the sum in an int, performs integer division, and prints the raw result without formatting. This fails for non\u2011integer inputs, truncates the fractional part, and does not produce the required two\u2011decimal\u2011place output.""}",2026-09-14T19:39:26.491817+00:00,2026-09-14T19:39:26.491842+00:00
+135,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,17,remove-duplicates-from-an-array,Remove duplicates from an array.,sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    set<int> st;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(st.find(arr[i])!=st.end()) continue;
+        st.insert(arr[i]);
+        arr[j]=arr[i];
+        j++;
+    }
+    cout<<j<<endl;
+    for(int i=0;i<j;i++) cout<<arr[i]<<"" "";
+    return 0;
+}",4.04s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 4"", ""output"": ""4\n1 2 3 4"", ""passed"": true, ""expected"": ""4\n1 2 3 4""}, {""input"": ""5\n1 1 1 1 1"", ""output"": ""1\n1"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""5\n1 2 3 4 5"", ""passed"": true, ""expected"": ""5\n1 2 3 4 5""}, {""input"": ""0"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""4.04s""}",2026-09-14T19:39:32.271381+00:00,2026-09-14T19:39:32.271405+00:00
+136,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,17,remove-duplicates-from-an-array,Remove duplicates from an array.,sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    set<int> st;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(st.find(arr[i])!=st.end()) continue;
+        st.insert(arr[i]);
+        arr[j]=arr[i];
+        j++;
+    }
+    cout<<j<<endl;
+    for(int i=0;i<j;i++) cout<<arr[i]<<"" "";
+    return 0;
+}",3.99s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 4"", ""output"": ""4\n1 2 3 4"", ""passed"": true, ""expected"": ""4\n1 2 3 4""}, {""input"": ""5\n1 1 1 1 1"", ""output"": ""1\n1"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""5\n1 2 3 4 5"", ""passed"": true, ""expected"": ""5\n1 2 3 4 5""}, {""input"": ""0"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}], ""success"": false, ""execution_time"": ""3.99s""}",2026-09-14T19:40:15.086288+00:00,2026-09-14T19:40:15.086303+00:00
+137,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,15,find-the-average-of-all-elements-in-an-array,Find the average of all elements in an array.,sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        double s=0;
+        for(int i=0;i<n;i++)
+        {
+            double x=sc.nextDouble();
+            s=s+x;
+        }
+        System.out.print(s/n);
+    }
+}",4.11s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""3.0"", ""passed"": false, ""expected"": ""3.00""}, {""input"": ""3\n10 20 30"", ""output"": ""20.0"", ""passed"": false, ""expected"": ""20.00""}, {""input"": ""4\n1.5 2.5 3.5 4.5"", ""output"": ""3.0"", ""passed"": false, ""expected"": ""3.00""}, {""input"": ""2\n-10 10"", ""output"": ""0.0"", ""passed"": false, ""expected"": ""0.00""}], ""success"": false, ""execution_time"": ""4.11s""}",2026-09-14T19:40:19.579531+00:00,2026-09-14T19:40:19.579548+00:00
+138,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,17,remove-duplicates-from-an-array,Remove duplicates from an array.,sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064,SUBMIT,cpp,success,"#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    set<int> st;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(st.find(arr[i])!=st.end()) continue;
+        st.insert(arr[i]);
+        arr[j]=arr[i];
+        j++;
+    }
+    if(j!=1) cout<<j<<endl;
+    for(int i=0;i<j;i++) cout<<arr[i]<<"" "";
+    return 0;
+}",3.95s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 2 3 4"", ""output"": ""4\n1 2 3 4"", ""passed"": true, ""expected"": ""4\n1 2 3 4""}, {""input"": ""5\n1 1 1 1 1"", ""output"": ""1"", ""passed"": true, ""expected"": ""1""}, {""input"": ""5\n1 2 3 4 5"", ""output"": ""5\n1 2 3 4 5"", ""passed"": true, ""expected"": ""5\n1 2 3 4 5""}, {""input"": ""0"", ""output"": ""0"", ""passed"": true, ""expected"": ""0""}], ""success"": true, ""execution_time"": ""3.95s""}",2026-09-14T19:40:54.051346+00:00,2026-09-14T19:40:54.051368+00:00
+139,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,15,find-the-average-of-all-elements-in-an-array,Find the average of all elements in an array.,sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91,HINT_REQUEST,javascript,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        double s=0;
+        for(int i=0;i<n;i++)
+        {
+            double x=sc.nextDouble();
+            s=s+x;
+        }
+        System.out.print(s/n);
+    }
+}",,"{""is_correct"": false, ""suggestions"": [""Learn how to format floating\u2011point output in Java using System.out.printf(\""%.2f\\n\"", value) or String.format."", ""Practice specifying decimal places and ensure a newline is printed if required."", ""Review the problem statement\u2019s output format before implementing the solution.""], ""error_pattern"": ""logic_error"", ""conceptual_gap"": ""Output formatting and precision control"", ""diagnosis_summary"": ""The program correctly calculates the average but prints the raw double value without formatting it to two decimal places, so outputs like '3.0' or '3.5' appear instead of the required '3.00' or '3.50'.""}",2026-09-14T19:41:05.902162+00:00,2026-09-14T19:41:05.902178+00:00
+140,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,15,find-the-average-of-all-elements-in-an-array,Find the average of all elements in an array.,sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91,RUN,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        double s=0;
+        for(int i=0;i<n;i++)
+        {
+            double x=sc.nextDouble();
+            s=s+x;
+        }
+        System.out.format(""%.2f"",s/n);
+    }
+}",4.37s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""3.00"", ""passed"": true, ""expected"": ""3.00""}, {""input"": ""3\n10 20 30"", ""output"": ""20.00"", ""passed"": true, ""expected"": ""20.00""}, {""input"": ""4\n1.5 2.5 3.5 4.5"", ""output"": ""3.00"", ""passed"": true, ""expected"": ""3.00""}, {""input"": ""2\n-10 10"", ""output"": ""0.00"", ""passed"": true, ""expected"": ""0.00""}], ""success"": true, ""execution_time"": ""4.37s""}",2026-09-14T19:42:05.892583+00:00,2026-09-14T19:42:05.892623+00:00
+141,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,15,find-the-average-of-all-elements-in-an-array,Find the average of all elements in an array.,sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91,SUBMIT,java,success,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        double s=0;
+        for(int i=0;i<n;i++)
+        {
+            double x=sc.nextDouble();
+            s=s+x;
+        }
+        System.out.format(""%.2f"",s/n);
+    }
+}",4.81s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""3.00"", ""passed"": true, ""expected"": ""3.00""}, {""input"": ""3\n10 20 30"", ""output"": ""20.00"", ""passed"": true, ""expected"": ""20.00""}, {""input"": ""4\n1.5 2.5 3.5 4.5"", ""output"": ""3.00"", ""passed"": true, ""expected"": ""3.00""}, {""input"": ""2\n-10 10"", ""output"": ""0.00"", ""passed"": true, ""expected"": ""0.00""}], ""success"": true, ""execution_time"": ""4.81s""}",2026-09-14T19:42:25.646315+00:00,2026-09-14T19:42:25.646350+00:00
+142,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    int sum;
+    vector<int> ar;
+    for(int i=0;i<=n;i+-){
+        cin>>ar[i];
+        sum+=ar[i];
+    }
+    cout<<sum;
+    return 0;
+}",0.47s,"{""errors"": [{""line"": null, ""message"": ""Execution error: Compilation Error:\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_aj6mrqtu\\code.cpp: In function 'int main()':\nC:\\Users\\HP\\AppData\\Local\\Temp\\hintcode_aj6mrqtu\\code.cpp:11:25: error: expected primary-express""}], ""results"": [], ""success"": false, ""execution_time"": ""0.47s""}",2026-09-14T19:45:46.794423+00:00,2026-09-14T19:45:46.794438+00:00
+143,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    int sum;
+    vector<int> ar;
+    for(int i=0;i<=n;i++){
+        cin>>ar[i];
+        sum+=ar[i];
+    }
+    cout<<sum;
+    return 0;
+}",25.13s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""15""}, {""input"": ""3\n-1 0 1"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""1\n100"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""100""}, {""input"": ""4\n-2 -3 -4 -5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""-14""}], ""success"": false, ""execution_time"": ""25.13s""}",2026-09-14T19:46:55.502816+00:00,2026-09-14T19:46:55.502844+00:00
+144,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin >> n;
+    int sum;
+    vector<int> ar;
+    for(int i=0;i<=n;i++){
+        cin>>ar[i];
+        sum+=ar[i];
+    }
+    cout<<sum<<endl;
+    return 0;
+}",25.60s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""15""}, {""input"": ""3\n-1 0 1"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""1\n100"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""100""}, {""input"": ""4\n-2 -3 -4 -5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""-14""}], ""success"": false, ""execution_time"": ""25.60s""}",2026-09-14T19:47:48.452685+00:00,2026-09-14T19:47:48.452711+00:00
+145,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin >> n;
+    int sum;
+    vector<int> ar;
+    for(int i=0;i<=n;i++){
+        cin>>ar[i];
+        sum= sum+ar[i];
+    }
+    cout<<sum<<endl;
+    return 0;
+}",24.61s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""15""}, {""input"": ""3\n-1 0 1"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""1\n100"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""100""}, {""input"": ""4\n-2 -3 -4 -5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""-14""}], ""success"": false, ""execution_time"": ""24.61s""}",2026-09-14T19:48:53.067284+00:00,2026-09-14T19:48:53.067303+00:00
+146,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin >> n;
+    int sum;
+    vector<int> arr;
+    for(int i=0;i<=n;i++){
+        cin>>arr[i];
+        sum= sum+arr[i];
+    }
+    cout<<sum<<endl;
+    return 0;
+}",27.12s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""15""}, {""input"": ""3\n-1 0 1"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""1\n100"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""100""}, {""input"": ""4\n-2 -3 -4 -5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""-14""}], ""success"": false, ""execution_time"": ""27.12s""}",2026-09-14T19:51:16.060809+00:00,2026-09-14T19:51:16.060822+00:00
+147,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin >> n;
+    int sum;
+    vector<int> arr;
+    for(int i=0;i<=n;i++){
+        cin>>arr[i];
+        sum= sum+arr[i];
+    }
+    cout<<sum<<endl;
+    return 0;
+}",26.19s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""15""}, {""input"": ""3\n-1 0 1"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""1\n100"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""100""}, {""input"": ""4\n-2 -3 -4 -5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""-14""}], ""success"": false, ""execution_time"": ""26.19s""}",2026-09-14T19:53:46.541576+00:00,2026-09-14T19:53:46.541591+00:00
+148,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,1,find-the-sum-of-all-elements-in-an-array,Find the sum of all elements in an array.,sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin >> n;
+    int sum;
+    vector<int> arr;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        sum= sum+arr[i];
+    }
+    cout<<sum<<endl;
+    return 0;
+}",25.25s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""15""}, {""input"": ""3\n-1 0 1"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""1\n100"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""100""}, {""input"": ""4\n-2 -3 -4 -5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""-14""}], ""success"": false, ""execution_time"": ""25.25s""}",2026-09-14T19:54:54.006855+00:00,2026-09-14T19:54:54.006878+00:00
+149,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,9,find-the-second-smallest-element-in-an-array,Find the second smallest element in an array.,sess_3e64b548-bf1f-4646-8726-8e89c00e1679,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int i, l=Integer.MAX_VALUE, sl=Integer.MAX_VALUE;
+        for(i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(l<=x)
+            {
+                sl=l;
+                l=x;
+            }
+            else if(sl<=x)
+            sl=x;
+        }
+        System.out.print(l);
+    }
+}",4.37s,"{""errors"": [], ""results"": [{""input"": ""5\n5 2 8 1 9"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n1 1 1"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""-1""}, {""input"": ""4\n4 1 4 2"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""2""}, {""input"": ""2\n5 5"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""-1""}], ""success"": false, ""execution_time"": ""4.37s""}",2026-09-14T20:04:46.769857+00:00,2026-09-14T20:04:46.769895+00:00
+150,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=0;
+    int mx=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<sum;
+    return 0;
+}",4.38s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""5"", ""passed"": false, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""1"", ""passed"": false, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""4.38s""}",2026-09-14T20:21:09.423236+00:00,2026-09-14T20:21:09.423259+00:00
+151,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,9,find-the-second-smallest-element-in-an-array,Find the second smallest element in an array.,sess_340708d6-eb86-4e7f-93fe-90eea6052990,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int i, l=Integer.MAX_VALUE, sl=Integer.MAX_VALUE;
+        for(i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(l<=x)
+            {
+                sl=l;
+                l=x;
+            }
+            else if(sl<=x)
+            sl=x;
+        }
+        System.out.print(l);
+    }
+}",3.34s,"{""errors"": [], ""results"": [{""input"": ""5\n5 2 8 1 9"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n1 1 1"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""-1""}, {""input"": ""4\n4 1 4 2"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""2""}, {""input"": ""2\n5 5"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""-1""}], ""success"": false, ""execution_time"": ""3.34s""}",2026-09-14T20:21:27.180773+00:00,2026-09-14T20:21:27.180832+00:00
+152,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=0;
+    int mx=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<sum;
+    return 0;
+}",4.74s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""5"", ""passed"": false, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""1"", ""passed"": false, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""4.74s""}",2026-09-14T20:21:43.016803+00:00,2026-09-14T20:21:43.016834+00:00
+153,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=0;
+    int mx=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<sum;
+    return 0;
+}",4.57s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""5"", ""passed"": false, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""1"", ""passed"": false, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""4.57s""}",2026-09-14T20:22:13.116821+00:00,2026-09-14T20:22:13.116857+00:00
+154,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=0;
+    int mx=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<sum;
+    return 0;
+}",4.69s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""5"", ""passed"": false, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""1"", ""passed"": false, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""4.69s""}",2026-09-14T20:22:31.732775+00:00,2026-09-14T20:22:31.732794+00:00
+155,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=0;
+    int mx=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<sum;
+    return 0;
+}",4.66s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""5"", ""passed"": false, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""1"", ""passed"": false, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""4.66s""}",2026-09-14T20:22:48.243294+00:00,2026-09-14T20:22:48.243314+00:00
+156,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=0;
+    int mx=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<sum;
+    return 0;
+}",4.48s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""5"", ""passed"": false, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""1"", ""passed"": false, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""4.48s""}",2026-09-14T20:23:17.355166+00:00,2026-09-14T20:23:17.355184+00:00
+157,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=0;
+    int mx=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<sum;
+    return 0;
+}",4.09s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""5"", ""passed"": false, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""1"", ""passed"": false, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""4.09s""}",2026-09-14T20:24:25.349823+00:00,2026-09-14T20:24:25.349844+00:00
+158,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=0;
+    int mx=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<mx;
+    return 0;
+}",4.81s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""6"", ""passed"": true, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""4"", ""passed"": true, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""4.81s""}",2026-09-14T20:28:14.392427+00:00,2026-09-14T20:28:14.392449+00:00
+159,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=arr[0];
+    int mx=arr[0];
+    for(int i=1;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<mx;
+    return 0;
+}",6.67s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""6"", ""passed"": true, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""4"", ""passed"": true, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""6.67s""}",2026-09-14T20:33:39.552382+00:00,2026-09-14T20:33:39.552425+00:00
+160,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=arr[0];
+    int mx=arr[0];
+    for(int i=1;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<mx;
+    return 0;
+}",7.10s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""6"", ""passed"": true, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""4"", ""passed"": true, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""7.10s""}",2026-09-14T20:34:14.827857+00:00,2026-09-14T20:34:14.827881+00:00
+161,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,8,find-the-second-largest-element-in-an-array,Find the second largest element in an array.,sess_41212405-ffc8-4ba4-9a9b-e48446c9ec11,RUN,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int i, l=Integer.MAX_VALUE, sl=Integer.MAX_VALUE;
+        for(i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(l<=x)
+            {
+                sl=l;
+                l=x;
+            }
+            else if(sl<=x)
+            sl=x;
+        }
+        System.out.print(l);
+    }
+}",2.62s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""4""}, {""input"": ""4\n5 4 3 2"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""4""}, {""input"": ""3\n1 1 1"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""-1""}, {""input"": ""2\n1 2"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""1""}], ""success"": false, ""execution_time"": ""2.62s""}",2026-09-14T20:36:17.627370+00:00,2026-09-14T20:36:17.627387+00:00
+162,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,73,find-the-largest-sum-of-any-contiguous-subarray-kadanes-algorithm-for-beginners,Find the largest sum of any contiguous subarray (Kadanes algorithm for beginners).,sess_3df5dfba-c40b-4e08-a40c-64342b3503d6,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int sum=arr[0];
+    int mx=arr[0];
+    for(int i=1;i<n;i++){
+        sum+=arr[i];
+        if(sum<0){
+            sum=0;
+        }
+        if(sum>mx) mx=sum;
+    }
+    cout<<mx;
+    return 0;
+}",4.54s,"{""errors"": [], ""results"": [{""input"": ""9\n-2 1 -3 4 -1 2 1 -5 4"", ""output"": ""6"", ""passed"": true, ""expected"": ""6""}, {""input"": ""1"", ""output"": ""0"", ""passed"": false, ""expected"": ""1""}, {""input"": ""5\n5 4 -1 7 8"", ""output"": ""23"", ""passed"": true, ""expected"": ""23""}, {""input"": ""5\n-2 -3 4 -1 -2"", ""output"": ""4"", ""passed"": true, ""expected"": ""4""}], ""success"": false, ""execution_time"": ""4.54s""}",2026-09-14T20:36:23.314415+00:00,2026-09-14T20:36:23.314430+00:00
+163,user_3JH0gS2vXtbFlXI4VTQhLXXJG2m,8,find-the-second-largest-element-in-an-array,Find the second largest element in an array.,sess_41212405-ffc8-4ba4-9a9b-e48446c9ec11,SUBMIT,java,failed,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Read input and print output
+        int n=sc.nextInt();
+        int i, l=Integer.MAX_VALUE, sl=Integer.MAX_VALUE;
+        for(i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            if(l<=x)
+            {
+                sl=l;
+                l=x;
+            }
+            else if(sl<=x)
+            sl=x;
+        }
+        System.out.print(l);
+    }
+}",2.61s,"{""errors"": [], ""results"": [{""input"": ""5\n1 2 3 4 5"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""4""}, {""input"": ""4\n5 4 3 2"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""4""}, {""input"": ""3\n1 1 1"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""-1""}, {""input"": ""2\n1 2"", ""output"": ""2147483647"", ""passed"": false, ""expected"": ""1""}], ""success"": false, ""execution_time"": ""2.61s""}",2026-09-14T20:37:31.420768+00:00,2026-09-14T20:37:31.420780+00:00
+164,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_37acefd7-b68d-4ac9-b574-60157405d126,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    int cnt;
+    vector<int> arr;
+    for(int i=0;i<n;i++) cin>>arr[i];
+
+    for(int i: arr){
+        if(i<0) cnt++;
+    }
+    return 0;
+}",32.96s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""32.96s""}",2026-09-14T20:51:44.324270+00:00,2026-09-14T20:51:44.324295+00:00
+165,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_37acefd7-b68d-4ac9-b574-60157405d126,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    int cnt;
+    vector<int> arr;
+    for(int i=0;i<n;i++) cin>>arr[i];
+
+    for(int i: arr){
+        if(i<0) cnt++;
+    }
+    cout<<cnt;
+    return 0;
+}",32.24s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""32.24s""}",2026-09-14T20:53:17.605929+00:00,2026-09-14T20:53:17.605942+00:00
+166,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_37acefd7-b68d-4ac9-b574-60157405d126,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    int cnt;
+    vector<int> arr;
+    for(int i=0;i<=n;i++) cin >> arr[i];
+
+    for(int i: arr){
+        if(i<0) cnt++;
+    }
+    cout<<cnt;
+    return 0;
+}",32.51s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""32.51s""}",2026-09-14T20:54:19.595654+00:00,2026-09-14T20:54:19.595688+00:00
+167,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_37acefd7-b68d-4ac9-b574-60157405d126,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    int cnt;
+    vector<int> arr;
+    for(int i=0;i<n;i++) cin >> arr[i];
+
+    for(int i: arr){
+        if(i<0) cnt++;
+    }
+    cout<<cnt;
+    return 0;
+}",31.52s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""31.52s""}",2026-09-14T20:55:47.154997+00:00,2026-09-14T20:55:47.155009+00:00
+168,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_37acefd7-b68d-4ac9-b574-60157405d126,SUBMIT,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    int cnt;
+    vector<int> arr;
+    for(int i=0;i<n;i++) cin >> arr[i];
+
+    for(int i: arr){
+        if(i<0) cnt++;
+    }
+    cout<<cnt;
+    return 0;
+}",32.20s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""32.20s""}",2026-09-14T20:56:34.106503+00:00,2026-09-14T20:56:34.106517+00:00
+169,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,20,find-the-number-of-negative-numbers-in-an-array,Find the number of negative numbers in an array.,sess_37acefd7-b68d-4ac9-b574-60157405d126,RUN,cpp,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    int cnt;
+    vector<int> arr;
+    for(int i=0;i<n;i++) cin >> arr[i];
+
+    for(int i: arr){
+        if(i<=0) cnt++;
+    }
+    cout<<cnt;
+    return 0;
+}",31.76s,"{""errors"": [], ""results"": [{""input"": ""5\n1 -2 3 -4 5"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""2""}, {""input"": ""3\n-1 -2 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}, {""input"": ""4\n1 2 3 4"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""0""}, {""input"": ""6\n0 -1 0 -2 0 -3"", ""output"": ""(no output)"", ""passed"": false, ""expected"": ""3""}], ""success"": false, ""execution_time"": ""31.76s""}",2026-09-14T20:57:20.144585+00:00,2026-09-14T20:57:20.144606+00:00
+170,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,78,remove-all-zeros-from-an-array-and-shift-non-zero-elements-to-the-front,Remove all zeros from an array and shift non-zero elements to the front.,sess_e7390b18-e9db-4857-93c5-144e28ea666b,HINT_REQUEST,javascript,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    return 0;
+}",,"{""is_correct"": false, ""suggestions"": [""Implement the two-pointer approach: use an insertPos index to track where the next non-zero element should go."", ""Iterate through the array, copying non-zero elements to insertPos and incrementing it."", ""After the loop, fill the remaining positions from insertPos to end with zeros, then print the array.""], ""error_pattern"": ""wrong_approach"", ""conceptual_gap"": ""In-place array manipulation / Two-pointer technique"", ""diagnosis_summary"": ""The student's code only reads the input into a vector and immediately returns without implementing any logic to move non-zero elements to the front or printing the result.""}",2026-09-14T21:40:23.813645+00:00,2026-09-14T21:40:23.813672+00:00
+171,user_3JKJBm2yRaTXc77M6Z6vy0DtFAx,78,remove-all-zeros-from-an-array-and-shift-non-zero-elements-to-the-front,Remove all zeros from an array and shift non-zero elements to the front.,sess_e7390b18-e9db-4857-93c5-144e28ea666b,HINT_REQUEST,javascript,failed,"#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Read input and print output
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    vector<int> arr2(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
+    for(int i=0;i<n;i++) if(arr[i]==0) arr2[j]=0;
+    return 0;
+}",,"{""is_correct"": false, ""suggestions"": [""In-place array modification using two-pointer technique"", ""Proper loop construction and variable declaration"", ""Handling non-zero elements and filling remaining positions with zeros""], ""error_pattern"": ""syntax_error"", ""conceptual_gap"": ""In-place array manipulation and two-pointer technique"", ""diagnosis_summary"": ""The code contains a syntax error due to an undeclared variable 'j' and does not implement the required algorithm. It attempts to use an extra array but fails to handle non-zero elements or produce output.""}",2026-09-14T21:44:02.704931+00:00,2026-09-14T21:44:02.704947+00:00

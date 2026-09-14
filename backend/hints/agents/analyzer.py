@@ -7,7 +7,7 @@ class AttemptAnalyzer(BaseAgent):
     
     def __init__(self):
         # Using Qwen for precise code evaluation
-        super().__init__(model_name='nvidia/nemotron-3-super-120b-a12b:free', temperature=0.1)
+        super().__init__(model_name='nvidia/nemotron-3-ultra-550b-a55b:free', temperature=0.1)
         self.chain = self._build_chain()
 
     def _build_chain(self):

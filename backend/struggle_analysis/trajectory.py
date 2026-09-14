@@ -294,68 +294,40 @@ def compute_transition(
     }
 
 
-def build_trajectory(user_id: str = None, problem_id_or_obj = None, session_id: str = None, max_attempts: int = None) -> dict:
+def build_trajectory(user_id: str, problem_id_or_obj, max_attempts: int = None, session_id: str = None) -> dict:
     """
-    Construct a complete research trajectory representation for USER + PROBLEM + SESSION.
+    Construct a complete research trajectory representation for USER + PROBLEM.
     Reconstructed chronologically from raw Attempt database records.
     
-    Supports online prefix temporal validity via max_attempts parameter (1 ... t).
-    When session_id is provided, attempts are strictly isolated to that problem-solving session.
+    Supports online prefix temporal validity via max_attempts parameter (1 ... t)
+    and session boundary isolation via optional session_id parameter.
     """
-    if session_id:
-        attempt_qs = Attempt.objects.filter(session_id=session_id).order_by('created_at', 'id')
-        if user_id:
-            attempt_qs = attempt_qs.filter(user_id=user_id)
-        if problem_id_or_obj:
-            if isinstance(problem_id_or_obj, Problem):
-                attempt_qs = attempt_qs.filter(problem=problem_id_or_obj)
-            else:
-                try:
-                    p = Problem.objects.get(problem_id=str(problem_id_or_obj))
-                    attempt_qs = attempt_qs.filter(problem=p)
-                except Problem.DoesNotExist:
-                    try:
-                        p = Problem.objects.get(pk=problem_id_or_obj)
-                        attempt_qs = attempt_qs.filter(problem=p)
-                    except Exception:
-                        pass
-        first_att = attempt_qs.first()
-        if not first_att:
-            return {
-                "user_id": user_id or "unknown",
-                "problem_id": str(problem_id_or_obj) if problem_id_or_obj else "unknown",
-                "problem_title": "Unknown",
-                "trajectory_length": 0,
-                "attempts": [],
-                "transitions": [],
-                "trajectory_summary": {}
-            }
-        problem = first_att.problem
-        if not user_id:
-            user_id = first_att.user_id
+    if isinstance(problem_id_or_obj, Problem):
+        problem = problem_id_or_obj
     else:
-        if isinstance(problem_id_or_obj, Problem):
-            problem = problem_id_or_obj
-        else:
+        try:
+            problem = Problem.objects.get(problem_id=str(problem_id_or_obj))
+        except Problem.DoesNotExist:
             try:
-                problem = Problem.objects.get(problem_id=str(problem_id_or_obj))
-            except Problem.DoesNotExist:
-                try:
-                    problem = Problem.objects.get(pk=problem_id_or_obj)
-                except (Problem.DoesNotExist, ValueError):
-                    return {
-                        "error": f"Problem with ID {problem_id_or_obj} not found",
-                        "user_id": user_id,
-                        "problem_id": str(problem_id_or_obj),
-                        "trajectory_length": 0,
-                        "attempts": [],
-                        "transitions": [],
-                        "trajectory_summary": {}
-                    }
-        attempt_qs = Attempt.objects.filter(
-            user_id=user_id,
-            problem=problem
-        ).order_by('created_at', 'id')
+                problem = Problem.objects.get(pk=problem_id_or_obj)
+            except (Problem.DoesNotExist, ValueError):
+                return {
+                    "error": f"Problem with ID {problem_id_or_obj} not found",
+                    "user_id": user_id,
+                    "problem_id": str(problem_id_or_obj),
+                    "trajectory_length": 0,
+                    "attempts": [],
+                    "transitions": [],
+                    "trajectory_summary": {}
+                }
+
+    attempt_qs = Attempt.objects.filter(
+        user_id=user_id,
+        problem=problem
+    ).order_by('created_at', 'id')
+
+    if session_id:
+        attempt_qs = attempt_qs.filter(session_id=session_id)
 
     if max_attempts and max_attempts > 0:
         attempt_qs = attempt_qs[:max_attempts]

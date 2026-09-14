@@ -1,0 +1,4 @@
+id,title,description,author_id,is_public,created_at,updated_at
+1,Top Interview 50,Must-do problems to ace your interviews.,,True,2026-06-15T15:30:17.423632+00:00,2026-06-15T15:30:17.424641+00:00
+2,Blind 75,The famous Blind 75 list covering core data structures.,,True,2026-06-15T15:30:19.319597+00:00,2026-06-15T15:30:19.319597+00:00
+3,Dynamic Programming Mastery,Advanced DP patterns and techniques.,,True,2026-06-15T15:30:22.897846+00:00,2026-06-15T15:30:22.897846+00:00

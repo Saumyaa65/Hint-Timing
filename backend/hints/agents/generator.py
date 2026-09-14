@@ -6,7 +6,7 @@ class HintGenerator(BaseAgent):
     """Generates the final hint text for the student."""
     
     def __init__(self):
-        super().__init__(model_name='nvidia/nemotron-3-super-120b-a12b:free', temperature=0.7)
+        super().__init__(model_name='nvidia/nemotron-3-ultra-550b-a55b:free', temperature=0.7)
         self.chain = self._build_chain()
 
     def _build_chain(self):

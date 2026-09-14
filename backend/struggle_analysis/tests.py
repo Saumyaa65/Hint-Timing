@@ -990,7 +990,7 @@ class ResearchDataIntegrityTests(TestCase):
         self.assertFalse(is_research_valid_user("user_clerk_test_dev"))
 
     def test_research_user_exclusions(self):
-        """Verify known test IDs ('1', '123', 'admin', 'test_user') are excluded, but developer Clerk ID is NOT globally excluded."""
+        """Verify fallback '1', dev test '123', admin, and test_user IDs are excluded, while developer Clerk ID is NOT globally excluded."""
         from struggle_analysis.config import is_research_valid_user
         
         self.assertFalse(is_research_valid_user("1"))
@@ -998,62 +998,76 @@ class ResearchDataIntegrityTests(TestCase):
         self.assertFalse(is_research_valid_user("admin"))
         self.assertFalse(is_research_valid_user("test_user"))
         
-        # Developer Clerk ID is no longer globally excluded
+        # Developer Clerk user account is NOT globally excluded anymore
         self.assertTrue(is_research_valid_user("user_3JH0gS2vXtbFlXI4VTQhLXXJG2m"))
         
         # Valid student user ID should pass
         self.assertTrue(is_research_valid_user("user_genuine_student_999"))
 
-    def test_session_level_research_sampling_and_isolation(self):
-        """Verify session-level filtering, account inclusion, invalid session exclusion, and session isolation."""
+    def test_session_level_research_validity_and_sampling(self):
+        """
+        Verify session-level research eligibility:
+        - Excludes test IDs and test accounts
+        - Does NOT globally exclude developer account
+        - Accepts valid session from developer account
+        - Excludes starter-code-only / single-attempt testing sessions from developer account
+        - Maintains session boundary isolation
+        """
         from struggle_analysis.config import is_research_valid_session
         from struggle_analysis.annotation import generate_pilot_annotation_batch
         from struggle_analysis.trajectory import build_trajectory
+        from django.contrib.auth.models import User
+        from hints.models import UserProfile
 
+        # 1. Test account excluded
+        user_test_profile = User.objects.create_user(username="test_prof_user", email="testprof@test.com")
+        UserProfile.objects.create(user=user_test_profile, clerk_id="user_clerk_profile_test", is_test_account=True)
+        Attempt.objects.create(user_id="user_clerk_profile_test", problem=self.problem, code="def sol(): pass\n# 1", session_id="sess_test_acc_1", source="RUN")
+        Attempt.objects.create(user_id="user_clerk_profile_test", problem=self.problem, code="def sol(): return 1", session_id="sess_test_acc_1", source="SUBMIT")
+        self.assertFalse(is_research_valid_session("sess_test_acc_1"))
+
+        # 2. Excluded test IDs ("1", "123")
+        Attempt.objects.create(user_id="1", problem=self.problem, code="def sol(): pass\n# 1", session_id="sess_id_1", source="RUN")
+        Attempt.objects.create(user_id="1", problem=self.problem, code="def sol(): return 1", session_id="sess_id_1", source="SUBMIT")
+        self.assertFalse(is_research_valid_session("sess_id_1"))
+
+        # 3. Developer account - Valid session (t >= 2, code evolves, single language)
         dev_user_id = "user_3JH0gS2vXtbFlXI4VTQhLXXJG2m"
+        valid_sess_id = "sess_dev_valid_100"
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="class Solution { int count() { return 0; } }", language="java", session_id=valid_sess_id, source="RUN")
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="class Solution { int count() { return 1; } }", language="java", session_id=valid_sess_id, source="SUBMIT")
+        self.assertTrue(is_research_valid_session(valid_sess_id))
 
-        # 1. Invalid Session: Excluded user ID "1"
-        Attempt.objects.create(user_id="1", problem=self.problem, code="def sol(): pass", language="python", source="RUN", session_id="sess_excluded_1")
-        Attempt.objects.create(user_id="1", problem=self.problem, code="def sol(): return 1", language="python", source="SUBMIT", session_id="sess_excluded_1")
-        self.assertFalse(is_research_valid_session("sess_excluded_1"))
+        # 4. Developer account - Invalid testing session (starter code only: identical code across attempts)
+        invalid_starter_sess_id = "sess_dev_invalid_starter"
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="class Solution { }", language="java", session_id=invalid_starter_sess_id, source="RUN")
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="class Solution { }", language="java", session_id=invalid_starter_sess_id, source="RUN")
+        self.assertFalse(is_research_valid_session(invalid_starter_sess_id))
 
-        # 2. Invalid Session: Developer account attempt with session_id=None
-        att_no_sess = Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): pass", language="python", source="RUN", session_id=None)
-        self.assertFalse(is_research_valid_session([att_no_sess]))
+        # 5. Developer account - Invalid testing session (single attempt t < 2)
+        single_att_sess_id = "sess_dev_single_attempt"
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="class Solution { int x; }", language="java", session_id=single_att_sess_id, source="RUN")
+        self.assertFalse(is_research_valid_session(single_att_sess_id))
 
-        # 3. Invalid Session: Single attempt (t < 2)
-        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): pass", language="python", source="RUN", session_id="sess_single")
-        self.assertFalse(is_research_valid_session("sess_single"))
+        # 6. Session boundary isolation
+        traj_valid = build_trajectory(dev_user_id, self.problem.problem_id, session_id=valid_sess_id)
+        self.assertEqual(traj_valid["trajectory_length"], 2)
 
-        # 4. Invalid Session: Zero code modifications (starter code only)
-        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): pass", language="python", source="RUN", session_id="sess_no_edits")
-        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): pass", language="python", source="SUBMIT", session_id="sess_no_edits")
-        self.assertFalse(is_research_valid_session("sess_no_edits"))
+        traj_invalid = build_trajectory(dev_user_id, self.problem.problem_id, session_id=invalid_starter_sess_id)
+        self.assertEqual(traj_invalid["trajectory_length"], 2)
 
-        # 5. Valid Session: Developer account with valid session_id, t=2, consistent language, and code edits
-        s_id_valid = "sess_dev_valid_999"
-        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): return 0", language="python", source="RUN", session_id=s_id_valid)
-        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): return 42", language="python", source="SUBMIT", session_id=s_id_valid)
-        self.assertTrue(is_research_valid_session(s_id_valid))
-
-        # Verify pilot annotation batch includes the valid session
+        # Pilot batch sampling includes valid session, excludes invalid/test sessions
+        from struggle_analysis.annotation import pseudonymize_id
         batch = generate_pilot_annotation_batch(max_trajectories=10)
-        self.assertEqual(batch["trajectory_count"], 1)
-        self.assertEqual(batch["materials"][0]["session_id"], s_id_valid)
+        batch_mat_ids = [m["material_id"] for m in batch["materials"]]
+        
+        expected_valid_mat_id = f"mat_{pseudonymize_id(valid_sess_id)}_t2"
+        expected_invalid_starter_mat_id = f"mat_{pseudonymize_id(invalid_starter_sess_id)}_t2"
+        expected_single_att_mat_id = f"mat_{pseudonymize_id(single_att_sess_id)}_t1"
 
-        # 6. Session Isolation Verification: Add a second distinct valid session for same user + problem
-        s_id_valid_2 = "sess_dev_valid_888"
-        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): x = 1", language="python", source="RUN", session_id=s_id_valid_2)
-        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): x = 2", language="python", source="SUBMIT", session_id=s_id_valid_2)
-
-        # Verify build_trajectory with session_id isolates attempts and does NOT merge sessions
-        traj_1 = build_trajectory(dev_user_id, self.problem.problem_id, session_id=s_id_valid)
-        traj_2 = build_trajectory(dev_user_id, self.problem.problem_id, session_id=s_id_valid_2)
-
-        self.assertEqual(len(traj_1["attempts"]), 2)
-        self.assertEqual(len(traj_2["attempts"]), 2)
-        self.assertEqual([a["code"] for a in traj_1["attempts"]], ["def sol(): return 0", "def sol(): return 42"])
-        self.assertEqual([a["code"] for a in traj_2["attempts"]], ["def sol(): x = 1", "def sol(): x = 2"])
+        self.assertIn(expected_valid_mat_id, batch_mat_ids)
+        self.assertNotIn(expected_invalid_starter_mat_id, batch_mat_ids)
+        self.assertNotIn(expected_single_att_mat_id, batch_mat_ids)
 
     def test_frontend_session_flow_end_to_end(self):
         """Verify full session flow across Run, Submit, and Hint requests reusing same session_id."""

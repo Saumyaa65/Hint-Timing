@@ -33,22 +33,22 @@ class HintChain:
         # Model configurations for different operations
         self.model_configs = {
             'attempt_evaluation': {
-                'model': 'qwen/qwen-2.5-coder-32b-instruct:free',
+                'model': 'nvidia/nemotron-3-ultra-550b-a55b:free',
                 'temperature': 0.3,  # Lower temperature for more precise evaluation
                 'description': 'Attempt Evaluation Model'
             },
             'hint_generation': {
-                'model': 'nvidia/nemotron-3-super-120b-a12b:free',
+                'model': 'nvidia/nemotron-3-ultra-550b-a55b:free',
                 'temperature': 0.7,  # Higher temperature for creative hint generation
                 'description': 'Hint Generation Model'
             },
             'hint_evaluation': {
-                'model': 'nvidia/nemotron-3-super-120b-a12b:free',
+                'model': 'nvidia/nemotron-3-ultra-550b-a55b:free',
                 'temperature': 0.2,  # Very low temperature for consistent scoring
                 'description': 'Hint Evaluation Model'
             },
             'auto_trigger': {
-                'model': 'nvidia/nemotron-3-super-120b-a12b:free',
+                'model': 'nvidia/nemotron-3-ultra-550b-a55b:free',
                 'temperature': 0.4,  # Medium temperature for balanced decision making
                 'description': 'Auto-Trigger Decision Model'
             }

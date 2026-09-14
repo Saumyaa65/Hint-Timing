@@ -53,7 +53,7 @@ def validate_annotation_record(record: dict) -> Tuple[bool, List[str]]:
     return (len(errors) == 0, errors)
 
 
-def generate_prefix_annotation_material(user_id: str, problem_id: str, prefix_length: int, session_id: str = None) -> dict:
+def generate_prefix_annotation_material(user_id: str, problem_id: str, prefix_length: int, session_id: Optional[str] = None) -> dict:
     """
     Generates privacy-preserving annotation material for a trajectory prefix strictly up to attempt t.
     Strips all future attempts (At+1..AN) and ALL model predictions (M1..M4).
@@ -86,8 +86,10 @@ def generate_prefix_annotation_material(user_id: str, problem_id: str, prefix_le
             "observable_signals": att.get("observable_signals", {})
         })
 
-    mat = {
-        "material_id": f"mat_{pseudonymize_id(user_id)}_{pseudonymize_id(problem_id)}_t{t}",
+    mat_seed = session_id if session_id else f"{user_id}_{problem_id}"
+
+    return {
+        "material_id": f"mat_{pseudonymize_id(mat_seed)}_t{t}",
         "student_id": pseudonymize_id(user_id, prefix="anon_user"),
         "problem_id": pseudonymize_id(problem_id, prefix="anon_prob"),
         "prefix_length": t,
@@ -96,44 +98,41 @@ def generate_prefix_annotation_material(user_id: str, problem_id: str, prefix_le
         "attempts": clean_attempts,
         "annotation_protocol_version": ANNOTATION_PROTOCOL_VERSION
     }
-    if session_id:
-        mat["session_id"] = session_id
-    return mat
 
 
-from struggle_analysis.config import is_research_valid_session
+from struggle_analysis.config import is_research_valid_user, is_research_valid_session
 
 def generate_pilot_annotation_batch(max_trajectories: int = 10) -> dict:
     """
     Generates a pilot annotation batch from real database user-problem sessions.
     Filters at the SESSION level using is_research_valid_session.
+    Excludes test accounts, test IDs, single-attempt sessions, starter-code-only sessions,
+    and duplicate-artifact sessions.
     Does NOT fabricate labels or run model predictions.
     """
-    distinct_session_ids = (
-        Attempt.objects.exclude(session_id__isnull=True)
-        .exclude(session_id="")
-        .values_list('session_id', flat=True)
-        .distinct()
-    )
+    distinct_session_ids = Attempt.objects.exclude(session_id__isnull=True).exclude(session_id='').values_list('session_id', flat=True).distinct()
     
     valid_sessions = []
     for s_id in distinct_session_ids:
-        attempts = list(Attempt.objects.filter(session_id=s_id).order_by('created_at', 'id'))
-        if is_research_valid_session(attempts):
-            valid_sessions.append((s_id, attempts))
+        if is_research_valid_session(s_id):
+            valid_sessions.append(s_id)
             if len(valid_sessions) >= max_trajectories:
                 break
-
+                
     batch_materials = []
-    for s_id, attempts in valid_sessions:
-        u_id = attempts[0].user_id
-        prob_obj = attempts[0].problem
-        p_id_str = prob_obj.problem_id if getattr(prob_obj, 'problem_id', None) else str(prob_obj.id)
+    for s_id in valid_sessions:
         try:
-            traj = build_trajectory(u_id, prob_obj, session_id=s_id)
+            first_att = Attempt.objects.filter(session_id=s_id).order_by('created_at').first()
+            if not first_att:
+                continue
+            u_id = first_att.user_id
+            p_id = first_att.problem.problem_id or str(first_att.problem.id)
+            
+            traj = build_trajectory(u_id, p_id, session_id=s_id)
             n_attempts = len(traj.get("attempts", []))
-            if n_attempts > 0:
-                mat = generate_prefix_annotation_material(u_id, p_id_str, prefix_length=n_attempts, session_id=s_id)
+            if n_attempts >= 2:
+                # Sample at latest attempt step t
+                mat = generate_prefix_annotation_material(u_id, p_id, prefix_length=n_attempts, session_id=s_id)
                 batch_materials.append(mat)
         except Exception:
             continue

@@ -7,7 +7,7 @@ class HintStrategist(BaseAgent):
     
     def __init__(self):
         # Using DeepSeek-R1 for reasoning/strategy
-        super().__init__(model_name='nvidia/nemotron-3-super-120b-a12b:free', temperature=0.4)
+        super().__init__(model_name='nvidia/nemotron-3-ultra-550b-a55b:free', temperature=0.4)
         self.chain = self._build_chain()
 
     def _build_chain(self):

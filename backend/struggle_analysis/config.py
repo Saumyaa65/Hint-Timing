@@ -44,18 +44,18 @@ HYBRID_CONFIG = {
     'MIN_CONFIDENCE_THRESHOLD': 0.40,
 }
 
-# Configurable user ID exclusions for fallback, manual test, and system admin accounts
+# Configurable user ID exclusions for fallback and test accounts
 RESEARCH_EXCLUDED_USER_IDS = {
-    "1",          # Unauthenticated frontend fallback ID
-    "123",        # Developer manual Postman/API test user
-    "test_user",  # Synthetic test user
-    "admin",      # System admin user
+    "1",                                 # Unauthenticated frontend fallback ID
+    "123",                               # Developer manual Postman/API test user
+    "test_user",                         # Synthetic test user
+    "admin",                             # System admin user
 }
 
 def is_research_valid_user(user_id: str) -> bool:
     """
     Returns True if user_id belongs to an authenticated candidate user,
-    excluding unauthenticated fallback '1', dev test ID '123', synthetic test users,
+    excluding unauthenticated fallback '1', dev test account '123', synthetic test users,
     and user profiles marked with is_test_account=True.
     """
     if not user_id or str(user_id).strip() in RESEARCH_EXCLUDED_USER_IDS:
@@ -72,78 +72,44 @@ def is_research_valid_user(user_id: str) -> bool:
     return True
 
 
-def is_research_valid_session(session_or_id) -> bool:
+def is_research_valid_session(session_id: str) -> bool:
     """
-    Determines if a problem-solving session is eligible for research sampling.
-    Can accept a session_id string or a list/queryset of Attempt objects.
+    Returns True if session_id represents a valid research session:
+    - Session ID is non-null and non-empty
+    - Belongs to an authenticated non-excluded research user (is_research_valid_user)
+    - Profile is_test_account is False
+    - Session has at least MIN_TRAJECTORY_LENGTH attempts (t >= 2)
+    - All attempts in the session belong to the same user and problem
+    - Programming language is consistent across code execution attempts
+    - Excludes starter-code-only or duplicate-artifact sessions (code evolves across attempts)
+    """
+    if not session_id or not str(session_id).strip():
+        return False
 
-    Eligibility criteria:
-    1. Authenticated user (is_research_valid_user(user_id) is True, not in RESEARCH_EXCLUDED_USER_IDS, is_test_account=False).
-    2. Valid, non-empty session_id.
-    3. Genuine trajectory length t >= 2.
-    4. Consistent non-empty language recorded across session attempts.
-    5. Excludes starter-code-only / zero-code-modification sessions (must have >= 2 distinct code states).
-    6. Excludes obvious testing / dummy artifact sessions (e.g. empty/dummy code).
-    """
     from hints.models import Attempt
-    from struggle_analysis.trajectory import normalize_code
-
-    if isinstance(session_or_id, str):
-        session_id = session_or_id.strip()
-        if not session_id:
-            return False
-        attempts = list(Attempt.objects.filter(session_id=session_id).order_by('created_at', 'id'))
-    elif isinstance(session_or_id, (list, tuple)):
-        attempts = list(session_or_id)
-    else:
-        try:
-            attempts = list(session_or_id)
-        except Exception:
-            return False
-
-    if not attempts or len(attempts) < 2:
+    atts = list(Attempt.objects.filter(session_id=str(session_id).strip()).order_by('created_at', 'id'))
+    if len(atts) < BASELINE_CONFIG.get('MIN_TRAJECTORY_LENGTH', 2):
         return False
 
-    # Check session_id validity across attempts
-    first_session_id = getattr(attempts[0], 'session_id', None)
-    if not first_session_id or not str(first_session_id).strip():
+    first_user = atts[0].user_id
+    if not is_research_valid_user(first_user):
         return False
 
-    for att in attempts:
-        if getattr(att, 'session_id', None) != first_session_id:
-            return False
-
-    # Check user authenticity & test account exclusion
-    user_id = getattr(attempts[0], 'user_id', None)
-    if not is_research_valid_user(user_id):
+    # Ensure user and problem isolation across the session
+    first_problem_id = atts[0].problem_id
+    if any(a.user_id != first_user or a.problem_id != first_problem_id for a in atts):
         return False
 
-    for att in attempts:
-        if getattr(att, 'user_id', None) != user_id:
-            return False
-
-    # 3. Check language consistency
-    # Code execution attempts (RUN / SUBMIT) must have a single consistent non-empty language
-    code_languages = {getattr(att, 'language', '').strip().lower() for att in attempts if getattr(att, 'language', None) and getattr(att, 'source', None) in {'RUN', 'SUBMIT'}}
-    all_languages = {getattr(att, 'language', '').strip().lower() for att in attempts if getattr(att, 'language', None)}
-
-    if code_languages:
-        if len(code_languages) != 1 or '' in code_languages:
-            return False
-    else:
-        if len(all_languages) != 1 or '' in all_languages:
-            return False
-
-    # Check code evolution (exclude starter-code-only / zero code modification sessions)
-    normalized_codes = [normalize_code(getattr(att, 'code', '')) for att in attempts]
-
-    # Exclude dummy/test codes
-    if all(not c or c.strip() in {'test', 'asdf', 'foo', 'bar'} for c in normalized_codes):
+    # Language consistency across code-executing attempts (RUN / SUBMIT) or non-empty code attempts
+    code_langs = set(a.language for a in atts if a.source in ('RUN', 'SUBMIT') and a.language)
+    if not code_langs:
+        code_langs = set(a.language for a in atts if a.language)
+    if len(code_langs) > 1:
         return False
 
-    # Must contain code edits (at least 2 distinct normalized code snapshots)
-    unique_codes = set(normalized_codes)
-    if len(unique_codes) < 2:
+    # Starter-code-only / duplicate-artifact exclusion: requires > 1 distinct non-empty code version
+    distinct_codes = set((a.code or '').strip() for a in atts if (a.code or '').strip())
+    if len(distinct_codes) <= 1:
         return False
 
     return True
