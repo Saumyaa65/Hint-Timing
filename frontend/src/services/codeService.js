@@ -13,7 +13,7 @@ const codeService = {
    * @param {string} language - The programming language
    * @returns {Promise<Object>} - Promise resolving to execution results
    */
-  runCode: async (userId, problemId, code, language, customInput = null) => {
+  runCode: async (userId, problemId, code, language, customInput = null, sessionId = null) => {
     const payload = {
       user_id: userId,
       problem_id: problemId,
@@ -22,6 +22,9 @@ const codeService = {
     };
     if (customInput !== null && customInput !== '') {
       payload.custom_input = customInput;
+    }
+    if (sessionId) {
+      payload.session_id = sessionId;
     }
     return apiClient.post('/code/run/', payload);
   },
@@ -32,15 +35,20 @@ const codeService = {
    * @param {number} problemId - The problem ID
    * @param {string} code - The solution code
    * @param {string} language - The programming language
+   * @param {string} [sessionId] - Optional session ID
    * @returns {Promise<Object>} - Promise resolving to submission results
    */
-  submitSolution: async (userId, problemId, code, language) => {
-    return apiClient.post('/code/submit/', {
+  submitSolution: async (userId, problemId, code, language, sessionId = null) => {
+    const payload = {
       user_id: userId,
       problem_id: problemId,
       code,
       language
-    });
+    };
+    if (sessionId) {
+      payload.session_id = sessionId;
+    }
+    return apiClient.post('/code/submit/', payload);
   },
 
   /**

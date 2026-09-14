@@ -2,7 +2,7 @@
   "batch_id": "batch_pilot_20260913_201516",
   "protocol_version": "TASK_2F_B_PROTOCOL_V1",
   "trajectory_count": 9,
-  "status": "awaiting_human_annotation",
+  "status": "INVALID_FOR_HUMAN_ANNOTATION",
   "materials": [
     {
       "material_id": "mat_anon_44d24498f03c_anon_61f6b2dd38dc_t5",
@@ -10,7 +10,7 @@
       "problem_id": "anon_prob_61f6b2dd38dc",
       "prefix_length": 5,
       "total_available_attempts_in_db": 5,
-      "status": "awaiting_human_annotation",
+      "status": "INVALID_FOR_HUMAN_ANNOTATION",
       "attempts": [
         {
           "step": 1,
@@ -91,7 +91,7 @@
       "problem_id": "anon_prob_44d24498f03c",
       "prefix_length": 8,
       "total_available_attempts_in_db": 8,
-      "status": "awaiting_human_annotation",
+      "status": "INVALID_FOR_HUMAN_ANNOTATION",
       "attempts": [
         {
           "step": 1,
@@ -214,7 +214,7 @@
       "problem_id": "anon_prob_8ccf39234d14",
       "prefix_length": 4,
       "total_available_attempts_in_db": 4,
-      "status": "awaiting_human_annotation",
+      "status": "INVALID_FOR_HUMAN_ANNOTATION",
       "attempts": [
         {
           "step": 1,
@@ -281,7 +281,7 @@
       "problem_id": "anon_prob_da6437d54f71",
       "prefix_length": 4,
       "total_available_attempts_in_db": 4,
-      "status": "awaiting_human_annotation",
+      "status": "INVALID_FOR_HUMAN_ANNOTATION",
       "attempts": [
         {
           "step": 1,
@@ -348,7 +348,7 @@
       "problem_id": "anon_prob_6d11d8c43597",
       "prefix_length": 8,
       "total_available_attempts_in_db": 8,
-      "status": "awaiting_human_annotation",
+      "status": "INVALID_FOR_HUMAN_ANNOTATION",
       "attempts": [
         {
           "step": 1,
@@ -471,7 +471,7 @@
       "problem_id": "anon_prob_d7dfa2787f9b",
       "prefix_length": 20,
       "total_available_attempts_in_db": 20,
-      "status": "awaiting_human_annotation",
+      "status": "INVALID_FOR_HUMAN_ANNOTATION",
       "attempts": [
         {
           "step": 1,
@@ -762,7 +762,7 @@
       "problem_id": "anon_prob_44d24498f03c",
       "prefix_length": 1,
       "total_available_attempts_in_db": 1,
-      "status": "awaiting_human_annotation",
+      "status": "INVALID_FOR_HUMAN_ANNOTATION",
       "attempts": [
         {
           "step": 1,
@@ -787,7 +787,7 @@
       "problem_id": "anon_prob_44d24498f03c",
       "prefix_length": 3,
       "total_available_attempts_in_db": 3,
-      "status": "awaiting_human_annotation",
+      "status": "INVALID_FOR_HUMAN_ANNOTATION",
       "attempts": [
         {
           "step": 1,
@@ -840,7 +840,7 @@
       "problem_id": "anon_prob_8f61f3ab3568",
       "prefix_length": 1,
       "total_available_attempts_in_db": 1,
-      "status": "awaiting_human_annotation",
+      "status": "INVALID_FOR_HUMAN_ANNOTATION",
       "attempts": [
         {
           "step": 1,
@@ -859,5 +859,6 @@
       ],
       "annotation_protocol_version": "TASK_2F_B_PROTOCOL_V1"
     }
-  ]
+  ],
+  "invalid_reason": "Data Validity Audit (Task 2G): Trajectories contain developer testing activity, unauthenticated fallback attempts, and unedited starter template code."
 }

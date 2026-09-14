@@ -57,6 +57,7 @@ export default function ProblemDetail({ user, theme }) {
   const [newPostContent, setNewPostContent] = useState('');
   const [isPostingDiscuss, setIsPostingDiscuss] = useState(false);
   const [showNewPostForm, setShowNewPostForm] = useState(false);
+  const [sessionId, setSessionId] = useState(null);
 
   useEffect(() => {
     localStorage.setItem('hintcode_split_width', leftWidth);
@@ -89,6 +90,11 @@ export default function ProblemDetail({ user, theme }) {
   useEffect(() => {
     loadProblemDetails();
     loadHistory();
+    // Generate a fresh random UUID session ID for this problem-solving session
+    const randomUUID = typeof crypto !== 'undefined' && crypto.randomUUID
+      ? crypto.randomUUID()
+      : `${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+    setSessionId(`sess_${randomUUID}`);
   }, [id]);
 
   const loadDiscussPosts = async (problemDbId) => {
@@ -294,7 +300,8 @@ export default function ProblemDetail({ user, theme }) {
         {
           title: problem.title,
           description: problem.description
-        }
+        },
+        sessionId
       );
       
       if (result && result.hint) {
@@ -344,7 +351,8 @@ export default function ProblemDetail({ user, theme }) {
         problem.problem_id || problem.id,
         code,
         language,
-        customInput
+        customInput,
+        sessionId
       );
       setRunResult(result);
       loadHistory();
@@ -362,7 +370,8 @@ export default function ProblemDetail({ user, theme }) {
             user?.id || 1,
             problem?.problem_id || problem?.id || 1,
             code || '\n',
-            { title: problem.title, description: problem.description }
+            { title: problem.title, description: problem.description },
+            sessionId
           );
           if (autoCheck?.should_trigger && autoCheck.hint) {
             setHints(prev => [autoCheck.hint, ...prev]);
@@ -385,7 +394,7 @@ export default function ProblemDetail({ user, theme }) {
     } finally {
       setLoadingRun(false);
     }
-  }, [user, problem, code, language, customInput]);
+  }, [user, problem, code, language, customInput, sessionId]);
 
   const submitSolution = useCallback(async () => {
     if (!user || !problem) return;
@@ -397,7 +406,8 @@ export default function ProblemDetail({ user, theme }) {
         user?.id || 1,
         problem?.problem_id || problem?.id || 1,
         code || '\n',
-        language
+        language,
+        sessionId
       );
       setRunResult({
         ...result,
@@ -418,7 +428,8 @@ export default function ProblemDetail({ user, theme }) {
             user?.id || 1,
             problem?.problem_id || problem?.id || 1,
             code || '\n',
-            { title: problem.title, description: problem.description }
+            { title: problem.title, description: problem.description },
+            sessionId
           );
           if (autoCheck?.should_trigger && autoCheck.hint) {
             setHints(prev => [autoCheck.hint, ...prev]);
@@ -442,7 +453,7 @@ export default function ProblemDetail({ user, theme }) {
     } finally {
       setIsSubmitting(false);
     }
-  }, [user, problem, code, language]);
+  }, [user, problem, code, language, sessionId]);
 
   // Global Keyboard Shortcuts
   useEffect(() => {

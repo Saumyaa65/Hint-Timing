@@ -4,7 +4,7 @@
 
 I've analyzed your coding platform and created a complete solution to load problems from your `problems_full.jsonl` file:
 
-### 📦 New Files Created:
+### 📦 New Files Created:   
 
 1. **`backend/load_jsonl_problems.py`** - Main loader script
 2. **`backend/JSONL_LOADER_README.md`** - Detailed documentation
@@ -13,7 +13,7 @@ I've analyzed your coding platform and created a complete solution to load probl
 
 ### 🔧 Modified Files:
 
-1. **`backend/hints/serializers.py`** - Enhanced to support JSONL data
+1. **`backend/hints/serializers.py`** - Enhanced to support JSONL data.
    - Added `description_preview` for problem list
    - Improved test case extraction
    - Added `hints_available` count

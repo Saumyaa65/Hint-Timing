@@ -43,7 +43,7 @@ class CodeViewSet(viewsets.ViewSet):
             logger.warning(f"Problem not found: {problem_id}")
             return None
 
-    def _create_attempt(self, user_id, problem, code, language, exec_status='pending', execution_time=None, evaluation_details=None):
+    def _create_attempt(self, user_id, problem, code, language, exec_status='pending', execution_time=None, evaluation_details=None, source='SUBMIT', session_id=None):
         """Create an attempt record."""
         try:
             attempt = Attempt.objects.create(
@@ -52,6 +52,8 @@ class CodeViewSet(viewsets.ViewSet):
                 code=code,
                 language=language,
                 status=exec_status,
+                source=source,
+                session_id=session_id,
                 execution_time=execution_time,
                 evaluation_details=evaluation_details,
             )
@@ -173,6 +175,7 @@ class CodeViewSet(viewsets.ViewSet):
         code = request.data.get('code')
         language = request.data.get('language', 'javascript')
         custom_input = request.data.get('custom_input')
+        session_id = request.data.get('session_id')
 
         if user_id is None or problem_id is None or code is None:
             logger.warning(f"Validation failed. request.data: {request.data}")
@@ -194,7 +197,9 @@ class CodeViewSet(viewsets.ViewSet):
         attempt = self._create_attempt(
             user_id, problem, code, language, attempt_status,
             execution_time=execution_result.get('execution_time'),
-            evaluation_details=execution_result
+            evaluation_details=execution_result,
+            source='RUN',
+            session_id=session_id
         )
         handle_attempt(attempt)
         return Response({
@@ -213,6 +218,7 @@ class CodeViewSet(viewsets.ViewSet):
         problem_id = request.data.get('problem_id')
         code = request.data.get('code')
         language = request.data.get('language', 'javascript')
+        session_id = request.data.get('session_id')
 
         if user_id is None or problem_id is None or code is None:
             logger.warning(f"Validation failed in submit. request.data: {request.data}")
@@ -234,7 +240,9 @@ class CodeViewSet(viewsets.ViewSet):
         attempt = self._create_attempt(
             user_id, problem, code, language, attempt_status,
             execution_time=execution_result.get('execution_time'),
-            evaluation_details=execution_result
+            evaluation_details=execution_result,
+            source='SUBMIT',
+            session_id=session_id
         )
         handle_attempt(attempt)
 

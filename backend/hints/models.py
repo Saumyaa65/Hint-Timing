@@ -9,6 +9,7 @@ class UserProfile(models.Model):
     bio = models.TextField(blank=True, null=True)
     total_score = models.IntegerField(default=0)
     global_rank = models.IntegerField(null=True, blank=True)
+    is_test_account = models.BooleanField(default=False, help_text="Designates if this account belongs to a developer or test account")
     
     # Streak tracking
     current_streak = models.IntegerField(default=0)
@@ -92,18 +93,26 @@ class UserProgress(models.Model):
         return f"Progress for user {self.user_id} on {self.problem.title}"
 
 class Attempt(models.Model):
+    SOURCE_CHOICES = [
+        ('RUN', 'Run'),
+        ('SUBMIT', 'Submit'),
+        ('HINT_REQUEST', 'Hint Request'),
+    ]
+
     user_id = models.CharField(max_length=255, default='')  # Clerk user ID
     problem = models.ForeignKey(Problem, on_delete=models.CASCADE, related_name='attempts')
     code = models.TextField()
     language = models.CharField(max_length=50, default='javascript')
     status = models.CharField(max_length=20, default='pending')
+    source = models.CharField(max_length=20, choices=SOURCE_CHOICES, default='SUBMIT', help_text="Trigger source of this attempt")
+    session_id = models.CharField(max_length=100, null=True, blank=True, help_text="Groups attempts belonging to the same problem-solving session")
     execution_time = models.CharField(max_length=50, null=True, blank=True)
     evaluation_details = models.JSONField(null=True, blank=True)  # Added field for storing evaluation details
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"Attempt by user {self.user_id} on {self.problem.title}"
+        return f"Attempt by user {self.user_id} on {self.problem.title} (Source: {self.source})"
 
 class Hint(models.Model):
     HINT_TYPES = [

@@ -12,7 +12,7 @@ const hintService = {
    * @param {Object} problemData - Optional problem data if problem doesn't exist
    * @returns {Promise<Object>} - Promise resolving to hint data
    */
-  requestHint: async (userId, problemId, userCode, problemData = null) => {
+  requestHint: async (userId, problemId, userCode, problemData = null, sessionId = null) => {
     const payload = {
       user_id: userId,
       problem_id: problemId,
@@ -22,6 +22,9 @@ const hintService = {
     // Add problem data if provided
     if (problemData) {
       payload.problem_data = problemData;
+    }
+    if (sessionId) {
+      payload.session_id = sessionId;
     }
     
     return apiClient.post('/hints/request_hint/', payload);
@@ -33,9 +36,10 @@ const hintService = {
    * @param {number} problemId - The problem ID
    * @param {string} userCode - The user's current code
    * @param {Object} problemData - Optional problem data if problem doesn't exist
+   * @param {string} [sessionId] - Optional session ID
    * @returns {Promise<Object>} - Promise resolving to auto-trigger data
    */
-  checkAutoTrigger: async (userId, problemId, userCode, problemData = null) => {
+  checkAutoTrigger: async (userId, problemId, userCode, problemData = null, sessionId = null) => {
     const payload = {
       user_id: userId,
       problem_id: problemId,
@@ -45,6 +49,9 @@ const hintService = {
     // Add problem data if provided
     if (problemData) {
       payload.problem_data = problemData;
+    }
+    if (sessionId) {
+      payload.session_id = sessionId;
     }
     
     return apiClient.post('/hints/check_auto_trigger/', payload);

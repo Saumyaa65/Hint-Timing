@@ -53,12 +53,12 @@ def validate_annotation_record(record: dict) -> Tuple[bool, List[str]]:
     return (len(errors) == 0, errors)
 
 
-def generate_prefix_annotation_material(user_id: str, problem_id: str, prefix_length: int) -> dict:
+def generate_prefix_annotation_material(user_id: str, problem_id: str, prefix_length: int, session_id: str = None) -> dict:
     """
     Generates privacy-preserving annotation material for a trajectory prefix strictly up to attempt t.
     Strips all future attempts (At+1..AN) and ALL model predictions (M1..M4).
     """
-    full_trajectory = build_trajectory(user_id, problem_id)
+    full_trajectory = build_trajectory(user_id, problem_id, session_id=session_id)
     attempts = full_trajectory.get("attempts", [])
     
     if not attempts:
@@ -86,7 +86,7 @@ def generate_prefix_annotation_material(user_id: str, problem_id: str, prefix_le
             "observable_signals": att.get("observable_signals", {})
         })
 
-    return {
+    mat = {
         "material_id": f"mat_{pseudonymize_id(user_id)}_{pseudonymize_id(problem_id)}_t{t}",
         "student_id": pseudonymize_id(user_id, prefix="anon_user"),
         "problem_id": pseudonymize_id(problem_id, prefix="anon_prob"),
@@ -96,25 +96,44 @@ def generate_prefix_annotation_material(user_id: str, problem_id: str, prefix_le
         "attempts": clean_attempts,
         "annotation_protocol_version": ANNOTATION_PROTOCOL_VERSION
     }
+    if session_id:
+        mat["session_id"] = session_id
+    return mat
 
+
+from struggle_analysis.config import is_research_valid_session
 
 def generate_pilot_annotation_batch(max_trajectories: int = 10) -> dict:
     """
-    Generates a pilot annotation batch from real database user-problem trajectories.
+    Generates a pilot annotation batch from real database user-problem sessions.
+    Filters at the SESSION level using is_research_valid_session.
     Does NOT fabricate labels or run model predictions.
     """
-    distinct_pairs = Attempt.objects.values('user_id', 'problem_id').distinct()[:max_trajectories]
+    distinct_session_ids = (
+        Attempt.objects.exclude(session_id__isnull=True)
+        .exclude(session_id="")
+        .values_list('session_id', flat=True)
+        .distinct()
+    )
     
+    valid_sessions = []
+    for s_id in distinct_session_ids:
+        attempts = list(Attempt.objects.filter(session_id=s_id).order_by('created_at', 'id'))
+        if is_research_valid_session(attempts):
+            valid_sessions.append((s_id, attempts))
+            if len(valid_sessions) >= max_trajectories:
+                break
+
     batch_materials = []
-    for pair in distinct_pairs:
-        u_id = pair['user_id']
-        p_id = pair['problem_id']
+    for s_id, attempts in valid_sessions:
+        u_id = attempts[0].user_id
+        prob_obj = attempts[0].problem
+        p_id_str = prob_obj.problem_id if getattr(prob_obj, 'problem_id', None) else str(prob_obj.id)
         try:
-            traj = build_trajectory(u_id, p_id)
+            traj = build_trajectory(u_id, prob_obj, session_id=s_id)
             n_attempts = len(traj.get("attempts", []))
             if n_attempts > 0:
-                # Sample at latest attempt step t
-                mat = generate_prefix_annotation_material(u_id, p_id, prefix_length=n_attempts)
+                mat = generate_prefix_annotation_material(u_id, p_id_str, prefix_length=n_attempts, session_id=s_id)
                 batch_materials.append(mat)
         except Exception:
             continue

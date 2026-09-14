@@ -931,9 +931,188 @@ class HumanAnnotationAndEvaluationTests(TestCase):
         train, test = split_students_train_test(records, test_ratio=0.3, seed=42)
         train_students = set(r["student_id"] for r in train)
         test_students = set(r["student_id"] for r in test)
-
         self.assertEqual(len(train_students.intersection(test_students)), 0)
         self.assertEqual(len(train_students) + len(test_students), 10)
+
+
+class ResearchDataIntegrityTests(TestCase):
+    def setUp(self):
+        self.problem = Problem.objects.create(
+            title="Integrity Benchmark",
+            problem_id="test_integrity_benchmark",
+            description="Benchmark problem for data integrity tests",
+            difficulty="medium"
+        )
+
+    def test_attempt_source_and_session_id_metadata(self):
+        """Verify source (RUN, SUBMIT, HINT_REQUEST) and session_id recording."""
+        att_run = Attempt.objects.create(
+            user_id="student_gen_1",
+            problem=self.problem,
+            code="print('run')",
+            status="success",
+            source="RUN",
+            session_id="sess_abc123"
+        )
+        self.assertEqual(att_run.source, "RUN")
+        self.assertEqual(att_run.session_id, "sess_abc123")
+
+        att_sub = Attempt.objects.create(
+            user_id="student_gen_1",
+            problem=self.problem,
+            code="print('submit')",
+            status="success",
+            source="SUBMIT",
+            session_id="sess_abc123"
+        )
+        self.assertEqual(att_sub.source, "SUBMIT")
+
+        att_hint = Attempt.objects.create(
+            user_id="student_gen_1",
+            problem=self.problem,
+            code="print('hint')",
+            status="failed",
+            source="HINT_REQUEST",
+            session_id="sess_abc123"
+        )
+        self.assertEqual(att_hint.source, "HINT_REQUEST")
+
+    def test_user_profile_is_test_account(self):
+        """Verify is_test_account flag on UserProfile causes is_research_valid_user to return False."""
+        from struggle_analysis.config import is_research_valid_user
+        from hints.models import UserProfile
+        from django.contrib.auth.models import User
+
+        user = User.objects.create_user(username="test_dev_user", email="dev@test.com")
+        profile = UserProfile.objects.create(user=user, clerk_id="user_clerk_test_dev", is_test_account=True)
+
+        self.assertTrue(profile.is_test_account)
+        self.assertFalse(is_research_valid_user("user_clerk_test_dev"))
+
+    def test_research_user_exclusions(self):
+        """Verify known test IDs ('1', '123', 'admin', 'test_user') are excluded, but developer Clerk ID is NOT globally excluded."""
+        from struggle_analysis.config import is_research_valid_user
+        
+        self.assertFalse(is_research_valid_user("1"))
+        self.assertFalse(is_research_valid_user("123"))
+        self.assertFalse(is_research_valid_user("admin"))
+        self.assertFalse(is_research_valid_user("test_user"))
+        
+        # Developer Clerk ID is no longer globally excluded
+        self.assertTrue(is_research_valid_user("user_3JH0gS2vXtbFlXI4VTQhLXXJG2m"))
+        
+        # Valid student user ID should pass
+        self.assertTrue(is_research_valid_user("user_genuine_student_999"))
+
+    def test_session_level_research_sampling_and_isolation(self):
+        """Verify session-level filtering, account inclusion, invalid session exclusion, and session isolation."""
+        from struggle_analysis.config import is_research_valid_session
+        from struggle_analysis.annotation import generate_pilot_annotation_batch
+        from struggle_analysis.trajectory import build_trajectory
+
+        dev_user_id = "user_3JH0gS2vXtbFlXI4VTQhLXXJG2m"
+
+        # 1. Invalid Session: Excluded user ID "1"
+        Attempt.objects.create(user_id="1", problem=self.problem, code="def sol(): pass", language="python", source="RUN", session_id="sess_excluded_1")
+        Attempt.objects.create(user_id="1", problem=self.problem, code="def sol(): return 1", language="python", source="SUBMIT", session_id="sess_excluded_1")
+        self.assertFalse(is_research_valid_session("sess_excluded_1"))
+
+        # 2. Invalid Session: Developer account attempt with session_id=None
+        att_no_sess = Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): pass", language="python", source="RUN", session_id=None)
+        self.assertFalse(is_research_valid_session([att_no_sess]))
+
+        # 3. Invalid Session: Single attempt (t < 2)
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): pass", language="python", source="RUN", session_id="sess_single")
+        self.assertFalse(is_research_valid_session("sess_single"))
+
+        # 4. Invalid Session: Zero code modifications (starter code only)
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): pass", language="python", source="RUN", session_id="sess_no_edits")
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): pass", language="python", source="SUBMIT", session_id="sess_no_edits")
+        self.assertFalse(is_research_valid_session("sess_no_edits"))
+
+        # 5. Valid Session: Developer account with valid session_id, t=2, consistent language, and code edits
+        s_id_valid = "sess_dev_valid_999"
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): return 0", language="python", source="RUN", session_id=s_id_valid)
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): return 42", language="python", source="SUBMIT", session_id=s_id_valid)
+        self.assertTrue(is_research_valid_session(s_id_valid))
+
+        # Verify pilot annotation batch includes the valid session
+        batch = generate_pilot_annotation_batch(max_trajectories=10)
+        self.assertEqual(batch["trajectory_count"], 1)
+        self.assertEqual(batch["materials"][0]["session_id"], s_id_valid)
+
+        # 6. Session Isolation Verification: Add a second distinct valid session for same user + problem
+        s_id_valid_2 = "sess_dev_valid_888"
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): x = 1", language="python", source="RUN", session_id=s_id_valid_2)
+        Attempt.objects.create(user_id=dev_user_id, problem=self.problem, code="def sol(): x = 2", language="python", source="SUBMIT", session_id=s_id_valid_2)
+
+        # Verify build_trajectory with session_id isolates attempts and does NOT merge sessions
+        traj_1 = build_trajectory(dev_user_id, self.problem.problem_id, session_id=s_id_valid)
+        traj_2 = build_trajectory(dev_user_id, self.problem.problem_id, session_id=s_id_valid_2)
+
+        self.assertEqual(len(traj_1["attempts"]), 2)
+        self.assertEqual(len(traj_2["attempts"]), 2)
+        self.assertEqual([a["code"] for a in traj_1["attempts"]], ["def sol(): return 0", "def sol(): return 42"])
+        self.assertEqual([a["code"] for a in traj_2["attempts"]], ["def sol(): x = 1", "def sol(): x = 2"])
+
+    def test_frontend_session_flow_end_to_end(self):
+        """Verify full session flow across Run, Submit, and Hint requests reusing same session_id."""
+        from rest_framework.test import APIClient
+        client = APIClient()
+        session_id = "sess_e2e_test_uuid_9999"
+        student_id = "user_genuine_student_session_test"
+        prob_id = self.problem.problem_id
+
+        # 1. Run Code
+        res_run = client.post('/api/code/run/', {
+            'user_id': student_id,
+            'problem_id': prob_id,
+            'code': 'def solution(): return 1',
+            'language': 'python',
+            'session_id': session_id
+        }, format='json')
+        self.assertEqual(res_run.status_code, 200)
+
+        # 2. Submit Code
+        res_sub = client.post('/api/code/submit/', {
+            'user_id': student_id,
+            'problem_id': prob_id,
+            'code': 'def solution(): return 2',
+            'language': 'python',
+            'session_id': session_id
+        }, format='json')
+        self.assertEqual(res_sub.status_code, 200)
+
+        # 3. Request Hint
+        mock_eval = {'safety_score': 1.0, 'helpfulness_score': 1.0, 'quality_score': 1.0, 'progress_alignment_score': 1.0, 'pedagogical_value_score': 1.0}
+        with patch('hints.views.AgentOrchestrator.generate_adaptive_hint', return_value={'generated_hint': 'Try returning the sum.', 'attempt_evaluation': {'is_correct': False}, 'hint_evaluation': mock_eval, 'updated_hint_level': 1}):
+            res_hint = client.post('/api/hints/request_hint/', {
+                'user_id': student_id,
+                'problem_id': prob_id,
+                'user_code': 'def solution(): return 3',
+                'session_id': session_id
+            }, format='json')
+            self.assertEqual(res_hint.status_code, 200)
+
+        # Verify Database Attempts
+        atts = list(Attempt.objects.filter(session_id=session_id).order_by('created_at'))
+        self.assertEqual(len(atts), 3)
+
+        # Verify same session_id, user_id, correct sources, and timestamps
+        for att in atts:
+            self.assertEqual(att.session_id, session_id)
+            self.assertEqual(att.user_id, student_id)
+            self.assertIsNotNone(att.created_at)
+
+        self.assertEqual(atts[0].source, "RUN")
+        self.assertEqual(atts[1].source, "SUBMIT")
+        self.assertEqual(atts[2].source, "HINT_REQUEST")
+
+        # Chronological timestamps
+        self.assertLessEqual(atts[0].created_at, atts[1].created_at)
+        self.assertLessEqual(atts[1].created_at, atts[2].created_at)
+
+
 
 
 

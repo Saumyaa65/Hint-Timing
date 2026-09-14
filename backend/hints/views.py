@@ -89,7 +89,7 @@ class HintViewSet(viewsets.ViewSet):
         logger.info(f"✅ Found {attempts.count()} previous attempts")
         return attempts
 
-    def _create_attempt(self, user_id: int, problem: Problem, user_code: str) -> Attempt:
+    def _create_attempt(self, user_id: str, problem: Problem, user_code: str, source: str = 'HINT_REQUEST', session_id: str = None) -> Attempt:
         """Create an attempt record for the user"""
         logger.info(f"📝 Creating attempt record for user {user_id} on problem {problem.id}")
         
@@ -105,7 +105,9 @@ class HintViewSet(viewsets.ViewSet):
             problem=problem,
             code=user_code,
             status='failed' if not attempt_evaluation.get('is_correct', False) else 'success',
-            evaluation_details=attempt_evaluation
+            evaluation_details=attempt_evaluation,
+            source=source,
+            session_id=session_id
         )
         
         logger.info(f"✅ Created attempt record (ID: {attempt.id}, Status: {attempt.status})")
@@ -121,6 +123,19 @@ class HintViewSet(viewsets.ViewSet):
         problem_id = request.data.get('problem_id')
         user_code = request.data.get('user_code')
         problem_data = request.data.get('problem_data')
+        session_id = request.data.get('session_id')
+        
+        # ... (rest of hint view logic)
+        # Note: at attempt creation in request_hint:
+        # attempt = Attempt.objects.create(
+        #     user_id=user_id,
+        #     problem=problem,
+        #     code=user_code,
+        #     status='failed' if not result['attempt_evaluation'].get('is_correct', False) else 'success',
+        #     evaluation_details=result['attempt_evaluation'],
+        #     source='HINT_REQUEST',
+        #     session_id=session_id
+        # )
 
         logger.info(f"📋 Request parameters:")
         logger.info(f"   - User ID: {user_id}")
@@ -234,7 +249,9 @@ class HintViewSet(viewsets.ViewSet):
             problem=problem,
             code=user_code,
             status='failed' if not result['attempt_evaluation'].get('is_correct', False) else 'success',
-            evaluation_details=result['attempt_evaluation']
+            evaluation_details=result['attempt_evaluation'],
+            source='HINT_REQUEST',
+            session_id=session_id
         )
         logger.info(f"📝 Created attempt record (ID: {attempt.id}, Status: {attempt.status})")
 

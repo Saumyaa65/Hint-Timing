@@ -1,3 +1,8 @@
+> [!CAUTION]
+> **DATA VALIDITY AUDIT NOTICE (TASK 2G)**
+> **THIS PILOT ANNOTATION BATCH IS MARKED AS `INVALID_FOR_HUMAN_ANNOTATION`.**
+> Audit revealed these trajectories consist of developer testing activity, unauthenticated frontend component clicks, and unedited starter template code. DO NOT PROCEED WITH HUMAN ANNOTATION ON THIS BATCH.
+
 # PILOT ANNOTATION BATCH FOR HUMAN REVIEW
 **Batch ID**: `batch_pilot_20260913_201516`  
 **Protocol Version**: `TASK_2F_B_PROTOCOL_V1`  
