@@ -1,0 +1,658 @@
+{
+  "metrics": {
+    "method_name": "M1 Snapshot Baseline",
+    "total_prefixes": 89,
+    "valid_count": 89,
+    "failed_count": 0,
+    "accuracy": 0.2697,
+    "balanced_accuracy": 0.4357,
+    "precision_macro": 0.3026,
+    "recall_macro": 0.4357,
+    "macro_f1": 0.2476,
+    "productive_f1": 0.5806,
+    "unproductive_f1": 0.0,
+    "uncertain_f1": 0.1622,
+    "confusion_matrix": [
+      [
+        18,
+        0,
+        22
+      ],
+      [
+        3,
+        0,
+        39
+      ],
+      [
+        1,
+        0,
+        6
+      ]
+    ]
+  },
+  "predictions": [
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #4 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #5 passed partial tests (2/4, 50.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #6 passed partial tests (2/4, 50.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_6",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #7 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_7",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #8 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #9 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_9",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #10 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_2",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #4 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #5 passed partial tests (3/4, 75.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #6 passed partial tests (3/4, 75.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #7 passed partial tests (3/4, 75.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #3 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_3",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #4 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #3 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #4 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #4 passed all tests (1/1). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #5 passed all tests (1/1). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #6 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_6",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #7 passed all tests (1/1). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_7",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #8 passed all tests (1/1). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #9 passed all tests (1/1). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_9",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #10 passed all tests (1/1). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_10",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #11 passed all tests (1/1). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_11",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #12 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_12",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #13 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 passed partial tests (2/4, 50.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #4 passed partial tests (2/4, 50.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #5 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #6 passed partial tests (2/4, 50.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #7 passed partial tests (2/4, 50.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #4 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #5 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #6 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #7 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_7",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #8 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_8",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #9 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #3 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #4 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #4 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #5 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #4 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #5 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #6 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_6",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #7 passed partial tests (3/4, 75.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_7",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #8 passed partial tests (3/4, 75.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #9 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_1",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_3",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #4 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #5 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Latest attempt #6 passed all tests (4/4). Assessed as PRODUCTIVE struggle (solved)."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #4 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #5 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #6 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_6",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #7 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #4 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #5 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #6 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #7 passed partial tests (1/4, 25.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_7",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #8 passed partial tests (3/4, 75.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #9 passed partial tests (3/4, 75.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_9",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #10 passed partial tests (3/4, 75.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_10",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #11 passed partial tests (3/4, 75.0%). Single snapshot lacks temporal context to verify progression trend."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #3 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #4 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #5 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #6 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    },
+    {
+      "prefix_id": "sess_e7390b18-e9db-4857-93c5-144e28ea666b_prefix_1",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Latest attempt #2 failed all tests or errored. Single snapshot cannot distinguish between initial attempt, active exploration, or repeated stagnation."
+    }
+  ]
+}

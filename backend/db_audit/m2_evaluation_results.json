@@ -1,0 +1,658 @@
+{
+  "metrics": {
+    "method_name": "M2 Rule-Based Feature Model",
+    "total_prefixes": 89,
+    "valid_count": 89,
+    "failed_count": 0,
+    "accuracy": 0.5393,
+    "balanced_accuracy": 0.4694,
+    "precision_macro": 0.5125,
+    "recall_macro": 0.4694,
+    "macro_f1": 0.4634,
+    "productive_f1": 0.6389,
+    "unproductive_f1": 0.6301,
+    "uncertain_f1": 0.1212,
+    "confusion_matrix": [
+      [
+        23,
+        5,
+        12
+      ],
+      [
+        7,
+        23,
+        12
+      ],
+      [
+        2,
+        3,
+        2
+      ]
+    ]
+  },
+  "predictions": [
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Code was modified, but no test suite evaluation feedback is available for trajectory assessment."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.49,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 3 (confidence: 0.49). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 4 (confidence: 0.9). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 4 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 5 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+2 tests passed, +50.0% pass rate)., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+2 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 6 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_6",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.75,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 7 (confidence: 0.75). Primary evidence: Error state changed accompanied by overall test progression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+2 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_7",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 8 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+4 tests passed, +100.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+4 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 9 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_9",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.69,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 10 (confidence: 0.69). Primary evidence: Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+4 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.7,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 2 (confidence: 0.7). Primary evidence: Recent attempt improved performance (+1 tests passed, +25.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_2",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.54,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 3 (confidence: 0.54). Primary evidence: 3 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 4 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 5 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+3 tests passed, +75.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Cumulative trajectory prefix demonstrates net test progress (+2 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 6 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.57,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 7 (confidence: 0.57). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Reverted solution to an earlier attempted code state without achieving test progress."
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Code was modified, but no test suite evaluation feedback is available for trajectory assessment."
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.8,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 3 (confidence: 0.8). Primary evidence: Recent attempt improved performance (+4 tests passed, +100.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement."
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_3",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.81,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 4 (confidence: 0.81). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant."
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Code was modified, but no test suite evaluation feedback is available for trajectory assessment."
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.8,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 3 (confidence: 0.8). Primary evidence: Recent attempt improved performance (+4 tests passed, +100.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression."
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.81,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 4 (confidence: 0.81). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Code was modified, but no test suite evaluation feedback is available for trajectory assessment."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 3 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.63,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 4 (confidence: 0.63). Primary evidence: Recent attempt improved performance (+1 tests passed, +100.0% pass rate)., Cumulative trajectory prefix demonstrates net test progress (+1 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.57,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 5 (confidence: 0.57). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Identical execution error encountered repeatedly without modification., Complete state (code, error, and test outcomes) remains stagnant."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 6 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_6",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.78,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 7 (confidence: 0.78). Primary evidence: Recent attempt improved performance (+1 tests passed, +100.0% pass rate)., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+1 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_7",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.57,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 8 (confidence: 0.57). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Identical execution error encountered repeatedly without modification., Complete state (code, error, and test outcomes) remains stagnant."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.69,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 9 (confidence: 0.69). Primary evidence: Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+1 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_9",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.69,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 10 (confidence: 0.69). Primary evidence: Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+1 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_10",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.57,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 11 (confidence: 0.57). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Identical execution error encountered repeatedly without modification., Complete state (code, error, and test outcomes) remains stagnant."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_11",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 12 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+3 tests passed, +0.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+4 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_12",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 13 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.56,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 2 (confidence: 0.56). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.78,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 3 (confidence: 0.78). Primary evidence: Recent attempt improved performance (+2 tests passed, +50.0% pass rate)., Cumulative trajectory prefix demonstrates net test progress (+2 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 4 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 5 (confidence: 0.95). Primary evidence: Error state changed accompanied by overall test progression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+2 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 6 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+2 tests passed, +50.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+2 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 7 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Evidence signals are balanced or insufficient."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.8,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 3 (confidence: 0.8). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 3 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 4 (confidence: 0.9). Primary evidence: Recent attempt improved performance (+1 tests passed, +25.0% pass rate)., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+1 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 5 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 6 (confidence: 0.72). Primary evidence: Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+1 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.56,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 7 (confidence: 0.56). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 7 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_7",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 8 (confidence: 0.72). Primary evidence: Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+1 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_8",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.56,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 9 (confidence: 0.56). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 9 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Code was modified, but no test suite evaluation feedback is available for trajectory assessment."
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.8,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 3 (confidence: 0.8). Primary evidence: Recent attempt improved performance (+4 tests passed, +100.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Successfully escaped prior stagnation loop into a new evaluation state or test improvement."
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.81,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 4 (confidence: 0.81). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant."
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.63,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 2 (confidence: 0.63). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant."
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.8,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 3 (confidence: 0.8). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 2 consecutive attempts with zero test progress., 3 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 4 (confidence: 0.9). Primary evidence: Recent attempt improved performance (+3 tests passed, +75.0% pass rate)., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+3 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 5 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Code was modified, but no test suite evaluation feedback is available for trajectory assessment."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 3 (confidence: 0.35). Factors: Code was modified, but no test suite evaluation feedback is available for trajectory assessment."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.55,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 4 (confidence: 0.55). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 5 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+1 tests passed, +25.0% pass rate)., Cumulative trajectory prefix demonstrates net test progress (+1 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 6 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_6",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 7 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+2 tests passed, +50.0% pass rate)., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+3 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_7",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 8 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 9 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+1 tests passed, +25.0% pass rate)., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+4 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_1",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Evidence signals are balanced or insufficient."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.49,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 3 (confidence: 0.49). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_3",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.61,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 4 (confidence: 0.61). Primary evidence: 4 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 5 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+4 tests passed, +100.0% pass rate)., Execution error was resolved in the latest attempt., Active code exploration observed without performance regression., Cumulative trajectory prefix demonstrates net test progress (+4 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 6 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.56,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 2 (confidence: 0.56). Primary evidence: Execution error was resolved in the latest attempt., Active code exploration observed without performance regression."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.54,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 3 (confidence: 0.54). Primary evidence: 3 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 4 (confidence: 0.9). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 4 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 5 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 2 consecutive attempts with zero test progress., 5 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 6 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 3 consecutive attempts with zero test progress., 6 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_6",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 7 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 4 consecutive attempts with zero test progress., 7 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.63,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 2 (confidence: 0.63). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.8,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 3 (confidence: 0.8). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 2 consecutive attempts with zero test progress., 3 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 4 (confidence: 0.9). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 3 consecutive attempts with zero test progress., 4 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 5 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 4 consecutive attempts with zero test progress., 5 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 6 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 5 consecutive attempts with zero test progress., 6 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 7 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 6 consecutive attempts with zero test progress., 7 consecutive failing attempts recorded without test score improvement., Reverted solution to an earlier attempted code state without achieving test progress."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_7",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 8 (confidence: 0.95). Primary evidence: Recent attempt improved performance (+2 tests passed, +50.0% pass rate)., Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+2 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as PRODUCTIVE struggle at attempt 9 (confidence: 0.95). Primary evidence: Successfully escaped prior stagnation loop into a new evaluation state or test improvement., Cumulative trajectory prefix demonstrates net test progress (+2 tests gained from initial attempt)."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_9",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 10 (confidence: 0.35). Factors: Trajectory exhibits strong conflicting evidence of both progress and stagnation."
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_10",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.57,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 11 (confidence: 0.57). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Reverted solution to an earlier attempted code state without achieving test progress."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Evidence signals are balanced or insufficient."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.54,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 3 (confidence: 0.54). Primary evidence: 3 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.9,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 4 (confidence: 0.9). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., 4 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 5 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 2 consecutive attempts with zero test progress., 5 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.95,
+      "reasoning": "Assessed as UNPRODUCTIVE struggle at attempt 6 (confidence: 0.95). Primary evidence: Student re-executed identical code with no change in evaluation outcome., Complete state (code, error, and test outcomes) remains stagnant., Sustained stagnation observed across 3 consecutive attempts with zero test progress., 6 consecutive failing attempts recorded without test score improvement."
+    },
+    {
+      "prefix_id": "sess_e7390b18-e9db-4857-93c5-144e28ea666b_prefix_1",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.35,
+      "reasoning": "Assessed as UNCERTAIN at attempt 2 (confidence: 0.35). Factors: Code was modified, but no test suite evaluation feedback is available for trajectory assessment."
+    }
+  ]
+}

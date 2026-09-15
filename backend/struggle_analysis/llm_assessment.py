@@ -20,28 +20,42 @@ CONCEPTUAL DEFINITIONS
 ==================================================
 
 1. PRODUCTIVE STRUGGLE:
-The student is experiencing difficulty, but the interaction trajectory contains clear evidence that their attempts are meaningfully evolving towards a solution.
-Evidence includes: improving test pass counts/rates, resolving compilation/runtime errors, shifting from one error type to another (e.g. syntax error -> runtime error -> test failure), active code/approach exploration, escaping a prior stagnation loop, or net overall test progress over early attempts.
+The student is experiencing difficulty, but the interaction trajectory contains clear evidence that their process is meaningfully evolving towards a correct solution.
+Evidence includes:
+- Net test suite performance gains (increasing passed tests or pass rate over time).
+- Error evolution across execution stages (e.g. syntax error -> runtime error -> test logic failure).
+- Meaningful approach changes (modifying algorithm, data structure, or core logic rather than just fixing typos or tweaking constants).
+- Meaningful partial progress even when the overall algorithm is not yet fully correct.
+- Escaping a prior stagnation loop through systematic hypothesis testing.
 
 2. UNPRODUCTIVE STRUGGLE:
 The student is struggling with sustained stagnation, repetition, or lack of meaningful state evolution.
-Evidence includes: repeated executions of identical code with identical outcomes, encountering the same execution error repeatedly without modification, complete state stagnation across code + errors + test results, sustained performance stagnation over multiple attempts, or cyclic reversion to prior unworking states without progress.
+Evidence includes:
+- Repeated execution of identical or near-identical code with identical outcomes.
+- Encountering the same execution or compilation error repeatedly without addressing the underlying defect.
+- Complete state stagnation across code, errors, and test pass counts over multiple consecutive attempts.
+- Repeated superficial edits (tweak constant, fix minor typo, re-indent) without addressing core algorithmic flaws.
+- Cyclic reversion to prior unworking code states without progress.
 
 3. UNCERTAIN:
 The available trajectory prefix does not contain enough evidence to confidently distinguish productive from unproductive struggle.
-Evidence includes: very short trajectory (only 1 or 2 attempts), conflicting signals of progress and stagnation, code modifications made without test suite evaluation feedback, or changing error states with zero performance resolution.
+Evidence includes:
+- Very short trajectory prefix (only 1 or 2 attempts).
+- Conflicting signals of progress and stagnation (e.g. test pass count improved, but code reverted to broken state).
+- Code modifications made without test suite evaluation feedback.
+- Changing error states with zero performance resolution.
 
 ==================================================
-CRITICAL RESEARCH INSTRUCTIONS
+CRITICAL RESEARCH EVALUATION INSTRUCTIONS
 ==================================================
 
-- PROCESS OVER OUTCOME: Assess the interaction PROCESS demonstrated in the trajectory up to attempt t. Do not assess based on whether the final attempt is solved or unsolved.
-- NO FUTURE LEAKAGE: You are evaluating strictly attempts 1 to t. You must NOT infer or guess future attempts (t+1 onwards).
-- FAILURE IS NORMAL: Intermediate failed attempts or high failure counts do NOT automatically imply unproductive struggle.
-- NEW ERRORS MAY BE PROGRESS: Shifting from a compilation error to a runtime error or wrong answer indicates progress through execution stages. Do NOT treat new error types as inherently negative.
-- CODE CHANGES ALONE ARE NOT PROOF: Changing code indicates exploration, but is not proof of productive learning unless accompanied by evaluation progress or meaningful error evolution.
-- DO NOT CHEAT OR INVENT EVIDENCE: Cite ONLY observable metrics provided in the trajectory (test pass rates, error messages, diff ratios, attempt frequency). Do NOT claim unobservable student thoughts, psychological states, or unrecorded code changes.
-- DO NOT FORCES A BINARY ANSWER: Use UNCERTAIN if evidence is ambiguous or insufficient.
+1. PROCESS OVER OUTCOME: Assess the interaction PROCESS demonstrated in the trajectory up to attempt t. Do not judge based on whether the final attempt is fully solved or unsolved.
+2. NO FUTURE LEAKAGE: You are evaluating strictly attempts 1 to t. You must NOT infer or guess future attempts (t+1 onwards).
+3. DISTINGUISH ERROR FIXES FROM APPROACH CHANGES: Fixing syntax/compilation errors or minor variable typos moves execution forward, but changing algorithm/logic constitutes a true approach change.
+4. RECOGNIZE MEANINGFUL PARTIAL PROGRESS: Gaining passing test cases or progressing from runtime crashes to logical wrong answers represents meaningful productive progress even if the overall algorithm is still incomplete.
+5. DISTINGUISH EXPLORATION FROM SYSTEMATIC PROGRESS: Randomly altering lines without test gains or error evolution is unguided exploration; systematic hypothesis testing with score improvement is productive progress.
+6. DO NOT INVENT EVIDENCE: Cite ONLY observable metrics provided in the trajectory (test pass rates, error messages, code diffs, transition metrics).
+7. DO NOT SILENTLY DEFAULT: Evaluate the evidence carefully and choose the state that best reflects the trajectory payload.
 
 ==================================================
 REQUIRED JSON OUTPUT FORMAT
@@ -68,7 +82,7 @@ You MUST respond strictly with a single valid JSON object formatted exactly as f
   "recommended_action": "CONTINUE" | "MONITOR" | "CONSIDER_INTERVENTION"
 }
 
-Respond ONLY with the JSON object. Do not include markdown code block backticks or conversational preamble.
+Respond ONLY with the raw JSON object. Do not include markdown code block backticks or conversational preamble.
 """
 
 
@@ -103,13 +117,15 @@ def format_trajectory_for_llm(trajectory_data: dict) -> str:
         pass_rate = att.get("pass_rate", 0.0)
         err = att.get("error_message", "")
         code = att.get("code", "")
+        timestamp = att.get("created_at", "")
 
-        if len(code) > 400:
-            code_snippet = code[:350] + "\n... [code truncated]"
+        if len(code) > 1500:
+            code_snippet = code[:1400] + "\n... [code truncated]"
         else:
             code_snippet = code
 
-        prompt_lines.append(f"\nAttempt #{idx}:")
+        time_str = f" | Timestamp: {timestamp}" if timestamp else ""
+        prompt_lines.append(f"\nAttempt #{idx}{time_str}:")
         prompt_lines.append(f"  Status: {status} | Language: {lang}")
         prompt_lines.append(f"  Test Results: {passed}/{total} passed (Pass Rate: {round(pass_rate*100, 1)}%)")
         if err:
@@ -157,9 +173,10 @@ def format_trajectory_for_llm(trajectory_data: dict) -> str:
 def parse_llm_json_response(raw_response: str) -> dict:
     """
     Safely parse JSON from LLM output, stripping markdown fencing if present.
+    Raises ValueError if JSON is invalid or missing state key so retries/errors occur.
     """
     clean_text = raw_response.strip()
-    match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', clean_text, re.DOTALL)
+    match = re.search(r'```(?:json)?\s*(\{.*\})\s*```', clean_text, re.DOTALL)
     if match:
         clean_text = match.group(1).strip()
     else:
@@ -168,29 +185,34 @@ def parse_llm_json_response(raw_response: str) -> dict:
         if start != -1 and end != -1:
             clean_text = clean_text[start:end+1]
 
-    parsed = json.loads(clean_text)
+    try:
+        parsed = json.loads(clean_text)
+    except Exception as e:
+        raise ValueError(f"LLM output could not be parsed as JSON: {e}. Raw response snippet: {raw_response[:150]}")
 
-    required_keys = ['state', 'confidence', 'reasoning']
-    for k in required_keys:
-        if k not in parsed:
-            raise ValueError(f"Missing required key '{k}' in LLM JSON output")
+    if not isinstance(parsed, dict):
+        raise ValueError(f"LLM output parsed as {type(parsed)}, expected JSON object.")
 
-    if parsed['state'] not in ['PRODUCTIVE', 'UNPRODUCTIVE', 'UNCERTAIN']:
-        parsed['state'] = 'UNCERTAIN'
+    if 'state' not in parsed:
+        raise ValueError("Missing required key 'state' in LLM JSON output")
 
+    state = str(parsed['state']).upper().strip()
+    if state not in ['PRODUCTIVE', 'UNPRODUCTIVE', 'UNCERTAIN']:
+        raise ValueError(f"Invalid state '{state}' in LLM JSON output; must be PRODUCTIVE, UNPRODUCTIVE, or UNCERTAIN.")
+
+    parsed['state'] = state
+    parsed['confidence'] = float(parsed.get('confidence', 0.5))
+    parsed['reasoning'] = str(parsed.get('reasoning', ''))
     return parsed
 
 
-PROMPT_VERSION = "TASK_2C_SYSTEM_V1"
+PROMPT_VERSION = "TASK_2C_SYSTEM_V2"
 
 
 def assess_trajectory_with_llm(trajectory_data: dict, model_name: str = None, strict_model_pinning: bool = False) -> dict:
     """
     Core Research LLM Entry Point:
     Assess trajectory prefix using OpenRouter LLM trajectory reasoning.
-    
-    Supports model fallbacks for application runtime resilience, or strict model pinning
-    (strict_model_pinning=True) for scientific research reproducibility.
     """
     api_key = getattr(settings, 'OPENROUTER_API_KEY', None)
     if not api_key:
@@ -202,74 +224,54 @@ def assess_trajectory_with_llm(trajectory_data: dict, model_name: str = None, st
         }
 
     formatted_user_prompt = format_trajectory_for_llm(trajectory_data)
+    primary_model = model_name or "meta-llama/llama-3.1-8b-instruct"
 
-    primary_model = model_name or "meta-llama/llama-3.3-70b-instruct"
+    try:
+        llm = ChatOpenAI(
+            model=primary_model,
+            openai_api_key=api_key,
+            openai_api_base="https://openrouter.ai/api/v1",
+            temperature=0.1,
+            max_tokens=500,
+            max_retries=2
+        )
 
-    if strict_model_pinning:
-        models_to_try = [primary_model]
-    else:
-        candidate_models = [
-            primary_model,
-            "qwen/qwen-2.5-coder-32b-instruct",
-            "google/gemini-2.0-flash-001",
-            "openai/gpt-4o-mini",
-            "openai/gpt-3.5-turbo"
+        messages = [
+            SystemMessage(content=SYSTEM_PROMPT),
+            HumanMessage(content=formatted_user_prompt)
         ]
-        models_to_try = []
-        for m in candidate_models:
-            if m not in models_to_try:
-                models_to_try.append(m)
 
-    last_error = None
+        response = llm.invoke(messages)
+        raw_content = response.content
 
-    for target_model in models_to_try:
-        try:
-            llm = ChatOpenAI(
-                model=target_model,
-                openai_api_key=api_key,
-                openai_api_base="https://openrouter.ai/api/v1",
-                temperature=0.3,
-                max_tokens=1000
-            )
+        parsed_json = parse_llm_json_response(raw_content)
 
-            messages = [
-                SystemMessage(content=SYSTEM_PROMPT),
-                HumanMessage(content=formatted_user_prompt)
-            ]
+        return {
+            "method": "LLM Trajectory Reasoning",
+            "model": primary_model,
+            "prompt_version": PROMPT_VERSION,
+            "strict_model_pinning": strict_model_pinning,
+            "state": parsed_json.get("state"),
+            "confidence": float(parsed_json.get("confidence", 0.5)),
+            "assessment_attempt": trajectory_data.get("trajectory_length", 0),
+            "evidence": parsed_json.get("evidence", {}),
+            "positive_signals": parsed_json.get("positive_signals", []),
+            "negative_signals": parsed_json.get("negative_signals", []),
+            "uncertainty_signals": parsed_json.get("uncertainty_signals", []),
+            "reasoning": parsed_json.get("reasoning", ""),
+            "recommended_action": parsed_json.get("recommended_action", "MONITOR"),
+            "raw_prompt_length": len(formatted_user_prompt)
+        }
 
-            response = llm.invoke(messages)
-            raw_content = response.content
-
-            parsed_json = parse_llm_json_response(raw_content)
-
-            return {
-                "method": "LLM Trajectory Reasoning",
-                "model": target_model,
-                "prompt_version": PROMPT_VERSION,
-                "strict_model_pinning": strict_model_pinning,
-                "state": parsed_json.get("state", "UNCERTAIN"),
-                "confidence": float(parsed_json.get("confidence", 0.5)),
-                "assessment_attempt": trajectory_data.get("trajectory_length", 0),
-                "evidence": parsed_json.get("evidence", {}),
-                "positive_signals": parsed_json.get("positive_signals", []),
-                "negative_signals": parsed_json.get("negative_signals", []),
-                "uncertainty_signals": parsed_json.get("uncertainty_signals", []),
-                "reasoning": parsed_json.get("reasoning", ""),
-                "recommended_action": parsed_json.get("recommended_action", "MONITOR"),
-                "raw_prompt_length": len(formatted_user_prompt)
-            }
-
-        except Exception as e:
-            last_error = e
-            logger.warning(f"LLM model {target_model} failed: {e}. Trying next candidate...")
-
-    return {
-        "error": f"LLM assessment failed on model '{primary_model}': {str(last_error)}" if strict_model_pinning else f"LLM assessment failed on all candidate models: {str(last_error)}",
-        "status": "failed",
-        "model": primary_model,
-        "prompt_version": PROMPT_VERSION,
-        "strict_model_pinning": strict_model_pinning
-    }
+    except Exception as e:
+        logger.warning(f"LLM model {primary_model} failed: {e}")
+        return {
+            "error": f"LLM assessment failed on model '{primary_model}': {str(e)}",
+            "status": "failed",
+            "model": primary_model,
+            "prompt_version": PROMPT_VERSION,
+            "strict_model_pinning": strict_model_pinning
+        }
 
 
 def assess_prefix_with_llm(user_id: str, problem_id_or_obj, max_attempts: int = None, model_name: str = None, strict_model_pinning: bool = False) -> dict:

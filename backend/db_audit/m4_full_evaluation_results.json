@@ -1,0 +1,2689 @@
+{
+  "metrics": {
+    "method_name": "M4 Hybrid Evidence-Fusion Model (Full)",
+    "total_prefixes": 89,
+    "valid_count": 89,
+    "failed_count": 0,
+    "accuracy": 0.6742,
+    "balanced_accuracy": 0.6067,
+    "precision_macro": 0.5816,
+    "recall_macro": 0.6067,
+    "macro_f1": 0.5814,
+    "productive_f1": 0.7073,
+    "unproductive_f1": 0.7368,
+    "uncertain_f1": 0.3,
+    "confusion_matrix": [
+      [
+        29,
+        4,
+        7
+      ],
+      [
+        11,
+        28,
+        3
+      ],
+      [
+        2,
+        2,
+        3
+      ]
+    ]
+  },
+  "audit_summary": {
+    "m3_cache_records_matched": "89/89",
+    "missing_invalid_m3_records": [],
+    "m2_m3_disagreements": 32,
+    "m4_differs_from_m2": 24,
+    "m4_differs_from_m3": 13,
+    "m4_differs_from_both": 5,
+    "improves_over_m3": true
+  },
+  "predictions": [
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_1",
+      "session_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157",
+      "prefix_number": 1,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Hybrid assessment reached consensus (UNCERTAIN, confidence: 0.5). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Uncertainty: UNCERTAIN_NO_EVALUATION_FEEDBACK"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_2",
+      "session_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157",
+      "prefix_number": 2,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.82,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.82). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_3",
+      "session_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157",
+      "prefix_number": 3,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_4",
+      "session_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157",
+      "prefix_number": 4,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_5",
+      "session_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157",
+      "prefix_number": 5,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_6",
+      "session_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157",
+      "prefix_number": 6,
+      "reference_label": "UNCERTAIN",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.64,
+      "reasoning": "Hybrid conflict resolved: Objective test suite evidence (+50.0% pass rate, +2 tests passed) takes precedence for PRODUCTIVE state.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U6_REVERSION_CYCLIC"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION",
+          "LLM Uncertainty: UNCERTAIN_LONG_TRAJECTORY"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed PRODUCTIVE (conf: 0.75), whereas LLM Reasoning assessed UNPRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_7",
+      "session_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157",
+      "prefix_number": 7,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Positive: P5_OVERALL_PROGRESS",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_8",
+      "session_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157",
+      "prefix_number": 8,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_9",
+      "session_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157",
+      "prefix_number": 9,
+      "reference_label": "UNCERTAIN",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.92,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.92). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U6_REVERSION_CYCLIC"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_1",
+      "session_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25",
+      "prefix_number": 1,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.92,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.92). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_2",
+      "session_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25",
+      "prefix_number": 2,
+      "reference_label": "UNCERTAIN",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.46,
+      "reasoning": "Hybrid assessment evaluated partial evidence (UNPRODUCTIVE, confidence: 0.46). Rule Baseline provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "agreement": [
+          "Partial Evidence: Rule Baseline identified directional evidence (UNPRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_3",
+      "session_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25",
+      "prefix_number": 3,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (UNPRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (UNPRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_4",
+      "session_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25",
+      "prefix_number": 4,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_5",
+      "session_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25",
+      "prefix_number": 5,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Negative: U1_REPEATED_EXECUTION"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_6",
+      "session_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25",
+      "prefix_number": 6,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.86,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.86). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U6_REVERSION_CYCLIC"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_1",
+      "session_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16",
+      "prefix_number": 1,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (UNPRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U2_REPEATED_ERROR",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_NO_EVALUATION_FEEDBACK"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (UNPRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_2",
+      "session_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16",
+      "prefix_number": 2,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.97,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.97). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Positive: P4_STAGNATION_ESCAPE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Negative: U1_REPEATED_EXECUTION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_3",
+      "session_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16",
+      "prefix_number": 3,
+      "reference_label": "UNCERTAIN",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.51,
+      "reasoning": "Hybrid assessment detected strong disagreement (Rule: UNPRODUCTIVE:0.81 vs LLM: PRODUCTIVE:0.85). Defaulting conservatively to UNCERTAIN state (confidence: 0.51).",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed UNPRODUCTIVE (conf: 0.81), whereas LLM Reasoning assessed PRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_1",
+      "session_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19",
+      "prefix_number": 1,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Hybrid assessment reached consensus (UNCERTAIN, confidence: 0.5). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Uncertainty: UNCERTAIN_NO_EVALUATION_FEEDBACK"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_2",
+      "session_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19",
+      "prefix_number": 2,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.97,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.97). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_3",
+      "session_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19",
+      "prefix_number": 3,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.51,
+      "reasoning": "Hybrid assessment detected strong disagreement (Rule: UNPRODUCTIVE:0.81 vs LLM: PRODUCTIVE:0.85). Defaulting conservatively to UNCERTAIN state (confidence: 0.51).",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed UNPRODUCTIVE (conf: 0.81), whereas LLM Reasoning assessed PRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_1",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 1,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Hybrid assessment reached consensus (UNCERTAIN, confidence: 0.5). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Uncertainty: UNCERTAIN_NO_EVALUATION_FEEDBACK"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_2",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 2,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_3",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 3,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.89,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.89). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U2_REPEATED_ERROR"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_4",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 4,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.86,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.86). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U2_REPEATED_ERROR",
+          "Objective Negative: U3_REPEATED_STATE"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_5",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 5,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (UNPRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U2_REPEATED_ERROR",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (UNPRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_6",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 6,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.96,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.96). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U2_REPEATED_ERROR"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_7",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 7,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.86,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.86). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U2_REPEATED_ERROR",
+          "Objective Negative: U3_REPEATED_STATE"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_8",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 8,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.6,
+      "reasoning": "Hybrid conflict resolved: Objective test suite evidence (+100.0% pass rate, +1 tests passed) takes precedence for PRODUCTIVE state.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U2_REPEATED_ERROR"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed PRODUCTIVE (conf: 0.69), whereas LLM Reasoning assessed UNPRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_9",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 9,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.92,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.92). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U2_REPEATED_ERROR"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_10",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 10,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.86,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.86). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U2_REPEATED_ERROR",
+          "Objective Negative: U3_REPEATED_STATE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_11",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 11,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_12",
+      "session_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6",
+      "prefix_number": 12,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_1",
+      "session_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a",
+      "prefix_number": 1,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.48,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.48). Rule Baseline provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [
+          "Partial Evidence: Rule Baseline identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_2",
+      "session_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a",
+      "prefix_number": 2,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.96,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.96). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_3",
+      "session_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a",
+      "prefix_number": 3,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (UNPRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (UNPRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_4",
+      "session_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a",
+      "prefix_number": 4,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_5",
+      "session_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a",
+      "prefix_number": 5,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_6",
+      "session_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a",
+      "prefix_number": 6,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_1",
+      "session_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993",
+      "prefix_number": 1,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Hybrid assessment reached consensus (UNCERTAIN, confidence: 0.5). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_2",
+      "session_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993",
+      "prefix_number": 2,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.97,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.97). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_3",
+      "session_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993",
+      "prefix_number": 3,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.77,
+      "reasoning": "Hybrid conflict resolved: Objective test suite evidence (+25.0% pass rate, +1 tests passed) takes precedence for PRODUCTIVE state.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed PRODUCTIVE (conf: 0.90), whereas LLM Reasoning assessed UNPRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_4",
+      "session_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993",
+      "prefix_number": 4,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (UNPRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (UNPRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_5",
+      "session_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993",
+      "prefix_number": 5,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.42,
+      "reasoning": "Hybrid assessment detected strong disagreement (Rule: PRODUCTIVE:0.72 vs LLM: UNPRODUCTIVE:0.85). Defaulting conservatively to UNCERTAIN state (confidence: 0.42).",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed PRODUCTIVE (conf: 0.72), whereas LLM Reasoning assessed UNPRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_6",
+      "session_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993",
+      "prefix_number": 6,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.86,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.86). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_7",
+      "session_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993",
+      "prefix_number": 7,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.42,
+      "reasoning": "Hybrid assessment detected strong disagreement (Rule: PRODUCTIVE:0.72 vs LLM: UNPRODUCTIVE:0.85). Defaulting conservatively to UNCERTAIN state (confidence: 0.42).",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed PRODUCTIVE (conf: 0.72), whereas LLM Reasoning assessed UNPRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_8",
+      "session_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993",
+      "prefix_number": 8,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.86,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.86). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_1",
+      "session_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47",
+      "prefix_number": 1,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (UNPRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U2_REPEATED_ERROR",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_NO_EVALUATION_FEEDBACK"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (UNPRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_2",
+      "session_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47",
+      "prefix_number": 2,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.97,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.97). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Positive: P4_STAGNATION_ESCAPE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P5_OVERALL_PROGRESS",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_3",
+      "session_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47",
+      "prefix_number": 3,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.51,
+      "reasoning": "Hybrid assessment detected strong disagreement (Rule: UNPRODUCTIVE:0.81 vs LLM: PRODUCTIVE:0.85). Defaulting conservatively to UNCERTAIN state (confidence: 0.51).",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed UNPRODUCTIVE (conf: 0.81), whereas LLM Reasoning assessed PRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_1",
+      "session_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792",
+      "prefix_number": 1,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.89,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.89). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_2",
+      "session_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792",
+      "prefix_number": 2,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.97,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.97). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_3",
+      "session_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792",
+      "prefix_number": 3,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P5_OVERALL_PROGRESS",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_4",
+      "session_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792",
+      "prefix_number": 4,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_1",
+      "session_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064",
+      "prefix_number": 1,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Hybrid assessment reached consensus (UNCERTAIN, confidence: 0.5). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Uncertainty: UNCERTAIN_NO_EVALUATION_FEEDBACK"
+        ],
+        "llm": [
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY",
+          "LLM Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_2",
+      "session_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064",
+      "prefix_number": 2,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Uncertainty: UNCERTAIN_NO_EVALUATION_FEEDBACK"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_3",
+      "session_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064",
+      "prefix_number": 3,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.85,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.85). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_4",
+      "session_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064",
+      "prefix_number": 4,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_5",
+      "session_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064",
+      "prefix_number": 5,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Uncertainty: UNCERTAIN_SHORT_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_6",
+      "session_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064",
+      "prefix_number": 6,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_7",
+      "session_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064",
+      "prefix_number": 7,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P5_OVERALL_PROGRESS",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_8",
+      "session_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064",
+      "prefix_number": 8,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Positive: P5_OVERALL_PROGRESS",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_1",
+      "session_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91",
+      "prefix_number": 1,
+      "reference_label": "UNCERTAIN",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Hybrid assessment reached consensus (UNCERTAIN, confidence: 0.5). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [],
+        "llm": [
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY",
+          "LLM Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_2",
+      "session_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91",
+      "prefix_number": 2,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.82,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 0.82). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P5_OVERALL_PROGRESS",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_3",
+      "session_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91",
+      "prefix_number": 3,
+      "reference_label": "UNCERTAIN",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.88,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.88). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_4",
+      "session_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91",
+      "prefix_number": 4,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (PRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as PRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_5",
+      "session_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91",
+      "prefix_number": 5,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Positive: P4_STAGNATION_ESCAPE",
+          "LLM Negative: U1_REPEATED_EXECUTION"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_1",
+      "session_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8",
+      "prefix_number": 1,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.48,
+      "reasoning": "Hybrid assessment evaluated partial evidence (PRODUCTIVE, confidence: 0.48). Rule Baseline provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P2_ERROR_EVOLUTION",
+          "Objective Positive: P3_EXPLORATION"
+        ],
+        "llm": [
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [
+          "Partial Evidence: Rule Baseline identified directional evidence (PRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_2",
+      "session_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8",
+      "prefix_number": 2,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "PRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid conflict resolved: LLM Reasoning higher confidence (0.85 vs 0.54) takes precedence for PRODUCTIVE state.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P2_ERROR_EVOLUTION",
+          "LLM Positive: P3_EXPLORATION"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed UNPRODUCTIVE (conf: 0.54), whereas LLM Reasoning assessed PRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_3",
+      "session_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8",
+      "prefix_number": 3,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_4",
+      "session_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8",
+      "prefix_number": 4,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_5",
+      "session_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8",
+      "prefix_number": 5,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_6",
+      "session_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8",
+      "prefix_number": 6,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_1",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 1,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.89,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.89). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_2",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 2,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.97,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.97). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS",
+          "Objective Negative: U6_REVERSION_CYCLIC"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_3",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 3,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS",
+          "Objective Negative: U6_REVERSION_CYCLIC"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_4",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 4,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS",
+          "Objective Negative: U6_REVERSION_CYCLIC"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION",
+          "LLM Negative: U5_REPEATED_FAILED_ATTEMPTS",
+          "LLM Negative: U6_REVERSION_CYCLIC"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_5",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 5,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS",
+          "Objective Negative: U6_REVERSION_CYCLIC"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_6",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 6,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS",
+          "Objective Negative: U6_REVERSION_CYCLIC"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_7",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 7,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.81,
+      "reasoning": "Hybrid conflict resolved: Objective test suite evidence (+50.0% pass rate, +2 tests passed) takes precedence for PRODUCTIVE state.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed PRODUCTIVE (conf: 0.95), whereas LLM Reasoning assessed UNPRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_8",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 8,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "PRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "PRODUCTIVE",
+      "confidence": 0.81,
+      "reasoning": "Hybrid conflict resolved: Objective test suite evidence (+50.0% pass rate, +2 tests passed) takes precedence for PRODUCTIVE state.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [],
+        "conflict": [
+          "Directional Method Conflict: Rule Baseline assessed PRODUCTIVE (conf: 0.95), whereas LLM Reasoning assessed UNPRODUCTIVE (conf: 0.85)."
+        ]
+      },
+      "recommended_action": "CONTINUE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_9",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 9,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.72,
+      "reasoning": "Hybrid assessment evaluated partial evidence (UNPRODUCTIVE, confidence: 0.72). LLM Reasoning provided directional signals while alternate method output UNCERTAIN.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Uncertainty: UNCERTAIN_CONFLICTING_EVIDENCE"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Partial Evidence: LLM Reasoning identified directional evidence (UNPRODUCTIVE), while alternate method output UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_10",
+      "session_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6",
+      "prefix_number": 10,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.86,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.86). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Positive: P4_STAGNATION_ESCAPE",
+          "Objective Positive: P5_OVERALL_TRAJECTORY_PROGRESS",
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U6_REVERSION_CYCLIC"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_1",
+      "session_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126",
+      "prefix_number": 1,
+      "reference_label": "PRODUCTIVE",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Hybrid assessment reached consensus (UNCERTAIN, confidence: 0.5). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "MONITOR"
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_2",
+      "session_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126",
+      "prefix_number": 2,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 0.85,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 0.85). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_3",
+      "session_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126",
+      "prefix_number": 3,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_4",
+      "session_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126",
+      "prefix_number": 4,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_5",
+      "session_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126",
+      "prefix_number": 5,
+      "reference_label": "UNPRODUCTIVE",
+      "m2_state": "UNPRODUCTIVE",
+      "m3_state": "UNPRODUCTIVE",
+      "predicted_state": "UNPRODUCTIVE",
+      "confidence": 1.0,
+      "reasoning": "Hybrid assessment reached consensus (UNPRODUCTIVE, confidence: 1.0). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U1_REPEATED_EXECUTION",
+          "Objective Negative: U3_REPEATED_STATE",
+          "Objective Negative: U4_PERFORMANCE_STAGNATION",
+          "Objective Negative: U5_REPEATED_FAILED_ATTEMPTS"
+        ],
+        "llm": [
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Negative: U4_PERFORMANCE_STAGNATION"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNPRODUCTIVE."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "INTERVENE"
+    },
+    {
+      "prefix_id": "sess_e7390b18-e9db-4857-93c5-144e28ea666b_prefix_1",
+      "session_id": "sess_e7390b18-e9db-4857-93c5-144e28ea666b",
+      "prefix_number": 1,
+      "reference_label": "UNCERTAIN",
+      "m2_state": "UNCERTAIN",
+      "m3_state": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "reasoning": "Hybrid assessment reached consensus (UNCERTAIN, confidence: 0.5). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence.",
+      "evidence": {
+        "objective": [
+          "Objective Negative: U2_REPEATED_ERROR",
+          "Objective Uncertainty: UNCERTAIN_NO_EVALUATION_FEEDBACK"
+        ],
+        "llm": [
+          "LLM Positive: P1_PERFORMANCE_IMPROVEMENT",
+          "LLM Positive: P3_EXPLORATION",
+          "LLM Negative: U1_REPEATED_EXECUTION",
+          "LLM Negative: U2_REPEATED_ERROR",
+          "LLM Negative: U3_REPEATED_STATE",
+          "LLM Uncertainty: UNCERTAIN_SHORT_TRAJECTORY"
+        ],
+        "agreement": [
+          "Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNCERTAIN."
+        ],
+        "conflict": []
+      },
+      "recommended_action": "MONITOR"
+    }
+  ]
+}

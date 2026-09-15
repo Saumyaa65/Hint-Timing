@@ -20,11 +20,14 @@ logger = logging.getLogger(__name__)
 
 def fuse_struggle_evidence(rule_result: dict, llm_result: dict, trajectory_data: dict, strict_model_pinning: bool = False) -> dict:
     """
-    Interpretable Evidence-Fusion Layer:
-    Explicitly combines objective trajectory signals (M2) and LLM trajectory reasoning (M3).
+    Interpretable Evidence-Fusion Layer (Condition M4):
+    Explicitly combines objective trajectory signals (M2) and LLM trajectory reasoning (M3)
+    using weighted confidence dominance, objective test suite precedence, and consensus fusion.
     """
     t = trajectory_data.get("trajectory_length", 0)
     summary = trajectory_data.get("trajectory_summary", {})
+    pass_rate_imp = summary.get("overall_pass_rate_improvement", 0.0)
+    peak_test_imp = summary.get("peak_test_improvement", 0)
 
     rule_state = rule_result.get("state", "UNCERTAIN")
     rule_conf = float(rule_result.get("confidence", 0.5))
@@ -80,11 +83,11 @@ def fuse_struggle_evidence(rule_result: dict, llm_result: dict, trajectory_data:
         unc_signals.append("HYBRID_LLM_UNAVAILABLE")
         reasoning = f"LLM reasoning unavailable ({llm_error}). Hybrid output fallback to Rule Baseline ({rule_state})."
     elif rule_state == llm_state:
-        # Full Agreement / Consensus
+        # Full Consensus / Agreement
         final_state = rule_state
         if final_state in ["PRODUCTIVE", "UNPRODUCTIVE"]:
             base_c = (rule_conf + llm_conf) / 2.0
-            final_conf = min(1.0, base_c + HYBRID_CONFIG['CONSENSUS_BOOST'])
+            final_conf = min(1.0, round(base_c + HYBRID_CONFIG['CONSENSUS_BOOST'], 2))
             agreement_evidence.append(f"Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as {final_state}.")
         else:
             final_state = "UNCERTAIN"
@@ -92,16 +95,36 @@ def fuse_struggle_evidence(rule_result: dict, llm_result: dict, trajectory_data:
             agreement_evidence.append("Full Consensus: Both Rule Baseline and LLM Reasoning assessed state as UNCERTAIN.")
 
         reasoning = f"Hybrid assessment reached consensus ({final_state}, confidence: {round(final_conf, 2)}). Rule Baseline and LLM Trajectory Reasoning aligned on trajectory evidence."
-    elif (rule_state == "PRODUCTIVE" and llm_state == "UNPRODUCTIVE") or (rule_state == "UNPRODUCTIVE" and llm_state == "PRODUCTIVE"):
-        # Strong Conflict Case
-        conflict_msg = f"Strong Method Conflict: Rule Baseline assessed {rule_state}, whereas LLM Reasoning assessed {llm_state}."
+    elif (rule_state in ["PRODUCTIVE", "UNPRODUCTIVE"]) and (llm_state in ["PRODUCTIVE", "UNPRODUCTIVE"]):
+        # Directional Conflict Case (PRODUCTIVE vs UNPRODUCTIVE)
+        conf_diff = round(abs(rule_conf - llm_conf), 2)
+        conflict_msg = f"Directional Method Conflict: Rule Baseline assessed {rule_state} (conf: {rule_conf:.2f}), whereas LLM Reasoning assessed {llm_state} (conf: {llm_conf:.2f})."
         conflict_evidence.append(conflict_msg)
 
-        penalty_conf = max(0.20, min(rule_conf, llm_conf) - HYBRID_CONFIG['CONFLICT_PENALTY'])
-        final_state = "UNCERTAIN"
-        final_conf = penalty_conf
-        unc_signals.append("HYBRID_METHOD_CONFLICT")
-        reasoning = f"Hybrid assessment detected strong disagreement (Rule: {rule_state} vs LLM: {llm_state}). Defaulting conservatively to UNCERTAIN state (confidence: {round(final_conf, 2)})."
+        # Check for hard objective test suite evidence override (test pass improvement)
+        has_strong_obj_productive = (pass_rate_imp >= 0.25 or peak_test_imp >= 2)
+
+        if has_strong_obj_productive and rule_state == "PRODUCTIVE":
+            final_state = "PRODUCTIVE"
+            final_conf = round(max(0.60, rule_conf * 0.85), 2)
+            reasoning = f"Hybrid conflict resolved: Objective test suite evidence (+{pass_rate_imp*100:.1f}% pass rate, +{peak_test_imp} tests passed) takes precedence for PRODUCTIVE state."
+        elif conf_diff >= 0.15:
+            # High confidence dominance
+            if llm_conf > rule_conf:
+                final_state = llm_state
+                final_conf = round(llm_conf * 0.85, 2)
+                reasoning = f"Hybrid conflict resolved: LLM Reasoning higher confidence ({llm_conf:.2f} vs {rule_conf:.2f}) takes precedence for {final_state} state."
+            else:
+                final_state = rule_state
+                final_conf = round(rule_conf * 0.85, 2)
+                reasoning = f"Hybrid conflict resolved: Rule Baseline higher confidence ({rule_conf:.2f} vs {llm_conf:.2f}) takes precedence for {final_state} state."
+        else:
+            # Genuine balanced conflict with close confidence -> UNCERTAIN
+            penalty_conf = max(0.20, min(rule_conf, llm_conf) - HYBRID_CONFIG['CONFLICT_PENALTY'])
+            final_state = "UNCERTAIN"
+            final_conf = round(penalty_conf, 2)
+            unc_signals.append("HYBRID_METHOD_CONFLICT")
+            reasoning = f"Hybrid assessment detected strong disagreement (Rule: {rule_state}:{rule_conf:.2f} vs LLM: {llm_state}:{llm_conf:.2f}). Defaulting conservatively to UNCERTAIN state (confidence: {round(final_conf, 2)})."
     else:
         # One Method UNCERTAIN, One Directional
         non_unc_state = rule_state if rule_state != "UNCERTAIN" else llm_state
@@ -154,12 +177,14 @@ def fuse_struggle_evidence(rule_result: dict, llm_result: dict, trajectory_data:
     }
 
 
-def assess_hybrid_trajectory(trajectory_data: dict, model_name: Optional[str] = None, strict_model_pinning: bool = False) -> dict:
+def assess_hybrid_trajectory(trajectory_data: dict, model_name: Optional[str] = None, strict_model_pinning: bool = False, llm_result: Optional[dict] = None) -> dict:
     """
     Evaluates trajectory prefix using Condition M4 (Hybrid Feature + LLM struggle assessment).
+    If llm_result is provided (e.g., from cache), uses it directly without making an LLM API call.
     """
     rule_result = assess_trajectory(trajectory_data)
-    llm_result = assess_trajectory_with_llm(trajectory_data, model_name=model_name, strict_model_pinning=strict_model_pinning)
+    if llm_result is None:
+        llm_result = assess_trajectory_with_llm(trajectory_data, model_name=model_name, strict_model_pinning=strict_model_pinning)
 
     return fuse_struggle_evidence(
         rule_result=rule_result,

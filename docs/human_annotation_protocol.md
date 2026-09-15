@@ -63,7 +63,7 @@ The trajectory provides insufficient or conflicting evidence for a clear judgmen
 
 ## F. Examples of Ambiguous / Uncertain Struggle
 - **Scenario E**: Student makes 1 attempt with a logical error. Too short to establish whether struggle is productive or unproductive ($A_1$).
-- **Scenario F**: Test pass ratio increases from 2/10 to 5/10, but execution time explodes by $10\times$ and introduces a recursion depth warning ($A_1 \dots A_3$).
+- **Scenario F**: Test pass ratio increases from 2/10 to 5/10. But execution time explodes by $10\times$ and introduces a recursion depth warning ($A_1 \dots A_3$).
 
 ---
 

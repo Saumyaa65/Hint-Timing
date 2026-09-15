@@ -1,0 +1,127 @@
+{
+  "total_evaluated_prefixes": 89,
+  "m1_metrics": {
+    "method_name": "M1 Snapshot Baseline",
+    "total_prefixes": 89,
+    "valid_count": 89,
+    "failed_count": 0,
+    "accuracy": 0.2697,
+    "balanced_accuracy": 0.4357,
+    "precision_macro": 0.3026,
+    "recall_macro": 0.4357,
+    "macro_f1": 0.2476,
+    "productive_f1": 0.5806,
+    "unproductive_f1": 0.0,
+    "uncertain_f1": 0.1622,
+    "confusion_matrix": [
+      [
+        18,
+        0,
+        22
+      ],
+      [
+        3,
+        0,
+        39
+      ],
+      [
+        1,
+        0,
+        6
+      ]
+    ]
+  },
+  "m2_metrics": {
+    "method_name": "M2 Rule-Based Feature Model",
+    "total_prefixes": 89,
+    "valid_count": 89,
+    "failed_count": 0,
+    "accuracy": 0.5393,
+    "balanced_accuracy": 0.4694,
+    "precision_macro": 0.5125,
+    "recall_macro": 0.4694,
+    "macro_f1": 0.4634,
+    "productive_f1": 0.6389,
+    "unproductive_f1": 0.6301,
+    "uncertain_f1": 0.1212,
+    "confusion_matrix": [
+      [
+        23,
+        5,
+        12
+      ],
+      [
+        7,
+        23,
+        12
+      ],
+      [
+        2,
+        3,
+        2
+      ]
+    ]
+  },
+  "m3_metrics": {
+    "method_name": "M3 LLM Trajectory Reasoning (Full)",
+    "total_prefixes": 89,
+    "valid_count": 89,
+    "failed_count": 0,
+    "accuracy": 0.6629,
+    "balanced_accuracy": 0.5976,
+    "precision_macro": 0.569,
+    "recall_macro": 0.5976,
+    "macro_f1": 0.5772,
+    "productive_f1": 0.6667,
+    "unproductive_f1": 0.7317,
+    "uncertain_f1": 0.3333,
+    "confusion_matrix": [
+      [
+        26,
+        8,
+        6
+      ],
+      [
+        10,
+        30,
+        2
+      ],
+      [
+        2,
+        2,
+        3
+      ]
+    ]
+  },
+  "m4_metrics": {
+    "method_name": "M4 Hybrid Evidence-Fusion Model (Full)",
+    "total_prefixes": 89,
+    "valid_count": 89,
+    "failed_count": 0,
+    "accuracy": 0.6742,
+    "balanced_accuracy": 0.6067,
+    "precision_macro": 0.5816,
+    "recall_macro": 0.6067,
+    "macro_f1": 0.5814,
+    "productive_f1": 0.7073,
+    "unproductive_f1": 0.7368,
+    "uncertain_f1": 0.3,
+    "confusion_matrix": [
+      [
+        29,
+        4,
+        7
+      ],
+      [
+        11,
+        28,
+        3
+      ],
+      [
+        2,
+        2,
+        3
+      ]
+    ]
+  }
+}

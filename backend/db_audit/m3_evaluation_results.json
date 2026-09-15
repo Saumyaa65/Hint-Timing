@@ -1,0 +1,747 @@
+{
+  "metrics": {
+    "method_name": "M3 LLM Trajectory Reasoning",
+    "total_prefixes": 89,
+    "valid_count": 45,
+    "failed_count": 44,
+    "accuracy": 0.0889,
+    "balanced_accuracy": 0.3333,
+    "precision_macro": 0.0296,
+    "recall_macro": 0.3333,
+    "macro_f1": 0.0544,
+    "productive_f1": 0.0,
+    "unproductive_f1": 0.0,
+    "uncertain_f1": 0.1633,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        21
+      ],
+      [
+        0,
+        0,
+        20
+      ],
+      [
+        0,
+        0,
+        4
+      ]
+    ]
+  },
+  "predictions": [
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_6",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_7",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_9",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_2",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_3",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_6",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_7",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_9",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_10",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_11",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_12",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "UNCERTAIN",
+      "confidence": 0.5,
+      "error": null,
+      "reasoning": "Extracted state via regex fallback."
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_7",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_8",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_3",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_6",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_7",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_1",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_2",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_3",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_4",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_5",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_6",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_1",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_6",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_7",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_8",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_9",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_10",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_1",
+      "reference_label": "PRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_2",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_3",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_4",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_5",
+      "reference_label": "UNPRODUCTIVE",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    },
+    {
+      "prefix_id": "sess_e7390b18-e9db-4857-93c5-144e28ea666b_prefix_1",
+      "reference_label": "UNCERTAIN",
+      "predicted_state": "FAILED/NO_PREDICTION",
+      "confidence": 0.0,
+      "error": "LLM assessment failed on all candidate models: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 400 tokens, but can only afford 208. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_2y91bPSKsZCRhPYOGFtMFaBGGE7'}",
+      "reasoning": ""
+    }
+  ]
+}

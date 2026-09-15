@@ -1,0 +1,3489 @@
+{
+  "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.6,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "The student switched from Java to JavaScript between attempts, and the code remains identical with the same compilation error.",
+      "interpretation": "The student's approach has not changed, and the error remains unresolved.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [
+        "Compilation error remains unresolved"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical error"
+      ],
+      "temporal": [
+        "Only 2 attempts, with a short elapsed duration"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The student's trajectory is uncertain due to the lack of meaningful progress, repeated execution of identical code, and unresolved compilation error.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2080
+  },
+  "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "Pass rate improved from 0.0% to 0.0% across 3 attempts, with a peak test pass improvement of +0 tests and a net pass rate improvement of +0.0%",
+      "interpretation": "The student is experiencing productive struggle as they are making meaningful changes to their code, resolving compilation errors, and attempting to address the problem, despite not yet achieving a correct solution.",
+      "progression": [
+        "Test results improved from 0/0 to 0/4"
+      ],
+      "exploration": [
+        "Code modifications made to address compilation error and resolve error evolution"
+      ],
+      "error_evolution": [
+        "Compilation error resolved in attempt 3"
+      ],
+      "stagnation": [
+        "No repeated execution or stagnant state observed"
+      ],
+      "temporal": [
+        "Total elapsed duration is 95.65s, with 2 outcome changes and 0 repeated states"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student's productive struggle is evident in their ability to resolve compilation errors, make meaningful code modifications, and attempt to address the problem, despite not yet achieving a correct solution.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 2841
+  },
+  "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "The student has made 4 attempts with no improvement in test pass rate or error resolution.",
+      "interpretation": "The student is experiencing unproductive struggle as they are not making meaningful progress towards solving the problem.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical or near-identical code with identical outcomes (Attempts 3 and 4)"
+      ],
+      "temporal": [
+        "4 attempts with no improvement in test pass rate or error resolution"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows repeated execution of identical code with no improvement in test pass rate or error resolution, indicating unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 3605
+  },
+  "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "Net pass rate improvement of 50.0% across 5 attempts, with a peak test pass improvement of +2 tests.",
+      "interpretation": "The student is making meaningful progress towards solving the problem, with a notable improvement in test pass rate and a reduction in errors.",
+      "progression": [
+        "Pass rate increased from 0.0% to 50.0% across 5 attempts"
+      ],
+      "exploration": [
+        "Code modifications made in attempts 3 and 4, with a focus on addressing compilation errors and improving algorithmic logic"
+      ],
+      "error_evolution": [
+        "Compilation error resolved in attempt 3, with a subsequent improvement in test pass rate"
+      ],
+      "stagnation": [
+        "Repeated execution in attempt 4, but followed by an outcome change in attempt 5"
+      ],
+      "temporal": [
+        "Total elapsed duration of 203.34s, with a peak test pass improvement in attempt 5"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a clear progression towards solving the problem, with a notable improvement in test pass rate and a reduction in errors. The student is making meaningful code modifications and addressing compilation errors, indicating productive struggle.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 4370
+  },
+  "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "Net pass rate improvement of 50.0% across 5 attempts, with 2/4 tests passed in the last attempt.",
+      "interpretation": "The student is making progress towards solving the problem, with a notable improvement in test pass rate and a clear direction towards the correct solution.",
+      "progression": [
+        "Peak test pass improvement: +2 tests",
+        "Net pass rate improvement: +50.0%"
+      ],
+      "exploration": [
+        "Code changes: 0",
+        "Repeated states: 2"
+      ],
+      "error_evolution": [
+        "Error evolution: Changed=False, Resolved=False in transitions 3->4 and 5->6"
+      ],
+      "stagnation": [
+        "Repeated executions: 2",
+        "Consecutive stagnant length: 1 in transitions 4->5 and 5->6"
+      ],
+      "temporal": [
+        "Total elapsed duration: 217.97s"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a productive struggle, with a clear progression towards the correct solution, despite some repeated executions and stagnant states.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 5131
+  },
+  "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_6": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 7,
+    "evidence": {
+      "observation": "The student has made repeated executions of identical or near-identical code with identical outcomes (Attempts 5-6, Code Similarity: 1.0)",
+      "interpretation": "The student is stuck in a loop of unproductive struggle, failing to make meaningful progress or changes to their approach.",
+      "progression": [
+        "The student has not made any meaningful progress in terms of test pass count or error resolution across the trajectory prefix."
+      ],
+      "exploration": [
+        "The student has not made any meaningful changes to their approach or algorithm, instead reverting to earlier code states."
+      ],
+      "error_evolution": [
+        "The student has not made any meaningful progress in error resolution, with the same error messages appearing across multiple attempts."
+      ],
+      "stagnation": [
+        "The student has repeated the same code execution multiple times (Attempts 5-6) without making any progress."
+      ],
+      "temporal": [
+        "The student has made 2 repeat executions, with a total elapsed duration of 278.39s."
+      ],
+      "uncertainty": [
+        "The student's trajectory prefix is relatively long, but the repeated execution and stagnation patterns suggest a lack of productive struggle."
+      ],
+      "reasoning": "The student's repeated execution of identical code and lack of meaningful progress or changes to their approach indicate unproductive struggle.",
+      "recommended_action": "MONITOR"
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_LONG_TRAJECTORY"
+    ],
+    "reasoning": "The student's repeated execution of identical code and lack of meaningful progress or changes to their approach indicate unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 6007
+  },
+  "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_7": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 8,
+    "evidence": {
+      "observation": "Pass rate improved from 0.0% to 100.0% across 8 attempts",
+      "interpretation": "The student demonstrated a productive struggle by making meaningful changes to their code and eventually achieving a correct solution.",
+      "progression": [
+        "Pass rate improved from 0.0% to 50.0% across attempts 1-4, then to 100.0% across attempts 7-8"
+      ],
+      "exploration": [
+        "Code modifications made to address compilation errors, fix typos, and change logic to count negative numbers"
+      ],
+      "error_evolution": [
+        "Compilation errors and runtime errors were addressed, and the student eventually resolved the issue"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with no progress (attempts 5-6) was followed by a productive outcome change"
+      ],
+      "temporal": [
+        "The student took 306.22 seconds to complete the 8 attempts"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE",
+      "P5_OVERALL_PROGRESS"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's productive struggle is evident in their ability to make meaningful changes to their code, address compilation and runtime errors, and eventually achieve a correct solution. The repeated execution of identical code without progress is a negative signal, but it is outweighed by the overall productive progression.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 6769
+  },
+  "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_8": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 9,
+    "evidence": {
+      "observation": "Net pass rate improvement of 100.0% across 9 attempts, with a peak test pass improvement of +4 tests.",
+      "interpretation": "The student demonstrates a productive struggle by making meaningful progress towards the solution, with a significant improvement in test pass rate and a peak improvement of 4 tests.",
+      "progression": [
+        "Pass rate improved from 0.0% to 100.0% across 9 attempts",
+        "Peak test pass improvement of +4 tests"
+      ],
+      "exploration": [
+        "Code changes were minimal, with only 0 changes across 9 attempts",
+        "Student reverted to an earlier attempted code state at attempt #6, but then made significant progress at attempt #8"
+      ],
+      "error_evolution": [
+        "Error evolution was present, with a change in error type from compilation error to execution error and finally to a resolved error at attempt #8"
+      ],
+      "stagnation": [
+        "Repeated states were present, with 3 instances of repeated execution and 1 instance of code reversion to an earlier attempted code state"
+      ],
+      "temporal": [
+        "Total elapsed duration was 323.29s, with a peak test pass improvement at attempt #8"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student demonstrates a productive struggle by making meaningful progress towards the solution, with a significant improvement in test pass rate and a peak improvement of 4 tests. The student's code changes were minimal, and they reverted to an earlier attempted code state at attempt #6, but then made significant progress at attempt #8. The error evolution was present, with a change in error type from compilation error to execution error and finally to a resolved error at attempt #8.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 7530
+  },
+  "sess_609d3fb5-b8fd-47be-b58b-477d5eb70157_prefix_9": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 10,
+    "evidence": {
+      "observation": "Net pass rate improvement of +100.0% across 10 attempts, with a peak improvement of +4 tests.",
+      "interpretation": "The student demonstrates a productive struggle by making meaningful progress towards the correct solution, with a significant improvement in test pass rate and a peak improvement of 4 tests.",
+      "progression": [
+        "Pass rate improved from 0.0% to 100.0% across 10 attempts",
+        "Peak test pass improvement of +4 tests"
+      ],
+      "exploration": [
+        "Code modifications made to address compilation errors and improve algorithmic logic",
+        "Student reverted to an earlier attempted code state in attempts 6 and 10"
+      ],
+      "error_evolution": [
+        "Compilation errors resolved in attempts 3 and 7",
+        "Error evolution from runtime errors to logical errors and eventually to correct solution"
+      ],
+      "stagnation": [
+        "Repeated execution of identical or near-identical code in attempts 5 and 6, and attempts 8 and 9"
+      ],
+      "temporal": [
+        "Total elapsed duration of 350.74s, with 3 repeat executions and 6 outcome changes"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student demonstrates a productive struggle by making meaningful progress towards the correct solution, with a significant improvement in test pass rate and a peak improvement of 4 tests. However, there are some negative signals, such as repeated execution and repeated errors, which indicate that the student may need additional guidance or support.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 8365
+  },
+  "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "Net pass rate improvement of 0.0% and 1 test passed in attempt 2",
+      "interpretation": "The student is making progress towards solving the problem, as evidenced by the improvement in test results and the correction of the compilation error.",
+      "progression": [
+        "1 test passed in attempt 2"
+      ],
+      "exploration": [
+        "Code modification to fix compilation error and add print statement"
+      ],
+      "error_evolution": [
+        "Compilation error resolved in attempt 2"
+      ],
+      "stagnation": [
+        "No repeated execution or stagnant state"
+      ],
+      "temporal": [
+        "2 attempts, 36.73s elapsed"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student's progress is evident in the corrected compilation error and the improvement in test results, indicating a productive struggle.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 2381
+  },
+  "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.6,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "The student's pass rate improved from 0.0% to 25.0% between attempts 1 and 2, indicating some progress. However, the code was reverted to a previous state in attempt 3, and the student switched to a different programming language.",
+      "interpretation": "The student's initial attempt was a compilation error, which was resolved in attempt 2. However, the student's progress was not sustained, and they reverted to a previous state in attempt 3.",
+      "progression": [
+        "Pass rate improved from 0.0% to 25.0% between attempts 1 and 2"
+      ],
+      "exploration": [
+        "Code was modified between attempts 1 and 2, but reverted to a previous state in attempt 3"
+      ],
+      "error_evolution": [
+        "Compilation error was resolved in attempt 2, but a new error occurred in attempt 3"
+      ],
+      "stagnation": [
+        "Student's progress was not sustained between attempts 2 and 3"
+      ],
+      "temporal": [
+        "Attempts 1 and 2 were made in a short duration, but attempt 3 was made after a longer duration"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_CONFLICTING_EVIDENCE"
+    ],
+    "reasoning": "The student's progress is uncertain due to conflicting evidence of improvement and stagnation. The student's pass rate improved between attempts 1 and 2, but they reverted to a previous state in attempt 3 and switched to a different programming language.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 3370
+  },
+  "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "The student's code has not shown any meaningful progress or improvement in test pass rates across attempts. The student has made minor changes to the code, but these changes have not led to any significant progress.",
+      "interpretation": "The student is struggling to make meaningful progress in solving the problem. They are making minor changes to the code, but these changes are not leading to any significant improvement in test pass rates.",
+      "progression": [
+        "The student's test pass rate has not improved across attempts"
+      ],
+      "exploration": [
+        "The student has made minor changes to the code, but these changes are not leading to any significant progress"
+      ],
+      "error_evolution": [
+        "The student has not made any meaningful progress in resolving errors"
+      ],
+      "stagnation": [
+        "The student has not shown any signs of stagnation, but the lack of progress is a concern"
+      ],
+      "temporal": [
+        "The student has made 4 attempts, but the total elapsed duration is 295.05s, which may indicate a lack of persistence"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The student's trajectory shows a lack of meaningful progress and improvement in test pass rates. The student has made minor changes to the code, but these changes have not led to any significant progress. The student's persistence and engagement are also a concern.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 4580
+  },
+  "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "Net pass rate improvement of 50.0% across 5 attempts, with a peak test pass improvement of +2 tests.",
+      "interpretation": "The student is making meaningful progress towards solving the problem, with a clear improvement in test pass rate and peak test pass improvement.",
+      "progression": [
+        "Attempt #2: 1/4 passed (25.0%), Attempt #5: 3/4 passed (75.0%)"
+      ],
+      "exploration": [
+        "Code changes in attempts #2 and #4, with a focus on sorting the input array and addressing compilation errors."
+      ],
+      "error_evolution": [
+        "Error evolution across attempts #1 -> #2 (resolved), #2 -> #3 (unresolved), #4 -> #5 (resolved)"
+      ],
+      "stagnation": [
+        "No repeated states or stagnation observed across attempts."
+      ],
+      "temporal": [
+        "Total elapsed duration: 315.11s, with 2 code changes and 2 outcome changes."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a clear progression towards solving the problem, with a focus on addressing compilation errors and improving test pass rate. The student's code changes and outcome changes indicate a systematic approach to problem-solving.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 5539
+  },
+  "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "Net pass rate improvement of 50.0% across 6 attempts, with a peak test pass improvement of +2 tests.",
+      "interpretation": "The student demonstrates a productive struggle by making meaningful changes to their code, improving their test pass rate, and resolving compilation errors.",
+      "progression": [
+        "Attempt #2: 1/4 passed (25.0%), Attempt #5: 3/4 passed (75.0%), Attempt #6: 3/4 passed (75.0%)"
+      ],
+      "exploration": [
+        "Code changes in Attempt #2 and #4, with a focus on sorting the array and improving the logic for finding the longest subarray with consecutive integers."
+      ],
+      "error_evolution": [
+        "Compilation errors in Attempt #1 and #4 were resolved in subsequent attempts, and the student made progress in resolving the logic error."
+      ],
+      "stagnation": [
+        "Repeated execution in Attempt #5 and #6, with no improvement in test pass rate."
+      ],
+      "temporal": [
+        "The student made 2 code changes and 2 outcome changes across 6 attempts, with a total elapsed duration of 361.75s."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student demonstrates a productive struggle by making meaningful changes to their code, improving their test pass rate, and resolving compilation errors. However, the repeated execution in Attempt #5 and #6 indicates some stagnation.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 6497
+  },
+  "sess_11ac3d64-785b-45f5-8ce1-e32e2a5ece25_prefix_6": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 7,
+    "evidence": {
+      "observation": "The student has made repeated executions of identical code with identical outcomes (Attempts 6 and 7) and has reverted to an earlier attempted code state (Attempt 7).",
+      "interpretation": "The student has entered a state of stagnation, failing to make meaningful progress or changes to their approach.",
+      "progression": [
+        "The student initially showed some improvement in test pass rate (25.0% to 75.0%) but has since plateaued."
+      ],
+      "exploration": [
+        "The student has made minor changes to their code, but these changes have not led to significant improvements or meaningful progress."
+      ],
+      "error_evolution": [
+        "The student has not made any meaningful progress in resolving errors or improving their code."
+      ],
+      "stagnation": [
+        "The student has repeated the same code execution with the same outcome (Attempts 6 and 7) and has reverted to an earlier attempted code state (Attempt 7)."
+      ],
+      "temporal": [
+        "The student has made 2 repeat executions and has been stagnant for 2 consecutive attempts."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows repeated executions of identical code with identical outcomes, indicating stagnation. The student has also reverted to an earlier attempted code state, further indicating a lack of progress.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 7519
+  },
+  "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "Repeated execution of identical code with identical error messages across two attempts.",
+      "interpretation": "The student is stuck in a loop of identical attempts without addressing the underlying issue.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical error messages"
+      ],
+      "temporal": [
+        "2 attempts, 29.07s elapsed"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with identical error messages across two attempts indicates a lack of meaningful progress or exploration.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2333
+  },
+  "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "The student's code modifications from attempt 1 to 3 show meaningful progress towards a correct solution, with a significant improvement in test pass rate from 0.0% to 100.0%.",
+      "interpretation": "The student's approach to solving the problem is evolving, with a clear shift from a flawed algorithm to a correct one.",
+      "progression": [
+        "The student gained 4 test passes across attempt 3, indicating a clear improvement in problem-solving skills."
+      ],
+      "exploration": [
+        "The student's code modifications show a systematic approach to solving the problem, with a clear focus on correcting the algorithm."
+      ],
+      "error_evolution": [
+        "The student's error messages changed from an ArrayIndexOutOfBoundsException to no error message, indicating a resolution of the underlying defect."
+      ],
+      "stagnation": [
+        "The student's code showed repeated execution of the same flawed algorithm in attempt 1 and 2, but this was broken in attempt 3."
+      ],
+      "temporal": [
+        "The student's struggle duration was 51.67s, with a peak test pass improvement of +0 tests and a net pass rate improvement of +0.0%."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows a clear and systematic approach to solving the problem, with a meaningful improvement in test pass rate and a resolution of the underlying defect.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 3247
+  },
+  "sess_03787fdd-b97e-430b-b542-154f690c6c16_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "Pass rate improved from 0.0% to 100.0% across 3 attempts, with a single outcome change and no repeated executions.",
+      "interpretation": "The student demonstrated a productive struggle by making meaningful changes to their approach, resolving the error, and achieving a correct solution.",
+      "progression": [
+        "Test pass count improved from 0 to 4 across 3 attempts"
+      ],
+      "exploration": [
+        "Code similarity between attempts 2 and 3 was 0.9972, indicating a small modification to the existing approach"
+      ],
+      "error_evolution": [
+        "Error evolution changed from unchanged to resolved across attempts 2 and 3"
+      ],
+      "stagnation": [
+        "Repeated states occurred between attempts 1 and 2, and attempts 3 and 4, but were short-lived and did not hinder progress"
+      ],
+      "temporal": [
+        "Total elapsed duration was 69.63s, with a peak test pass improvement of +0 tests and a net pass rate improvement of +0.0%"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's productive struggle is evident in their ability to resolve the error, make meaningful changes to their approach, and achieve a correct solution. While there were some repeated executions and repeated states, they did not hinder progress and were short-lived.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 4160
+  },
+  "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.6,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "Pass rate remains 0.0% across two attempts, no test suite evaluation feedback",
+      "interpretation": "Student is struggling to solve the problem, but the trajectory is too short to confidently determine the nature of the struggle",
+      "progression": [],
+      "exploration": [
+        "Code modification made without test suite evaluation feedback"
+      ],
+      "error_evolution": [
+        "Compilation error persists across attempts"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes"
+      ],
+      "temporal": [
+        "Two attempts with no significant elapsed time difference"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The trajectory is too short to confidently determine the nature of the student's struggle, but there are signs of repeated execution and error persistence.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2381
+  },
+  "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "Pass rate improved from 0.0% to 100.0% across 3 attempts",
+      "interpretation": "Student demonstrated productive struggle by making meaningful approach changes and resolving compilation errors",
+      "progression": [
+        "Test pass count increased from 0 to 4 across 3 attempts"
+      ],
+      "exploration": [
+        "Student modified code to fix compilation error and improve algorithm"
+      ],
+      "error_evolution": [
+        "Compilation error resolved in attempt 2, execution error resolved in attempt 3"
+      ],
+      "stagnation": [
+        "No repeated execution or stagnant state observed"
+      ],
+      "temporal": [
+        "Student made progress across 3 attempts with no repeated attempts"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student demonstrated productive struggle by making meaningful approach changes, resolving compilation errors, and improving test pass count across 3 attempts.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 3352
+  },
+  "sess_36262904-b141-47c4-b1ec-52886d9f7f19_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "Pass rate improved from 0.0% to 100.0% across 3 attempts",
+      "interpretation": "Student demonstrated productive struggle by making meaningful approach changes and resolving compilation errors",
+      "progression": [
+        "Test results improved from 0/0 to 4/4 passed"
+      ],
+      "exploration": [
+        "Student modified code to address compilation errors and eventually achieved correct solution"
+      ],
+      "error_evolution": [
+        "Compilation error resolved in attempt 2, and correct solution achieved in attempt 3"
+      ],
+      "stagnation": [
+        "Repeated state observed in attempt 4, but overall trajectory shows productive progress"
+      ],
+      "temporal": [
+        "Student made progress over 3 attempts, with a total elapsed duration of 156.88s"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student demonstrated productive struggle by making meaningful approach changes, resolving compilation errors, and achieving a correct solution. While a repeated state was observed in attempt 4, the overall trajectory shows productive progress.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 4324
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.65,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "No net test suite performance gains (Pass Rate: 0.0% in both attempts).",
+      "interpretation": "The student is experiencing compilation errors, but the interaction trajectory does not contain clear evidence of productive or unproductive struggle.",
+      "progression": [],
+      "exploration": [
+        "Code modifications made without test suite evaluation feedback (rev function call changes)."
+      ],
+      "error_evolution": [
+        "Compilation errors persist across attempts (invalid initialization, undeclared 'reverse')."
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes (no code changes)."
+      ],
+      "temporal": [
+        "Attempt frequency: 2 attempts, struggle duration: 20.72s"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The trajectory prefix does not contain enough evidence to confidently distinguish productive from unproductive struggle due to the short length and lack of meaningful state evolution.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 2367
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "Pass rate remained 0.0% across attempts, but error messages indicate compilation and execution errors, with the student attempting to fix the code by modifying the function calls and parameters.",
+      "interpretation": "The student is actively trying to solve the problem, but their approach is not yielding the desired outcome, indicating productive struggle.",
+      "progression": [
+        "Attempt 1 to 2: Error message changed from compilation error to invalid initialization; Attempt 2 to 3: Error message changed from invalid initialization to std::bad_alloc"
+      ],
+      "exploration": [
+        "The student modified the function calls and parameters in attempts 2 and 3, indicating exploration of different approaches"
+      ],
+      "error_evolution": [
+        "Error messages indicate compilation and execution errors, but the student is attempting to address them"
+      ],
+      "stagnation": [
+        "No repeated states or stagnation observed"
+      ],
+      "temporal": [
+        "Three attempts were made within a short duration of 91.04s"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student is actively trying to solve the problem, making changes to their code and attempting to address compilation and execution errors, indicating productive struggle.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 3302
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "Net pass rate improvement of +100.0% across 4 attempts, with a peak test pass improvement of +1 tests.",
+      "interpretation": "The student is making meaningful progress towards solving the problem, with a notable improvement in test pass rate and a reduction in error messages.",
+      "progression": [
+        "Test pass rate increased from 0.0% to 100.0% across 4 attempts"
+      ],
+      "exploration": [
+        "Code modifications made to address compilation errors and improve algorithmic approach, including changes to the `rev` function and the main `main` function"
+      ],
+      "error_evolution": [
+        "Error messages shifted from compilation errors to runtime errors, indicating a move towards a more correct solution"
+      ],
+      "stagnation": [
+        "No repeated states or stagnation observed across attempts"
+      ],
+      "temporal": [
+        "Attempts 1-4 show a consistent pattern of improvement, with a total elapsed duration of 116.85s"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a clear progression towards a correct solution, with a notable improvement in test pass rate and a reduction in error messages. The code modifications made across attempts indicate a systematic approach to addressing compilation errors and improving the algorithm.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 4242
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "The student has made repeated attempts with identical or near-identical code, resulting in the same compilation error and execution error (std::bad_alloc).",
+      "interpretation": "The student is experiencing unproductive struggle as they are not making meaningful changes to their approach or addressing the underlying defect.",
+      "progression": [
+        "The student has not made any progress in terms of test pass count or error resolution."
+      ],
+      "exploration": [
+        "The student has made superficial edits, such as changing the condition in the while loop from l>r to l<r, but this does not address the core issue."
+      ],
+      "error_evolution": [
+        "The student is encountering the same execution error (std::bad_alloc) repeatedly without addressing the underlying defect."
+      ],
+      "stagnation": [
+        "The student has repeated the same execution with identical code and error messages, indicating stagnation."
+      ],
+      "temporal": [
+        "The student has made 5 attempts with no significant progress or improvement."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated attempts with identical code and error messages, lack of meaningful changes, and stagnation in test pass count and error resolution indicate unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 5191
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "The student's code has been stuck in a bad_alloc error for 4 out of 6 attempts, with no meaningful progress towards a correct solution.",
+      "interpretation": "The student is experiencing unproductive struggle, as they are not making progress towards a correct solution and are instead stuck in a cycle of repeated errors.",
+      "progression": [
+        "The student's test pass rate has not improved across attempts, and they have not made any meaningful progress towards a correct solution."
+      ],
+      "exploration": [
+        "The student has made minor changes to their code, but these changes have not led to any significant improvements."
+      ],
+      "error_evolution": [
+        "The student's error has not evolved, and they are still experiencing the same bad_alloc error."
+      ],
+      "stagnation": [
+        "The student has repeated the same error for 4 out of 6 attempts, indicating stagnation."
+      ],
+      "temporal": [
+        "The student has been stuck in this cycle of errors for 340.42 seconds, indicating a prolonged period of unproductive struggle."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows a clear pattern of unproductive struggle, with repeated errors and no meaningful progress towards a correct solution.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 6147
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_6": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 7,
+    "evidence": {
+      "observation": "Net pass rate improvement of 100.0% across 7 attempts, with 4 outcome changes and 1 code change.",
+      "interpretation": "The student is making progress towards solving the problem, with a clear improvement in test pass rate and outcome changes indicating a meaningful evolution of their approach.",
+      "progression": [
+        "Peak test pass improvement of +1 tests, with a net pass rate improvement of 100.0%"
+      ],
+      "exploration": [
+        "Code change at attempt #5, modifying the k value to k=k%n, indicating a systematic hypothesis testing approach"
+      ],
+      "error_evolution": [
+        "Error evolution across execution stages, from compilation error to runtime error to logical wrong answer"
+      ],
+      "stagnation": [
+        "Repeated state at attempt #4 and #5, but followed by outcome changes and improvement in test pass rate"
+      ],
+      "temporal": [
+        "Total elapsed duration of 399.82s, with 4 outcome changes and 1 code change"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a productive struggle, with a clear improvement in test pass rate and outcome changes indicating a meaningful evolution of their approach. The code change at attempt #5 indicates a systematic hypothesis testing approach, and the error evolution across execution stages suggests that the student is making progress towards solving the problem.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 7101
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_7": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 8,
+    "evidence": {
+      "observation": "The student has made 2 repeat executions with no net test suite performance gains, and 1 code change that did not improve the test pass rate.",
+      "interpretation": "The student is stuck in a loop of repeated execution with no meaningful progress towards a correct solution.",
+      "progression": [
+        "The student's test pass rate has not improved across attempts 1-8."
+      ],
+      "exploration": [
+        "The student made a code change in attempt 5, but it did not lead to any improvement in the test pass rate."
+      ],
+      "error_evolution": [
+        "The student encountered the same error (std::bad_alloc) across multiple attempts."
+      ],
+      "stagnation": [
+        "The student has repeated the same execution state in attempts 7 and 8."
+      ],
+      "temporal": [
+        "The student has been stuck in this loop for 7 attempts."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows repeated execution with no net test suite performance gains, and a lack of meaningful progress towards a correct solution.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 8055
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_8": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 9,
+    "evidence": {
+      "observation": "The student's code has been repeatedly executing the same error (std::bad_alloc) across 9 attempts, with no meaningful changes in the code or error messages.",
+      "interpretation": "The student is experiencing unproductive struggle, as they are not making progress towards a correct solution and are stuck in a loop of repeated errors.",
+      "progression": [
+        "The student's test pass rate has not improved across attempts, and the code has not evolved towards a correct solution."
+      ],
+      "exploration": [
+        "The student has made minor changes to the code, but these changes have not led to any meaningful progress or resolution of the error."
+      ],
+      "error_evolution": [
+        "The student has encountered the same error (std::bad_alloc) repeatedly, with no indication of error resolution or evolution."
+      ],
+      "stagnation": [
+        "The student has repeated the same execution and error across multiple attempts, indicating stagnation."
+      ],
+      "temporal": [
+        "The student has spent a significant amount of time (584.57s) on this problem, with no progress towards a solution."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of the same error and lack of meaningful code changes indicate unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 9044
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_9": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 10,
+    "evidence": {
+      "observation": "Net pass rate improvement of 100.0% across 10 attempts, with a peak test pass improvement of +1 tests.",
+      "interpretation": "The student is making meaningful progress towards solving the problem, with a consistent improvement in test pass rate and a peak improvement of 1 test.",
+      "progression": [
+        "Test pass rate improved from 0.0% to 100.0% across 10 attempts"
+      ],
+      "exploration": [
+        "Code changes were made to address compilation errors and improve algorithm efficiency"
+      ],
+      "error_evolution": [
+        "Error messages evolved from compilation errors to runtime errors, indicating a shift from syntax errors to logical errors"
+      ],
+      "stagnation": [
+        "Repeated states were observed in attempts 4-5 and 7-8, but the student was able to break out of stagnation and continue making progress"
+      ],
+      "temporal": [
+        "The student took 635.88s to complete 10 attempts, with a consistent pace of improvement"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's consistent improvement in test pass rate and peak improvement of 1 test indicate productive struggle. The evolution of error messages from compilation errors to runtime errors suggests a shift from syntax errors to logical errors, which is a key aspect of productive struggle. The repeated states observed in attempts 4-5 and 7-8 are mitigated by the student's ability to break out of stagnation and continue making progress.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 10054
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_10": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 11,
+    "evidence": {
+      "observation": "The student has made repeated executions with identical or near-identical code and outcomes across multiple attempts (Attempts 5-11).",
+      "interpretation": "The student is experiencing sustained stagnation and repetition without meaningful state evolution.",
+      "progression": [
+        "The student initially showed some improvement in test pass rate (Attempt 4) but then regressed (Attempt 5)."
+      ],
+      "exploration": [
+        "The student made some code changes (Attempts 5-11) but these changes did not lead to any meaningful progress or improvement in test pass rate."
+      ],
+      "error_evolution": [
+        "The student encountered the same execution error (std::bad_alloc) repeatedly without addressing the underlying defect."
+      ],
+      "stagnation": [
+        "The student has been in a state of stagnation for multiple attempts (Attempts 5-11) with repeated executions and no meaningful progress."
+      ],
+      "temporal": [
+        "The student has been working on this problem for a significant amount of time (677.16s) with no meaningful progress."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated executions with identical or near-identical code and outcomes, lack of meaningful state evolution, and sustained stagnation indicate an unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 11050
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_11": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 12,
+    "evidence": {
+      "observation": "Net pass rate improvement of +100.0% across 12 attempts, with a peak test pass improvement of +4 tests.",
+      "interpretation": "The student demonstrates a productive struggle by making meaningful changes to their approach, gradually improving their test pass rate and resolving the error.",
+      "progression": [
+        "Improved test pass rate from 0.0% to 100.0% across 12 attempts",
+        "Peak test pass improvement of +4 tests"
+      ],
+      "exploration": [
+        "Code changes in attempts 5, 7, 9, and 11, indicating systematic hypothesis testing and exploration of different approaches"
+      ],
+      "error_evolution": [
+        "Error evolution across execution stages, from compilation error to runtime error to successful execution"
+      ],
+      "stagnation": [
+        "Repeated states in attempts 5-6, 8-9, and 10-11, but with subsequent code changes and improvements"
+      ],
+      "temporal": [
+        "Total elapsed duration of 749.4s, with a peak of 4 consecutive successful attempts"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a productive struggle, with a clear progression towards a correct solution, despite some repeated states and minor setbacks.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 11949
+  },
+  "sess_82bb0a94-308c-4388-8a2a-5fc92a5347d6_prefix_12": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 13,
+    "evidence": {
+      "observation": "Net pass rate improvement of +100.0% across 13 attempts, with a peak test pass improvement of +4 tests.",
+      "interpretation": "The student's process demonstrates a clear progression towards a correct solution, with meaningful approach changes and error evolution.",
+      "progression": [
+        "Test pass count improved from 0 to 4 across attempts 4 to 12."
+      ],
+      "exploration": [
+        "Code modifications made without test suite evaluation feedback, but with a focus on algorithmic changes."
+      ],
+      "error_evolution": [
+        "Error messages shifted from compilation errors to runtime errors, indicating a progression towards a correct solution."
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes across attempts 5 to 6 and 10 to 11."
+      ],
+      "temporal": [
+        "Total elapsed duration of 774.82s, with a peak test pass improvement of +4 tests."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a productive struggle, with a clear progression towards a correct solution. The student's approach changes and error evolution indicate a meaningful process, despite some repeated execution and error messages.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 12840
+  },
+  "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.65,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "Pass rate remains 0.0% across both attempts, with no test suite performance gains.",
+      "interpretation": "The student is experiencing difficulty, but the interaction trajectory does not contain clear evidence of productive struggle.",
+      "progression": [
+        "No test or score progression details"
+      ],
+      "exploration": [
+        "Code modification changed the comparison operator from '>' to '<', but this does not constitute a meaningful approach change."
+      ],
+      "error_evolution": [
+        "Error shifted from compilation error to execution error, but this does not indicate meaningful progress."
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes."
+      ],
+      "temporal": [
+        "Two consecutive attempts with no elapsed duration increase."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The trajectory prefix does not contain enough evidence to confidently distinguish productive from unproductive struggle due to the short length and lack of meaningful progress.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2023
+  },
+  "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "Net pass rate improvement of 50.0% across 3 attempts, with a peak test pass improvement of +2 tests.",
+      "interpretation": "The student is making meaningful progress towards solving the problem, with a clear improvement in test pass rate and performance.",
+      "progression": [
+        "Test pass rate improved from 0.0% to 50.0% across 3 attempts"
+      ],
+      "exploration": [
+        "Code similarity between attempts 1 and 2 is high (0.971), indicating minimal changes, but attempt 3 introduced a new variable assignment (x=1)"
+      ],
+      "error_evolution": [
+        "Error evolution shows a change from compilation error to execution error, with a resolved error in attempt 2"
+      ],
+      "stagnation": [
+        "No repeated states or stagnation observed across attempts"
+      ],
+      "temporal": [
+        "Total elapsed duration is 69.67s, with a consistent attempt frequency"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a clear improvement in test pass rate and performance, with minimal stagnation or repeated states. The introduction of a new variable assignment in attempt 3 suggests exploration and adaptation of the solution.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 2798
+  },
+  "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "The student's code has not evolved meaningfully across attempts, with the same error and approach persisting.",
+      "interpretation": "The student is stuck in a loop of repeated execution with no progress towards a correct solution.",
+      "progression": [
+        "The test pass rate has not improved beyond 50.0% across attempts."
+      ],
+      "exploration": [
+        "The student has made no meaningful changes to their approach, only tweaking minor details."
+      ],
+      "error_evolution": [
+        "The student has not addressed the underlying compilation error, instead reverting to the same incorrect code."
+      ],
+      "stagnation": [
+        "The student has repeated the same execution with the same outcome, indicating stagnation."
+      ],
+      "temporal": [
+        "The student has made 1 code change and 1 outcome change, but with no meaningful progress."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows repeated execution with no progress, indicating unproductive struggle. The student has not addressed the underlying compilation error and has not made meaningful changes to their approach.",
+    "recommended_action": "CONSIDER_INTERVENTION",
+    "raw_prompt_length": 3570
+  },
+  "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "Net pass rate improvement of +50.0% across 5 attempts, with a peak test pass improvement of +2 tests.",
+      "interpretation": "The student is experiencing productive struggle, as they are making meaningful progress towards a correct solution.",
+      "progression": [
+        "Test pass rate improved from 0.0% to 50.0% across 3 attempts (Attempts 1-3)"
+      ],
+      "exploration": [
+        "Code modification at Attempt #2 introduced a new error, but the student corrected it and continued to make progress (Attempt #3)"
+      ],
+      "error_evolution": [
+        "Error evolution across execution stages, from compilation error to runtime error, indicating a deeper understanding of the problem"
+      ],
+      "stagnation": [
+        "Repeated execution at Attempt #4, but the student quickly recovered and made progress again at Attempt #5"
+      ],
+      "temporal": [
+        "Total elapsed duration of 106.01s, indicating a reasonable pace of learning"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's productive struggle is evident in their ability to learn from mistakes, adapt their code, and make progress towards a correct solution.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 4591
+  },
+  "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "Net pass rate improvement of 50.0% across 6 attempts, with 3 outcome changes and 1 code change.",
+      "interpretation": "The student is making progress towards solving the problem, with a mix of correct and incorrect attempts.",
+      "progression": [
+        "Peak test pass improvement of +2 tests",
+        "Net pass rate improvement of 50.0%"
+      ],
+      "exploration": [
+        "Code change from map to unordered_map in attempt 5",
+        "Modification of the comparison operator in attempt 2"
+      ],
+      "error_evolution": [
+        "Error resolved in attempt 2 and attempt 6",
+        "Error introduced in attempt 5"
+      ],
+      "stagnation": [
+        "Repeated state in attempts 3 and 4",
+        "Consecutive stagnant length of 1 in attempt 4"
+      ],
+      "temporal": [
+        "Total elapsed duration of 164.08s",
+        "Total attempts in prefix of 6"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's progress is evident from the net pass rate improvement and the mix of correct and incorrect attempts. The code changes and error evolution suggest a systematic approach to solving the problem.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 5383
+  },
+  "sess_66be4316-66d1-4d4f-98f5-a67b4cc1c08a_prefix_6": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 7,
+    "evidence": {
+      "observation": "Net pass rate improvement of 50.0% across 7 attempts, with 3 outcome changes and 2 repeat executions.",
+      "interpretation": "The student is making progress towards solving the problem, with a mix of productive and unproductive interactions.",
+      "progression": [
+        "Peak test pass improvement of +2 tests, indicating meaningful progress.",
+        "Improved pass rate from 0.0% to 50.0%."
+      ],
+      "exploration": [
+        "Code changes are minimal, with only 1 significant change (attempt 2 to 3) indicating a meaningful approach change."
+      ],
+      "error_evolution": [
+        "Error evolution is present, with changes in error messages and resolution across attempts."
+      ],
+      "stagnation": [
+        "Repeated states are present, with 2 instances of repeated execution (attempts 6 to 7 and attempts 3 to 4)."
+      ],
+      "temporal": [
+        "Total elapsed duration is 330.24s, indicating a moderate pace."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student is making progress towards solving the problem, with a mix of productive and unproductive interactions. The presence of error evolution, peak test pass improvement, and meaningful approach changes indicate productive struggle. However, repeated states and stagnation indicate areas for improvement.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 6175
+  },
+  "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.6,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "No net test suite performance gains (0/4 passed in both attempts), identical error messages, and repeated code structure.",
+      "interpretation": "The student is struggling with a sustained stagnation, but the trajectory prefix is too short to confidently distinguish productive from unproductive struggle.",
+      "progression": [
+        "No test or score progression details"
+      ],
+      "exploration": [
+        "Code modifications made without test suite evaluation feedback, and repeated identical code structure"
+      ],
+      "error_evolution": [
+        "Error messages remain identical across attempts"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes"
+      ],
+      "temporal": [
+        "Attempt frequency is 2, struggle duration is 167.43s"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The trajectory prefix is too short to confidently assess the student's struggle state. The student has made repeated identical code changes without test suite evaluation feedback, and the error messages remain identical across attempts.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 1614
+  },
+  "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "Repeated execution of identical or near-identical code with identical outcomes across attempts 2 and 3.",
+      "interpretation": "The student is stuck in a loop of identical code modifications without addressing the underlying defect.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes"
+      ],
+      "temporal": [
+        "3 attempts with no progress"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's code has not changed significantly across attempts 2 and 3, and the outcome remains the same. This indicates a lack of meaningful progress or exploration.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2293
+  },
+  "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "The student's code has not shown any meaningful progress or evolution towards a correct solution. The test pass rate has only improved by 25.0% in the last attempt, but this is largely due to a superficial edit (adding 1 to the output).",
+      "interpretation": "The student is stuck in a stagnation loop, repeatedly executing the same code with minor tweaks without addressing the underlying algorithmic flaws.",
+      "progression": [
+        "The test pass rate has only improved by 25.0% in the last attempt."
+      ],
+      "exploration": [
+        "The student has made minor tweaks to the code, such as adding a newline character or incrementing the output by 1, but these changes do not constitute meaningful approach changes."
+      ],
+      "error_evolution": [
+        "The error evolution is stagnant, with no meaningful changes or resolutions across attempts."
+      ],
+      "stagnation": [
+        "The student has repeated the same code with minor tweaks, indicating a lack of meaningful progress or exploration."
+      ],
+      "temporal": [
+        "The student has made 4 attempts, with a total elapsed duration of 214.71s, indicating a prolonged struggle with the problem."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The student's trajectory prefix shows a lack of meaningful progress or exploration, with repeated execution of the same code and minor tweaks without addressing the underlying algorithmic flaws. The only positive signal is a minor improvement in test pass rate, but this is largely due to a superficial edit.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2976
+  },
+  "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "The student's code has not shown any meaningful progress or improvement in test pass rates across the 5 attempts. The student has repeated the same code with slight modifications, resulting in no change in test pass rates.",
+      "interpretation": "The student is stuck in a loop of unproductive struggle, repeatedly executing the same code without making any meaningful changes or progress.",
+      "progression": [
+        "The student's test pass rate has remained at 25.0% across attempts 4 and 5."
+      ],
+      "exploration": [
+        "The student has made minor modifications to the code, such as adding a newline character at the end of the output, but these changes have not resulted in any meaningful progress."
+      ],
+      "error_evolution": [
+        "The student's error messages have not changed across attempts, indicating a lack of progress in addressing the underlying issues."
+      ],
+      "stagnation": [
+        "The student has repeated the same code with slight modifications, resulting in no change in test pass rates."
+      ],
+      "temporal": [
+        "The student has been stuck in this loop of unproductive struggle for 5 attempts, with a total elapsed duration of 248.95s."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory prefix shows a lack of progress and improvement in test pass rates, with repeated execution of the same code and minor modifications that have not resulted in any meaningful changes.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 3660
+  },
+  "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "The student's code has not shown any meaningful progress or improvement in test pass rates across the 6 attempts. The student has repeated the same code with minor tweaks, resulting in no net improvement in test pass rates.",
+      "interpretation": "The student is stuck in a loop of minor modifications without addressing the underlying algorithmic flaws. The repeated execution of identical code with identical outcomes indicates a lack of meaningful state evolution.",
+      "progression": [
+        "No significant improvement in test pass rates across attempts"
+      ],
+      "exploration": [
+        "Repeated execution of identical code with minor tweaks"
+      ],
+      "error_evolution": [
+        "No meaningful error evolution or resolution"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes"
+      ],
+      "temporal": [
+        "6 attempts with no significant progress"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows repeated execution of identical code with minor tweaks, resulting in no net improvement in test pass rates. This indicates a lack of meaningful state evolution and suggests that the student is stuck in a loop of minor modifications without addressing the underlying algorithmic flaws.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 4341
+  },
+  "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_6": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 7,
+    "evidence": {
+      "observation": "The student's code has not shown any meaningful progress or improvement in the test pass rate over the 7 attempts. The student has repeated the same code with slight modifications, resulting in no net improvement in the test pass rate.",
+      "interpretation": "The student is experiencing unproductive struggle, characterized by repeated execution of identical or near-identical code with identical outcomes, and lack of meaningful state evolution.",
+      "progression": [
+        "The test pass rate has remained at 0.0% for 6 out of 7 attempts."
+      ],
+      "exploration": [
+        "The student has made minor modifications to the code, such as adding or removing a semicolon, but these changes have not resulted in any meaningful progress."
+      ],
+      "error_evolution": [
+        "The student has not addressed the underlying defect in their code, resulting in repeated execution of identical errors."
+      ],
+      "stagnation": [
+        "The student has repeated the same code with slight modifications, resulting in no net improvement in the test pass rate."
+      ],
+      "temporal": [
+        "The student has been stuck in a state of stagnation for 6 out of 7 attempts."
+      ],
+      "repeat_executions": [
+        "The student has repeated the same code 3 times."
+      ],
+      "outcome_changes": [
+        "The student has made 2 outcome changes, but these changes have not resulted in any meaningful progress."
+      ],
+      "code_changes": [
+        "The student has made 1 code change, but this change has not resulted in any meaningful progress."
+      ],
+      "repeated_states": [
+        "The student has repeated the same state 3 times."
+      ],
+      "currently_stagnant": [
+        "The student is currently stagnant, with no net improvement in the test pass rate over the 7 attempts."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory prefix shows repeated execution of identical or near-identical code with identical outcomes, lack of meaningful state evolution, and no net improvement in the test pass rate. This indicates unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 5023
+  },
+  "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_7": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 8,
+    "evidence": {
+      "observation": "The student has made repeated execution of identical or near-identical code with identical outcomes (Attempts 2-3, 4-5, 6-7).",
+      "interpretation": "The student is experiencing sustained stagnation and repetition without addressing the underlying defect.",
+      "progression": [
+        "The student has not made any meaningful progress in terms of test pass count or overall algorithmic correctness."
+      ],
+      "exploration": [
+        "The student has made superficial edits (e.g., adding a newline character, incrementing a counter) without addressing core algorithmic flaws."
+      ],
+      "error_evolution": [
+        "The student has not made any meaningful progress in terms of error resolution or evolution."
+      ],
+      "stagnation": [
+        "The student has repeated execution of identical code with identical outcomes, indicating stagnation."
+      ],
+      "temporal": [
+        "The student has made repeated attempts with no significant progress over a prolonged period (8 attempts)."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with identical outcomes, lack of meaningful progress, and superficial edits indicate unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 5734
+  },
+  "sess_dc01ae80-4430-44d2-a011-3314a8822993_prefix_8": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 9,
+    "evidence": {
+      "observation": "The student's code has not shown any meaningful progress or improvement in test pass rates over the 9 attempts. The student has repeated the same code with minor variations, resulting in no net improvement in test pass rates.",
+      "interpretation": "The student's interaction process demonstrates a lack of meaningful exploration and systematic hypothesis testing. The student is stuck in a loop of repeating the same code with minor variations, resulting in no progress.",
+      "progression": [
+        "The student's test pass rate has not improved over the 9 attempts."
+      ],
+      "exploration": [
+        "The student has made minor code changes, but these changes have not led to any meaningful progress or improvement in test pass rates."
+      ],
+      "error_evolution": [
+        "The student's error messages have not changed over the 9 attempts, indicating a lack of meaningful exploration and systematic hypothesis testing."
+      ],
+      "stagnation": [
+        "The student has repeated the same code with minor variations, resulting in no net improvement in test pass rates."
+      ],
+      "temporal": [
+        "The student has been stuck in this loop for 9 attempts, indicating a lack of progress."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's interaction process demonstrates a lack of meaningful exploration and systematic hypothesis testing. The student is stuck in a loop of repeating the same code with minor variations, resulting in no progress.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 6432
+  },
+  "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "Repeated compilation error due to undeclared variable 'i' across two attempts, with no code changes or approach modifications.",
+      "interpretation": "The student is experiencing unproductive struggle due to repeated execution of identical code with identical outcomes, indicating a lack of meaningful state evolution.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [
+        "Repeated compilation error due to undeclared variable 'i'"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes"
+      ],
+      "temporal": [
+        "Two consecutive attempts with no progress"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with identical outcomes and lack of code changes or approach modifications indicate unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2015
+  },
+  "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "Pass rate improved from 0.0% to 100.0% across 3 attempts",
+      "interpretation": "Student demonstrated productive struggle by addressing compilation error, modifying code to correctly find maximum element, and achieving 100% test pass rate",
+      "progression": [
+        "Test pass rate improved from 0/0 to 4/4 across 3 attempts"
+      ],
+      "exploration": [
+        "Student modified code to correctly iterate through array and compare elements (Attempt #3)"
+      ],
+      "error_evolution": [
+        "Compilation error resolved in Attempt #3"
+      ],
+      "stagnation": [
+        "Repeated state observed in Attempt #1 and #2, but student broke stagnation in Attempt #3"
+      ],
+      "temporal": [
+        "Student took 60.17s to complete 3 attempts, with peak test pass improvement of +0 tests"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P5_OVERALL_PROGRESS"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "Student demonstrated productive struggle by addressing compilation error, modifying code to correctly find maximum element, and achieving 100% test pass rate. Repeated state in Attempt #1 and #2 was broken in Attempt #3, indicating overall progress.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 2702
+  },
+  "sess_e788ae62-ff47-4e6a-bc8c-be55105fdc47_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "Pass rate improved from 0.0% to 100.0% across 3 attempts",
+      "interpretation": "Student demonstrated meaningful approach changes and error evolution",
+      "progression": [
+        "Test pass count improved from 0 to 4 across 3 attempts"
+      ],
+      "exploration": [
+        "Student modified algorithm by introducing a second loop to find the maximum element"
+      ],
+      "error_evolution": [
+        "Compilation error resolved in attempt 3, and no further errors occurred"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code in attempts 3 and 4, but with no performance regression"
+      ],
+      "temporal": [
+        "Student made progress within 3 attempts, with a total elapsed duration of 81.7s"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student demonstrated productive struggle by making meaningful approach changes, resolving errors, and improving test pass count. Although there were repeated executions and stagnant states, they did not hinder progress.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 3378
+  },
+  "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "Repeated execution of identical code with identical outcomes (Pass Rate: 25.0% in both attempts)",
+      "interpretation": "The student is stuck in a loop of identical code execution without addressing the underlying algorithmic flaws.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes"
+      ],
+      "temporal": [
+        "Repeated execution in consecutive attempts"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with identical outcomes in consecutive attempts indicates a lack of meaningful progress or exploration, suggesting an unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 1814
+  },
+  "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "The student has repeated the same code with identical outcomes across two consecutive attempts, and the third attempt also shows no improvement.",
+      "interpretation": "The student is stuck in a loop of unproductive struggle, failing to make meaningful changes or progress towards a correct solution.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution or stagnant state details: The student has repeated the same code with identical outcomes across two consecutive attempts, and the third attempt also shows no improvement."
+      ],
+      "temporal": [
+        "Attempt frequency or struggle duration details: The student has made 3 attempts in a row with no improvement, indicating a prolonged period of stagnation."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with no improvement across three attempts indicates a lack of productive struggle and a prolonged period of stagnation.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2578
+  },
+  "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "Net pass rate improved from 25.0% to 100.0% across 4 attempts",
+      "interpretation": "The student demonstrated a productive struggle by making meaningful changes to their approach, eventually leading to a correct solution.",
+      "progression": [
+        "Pass rate improved from 25.0% to 100.0% across 4 attempts"
+      ],
+      "exploration": [
+        "Code modifications made in attempts 2 and 3, but did not address the core issue; however, the student eventually found the correct solution in attempt 4"
+      ],
+      "error_evolution": [
+        "Error evolution is not explicitly mentioned, but the student's approach changed in attempts 2 and 3, indicating a shift towards a correct solution"
+      ],
+      "stagnation": [
+        "Repeated execution in attempts 1-3, but the student broke the stagnation cycle in attempt 4"
+      ],
+      "temporal": [
+        "Total elapsed duration: 106.98s, with 2 repeat executions and 1 outcome change"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P3_EXPLORATION",
+      "P5_OVERALL_PROGRESS"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's productive struggle is evident in their ability to improve their pass rate and eventually find the correct solution. Although there were repeated executions and errors, the student's approach changed in attempts 2 and 3, indicating a shift towards a correct solution.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 3345
+  },
+  "sess_3dbfeb71-547f-49af-bdbe-94c6bfbfc792_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "Net pass rate improvement of +75.0% across 5 attempts, with a peak improvement of +3 tests.",
+      "interpretation": "The student's process demonstrates a clear progression towards a correct solution, with a significant improvement in test pass rate and a change in outcome.",
+      "progression": [
+        "Test pass rate improved from 25.0% to 100.0% across 4 attempts"
+      ],
+      "exploration": [
+        "Code modifications made in attempts 2 and 3, but did not lead to significant progress until attempt 4"
+      ],
+      "error_evolution": [
+        "Error evolution is not explicitly mentioned, but the student's process shows a clear progression towards a correct solution"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code in attempts 2 and 3, but the student's process shows a clear progression towards a correct solution"
+      ],
+      "temporal": [
+        "Total elapsed duration of 137.0s, with a peak test pass improvement of +3 tests"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's process demonstrates a clear progression towards a correct solution, with a significant improvement in test pass rate and a change in outcome. The repeated execution of identical code in attempts 2 and 3 is a negative signal, but the student's process shows a clear progression towards a correct solution.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 4106
+  },
+  "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.6,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "Pass rate remains 0.0% across two attempts, no test suite evaluation feedback",
+      "interpretation": "Student is struggling to address compilation errors, but there is no clear evidence of productive or unproductive struggle",
+      "progression": [],
+      "exploration": [
+        "Student modified code to include the set library, but introduced a new compilation error"
+      ],
+      "error_evolution": [
+        "Compilation error persists across two attempts"
+      ],
+      "stagnation": [
+        "No repeated execution or stagnant state"
+      ],
+      "temporal": [
+        "Two attempts with a short elapsed duration"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY",
+      "UNCERTAIN_CONFLICTING_EVIDENCE"
+    ],
+    "reasoning": "The trajectory prefix is too short and lacks clear evidence of productive or unproductive struggle, making it difficult to confidently assess the student's struggle state.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2148
+  },
+  "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "Net test suite performance remains unchanged, but the student is making meaningful code changes with slight modifications (Code Similarity: 0.845, 0.9434) across attempts.",
+      "interpretation": "The student is attempting to address compilation errors and logical issues, indicating a productive struggle.",
+      "progression": [
+        "Error evolution across execution stages (e.g., syntax error -> compilation error -> logical error)"
+      ],
+      "exploration": [
+        "Meaningful approach changes (modifying algorithm, data structure, or core logic)"
+      ],
+      "error_evolution": [
+        "Error evolution across attempts (e.g., compilation error -> no match for 'operator!=')"
+      ],
+      "stagnation": [
+        "No repeated execution or stagnant state across attempts"
+      ],
+      "temporal": [
+        "Total elapsed duration: 80.64s, with 2 code changes and 0 repeated states"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's productive struggle is evident through meaningful code changes, error evolution, and the absence of stagnation. Although the test suite performance remains unchanged, the student's approach is evolving, indicating a productive trajectory.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 3172
+  },
+  "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "The student has made meaningful code changes across attempts, with a focus on addressing compilation errors and improving the algorithm. The student has also made progress in understanding the use of the set data structure and the find() method.",
+      "interpretation": "The student is actively engaged in the problem-solving process, experimenting with different approaches and refining their code. The student's code changes are not superficial, but rather reflect a deeper understanding of the problem and the necessary modifications to achieve the desired outcome.",
+      "progression": [
+        "The student has made progress in understanding the use of the set data structure and the find() method, as evidenced by the changes in the code from attempt 1 to attempt 4."
+      ],
+      "exploration": [
+        "The student has explored different approaches to solving the problem, including using the set data structure and the find() method."
+      ],
+      "error_evolution": [
+        "The student has made progress in addressing compilation errors and improving the algorithm, as evidenced by the changes in the error messages from attempt 1 to attempt 4."
+      ],
+      "stagnation": [
+        "The student has not shown any signs of stagnation, as evidenced by the lack of repeated states and the continuous improvement in the code."
+      ],
+      "temporal": [
+        "The student has made progress over a relatively short period of time, with a total elapsed duration of 109.75s."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a productive struggle, with meaningful code changes, progress in understanding the problem, and a focus on addressing compilation errors and improving the algorithm.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 3952
+  },
+  "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "Net pass rate improvement from 0.0% to 25.0% across 5 attempts",
+      "interpretation": "Student is making progress towards solving the problem, with a clear improvement in test pass rate and a meaningful approach change in attempt 5",
+      "progression": [
+        "Pass rate gained from 0.0 to 25.0 across 5 attempts"
+      ],
+      "exploration": [
+        "Code modification in attempt 5 to include output printing"
+      ],
+      "error_evolution": [
+        "Error resolved in attempt 4, with a subsequent code change in attempt 5"
+      ],
+      "stagnation": [
+        "No repeated states or stagnation observed across attempts"
+      ],
+      "temporal": [
+        "Total elapsed duration of 142.82s, with a peak test pass improvement of +1 tests"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a clear progression towards solving the problem, with a significant improvement in test pass rate and a meaningful approach change in attempt 5. The error was resolved in attempt 4, and the student made a code change in attempt 5 to include output printing, indicating a systematic and productive exploration of the problem.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 4787
+  },
+  "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "Net pass rate improvement of 25.0% across 6 attempts, with a peak test pass improvement of +1 tests.",
+      "interpretation": "The student is making progress towards solving the problem, with a clear improvement in test pass rate and a peak improvement in test passes.",
+      "progression": [
+        "Test pass rate improved from 0.0% to 25.0% across 6 attempts",
+        "Peak test pass improvement of +1 tests"
+      ],
+      "exploration": [
+        "Code changes made in attempts 2-5, with a focus on modifying the algorithm to remove duplicates",
+        "Outcome change in attempt 4, with a resolution of the compilation error"
+      ],
+      "error_evolution": [
+        "Compilation error resolved in attempt 4, with a change in error message from 'set' not declared to 'no match for 'operator!=...'",
+        "Error evolution indicates a systematic approach to debugging"
+      ],
+      "stagnation": [
+        "Repeated state in attempt 6, with a code similarity of 0.9972 to attempt 5, indicating a lack of progress in the last attempt"
+      ],
+      "temporal": [
+        "Total elapsed duration of 179.96s, with a peak test pass improvement in attempt 5"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_REPEATED_STATE"
+    ],
+    "reasoning": "The student is making progress towards solving the problem, with a clear improvement in test pass rate and a peak improvement in test passes. However, the repeated state in attempt 6 indicates a lack of progress in the last attempt.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 5613
+  },
+  "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_6": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 7,
+    "evidence": {
+      "observation": "Net pass rate improvement of +75.0% across 7 attempts, with a peak test pass improvement of +3 tests.",
+      "interpretation": "The student is making meaningful progress towards solving the problem, with a clear improvement in test pass rate and peak test pass improvement.",
+      "progression": [
+        "Pass rate improved from 0.0% to 75.0% across 7 attempts",
+        "Peak test pass improvement of +3 tests"
+      ],
+      "exploration": [
+        "Code changes made in attempts 2-4 and 6-7, with a focus on improving the algorithm",
+        "Outcome change in attempt 4, with a resolution of the compilation error"
+      ],
+      "error_evolution": [
+        "Compilation error resolved in attempt 4",
+        "Error evolution across execution stages, from syntax error to runtime error to test logic failure"
+      ],
+      "stagnation": [
+        "Repeated state in attempt 6, but followed by a code change in attempt 7 and improvement in test pass rate"
+      ],
+      "temporal": [
+        "Total elapsed duration of 219.09s, with a peak test pass improvement of +3 tests"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a clear improvement in test pass rate and peak test pass improvement, with a focus on improving the algorithm and resolving compilation errors. While there is a repeated state in attempt 6, it is followed by a code change in attempt 7 and improvement in test pass rate.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 6467
+  },
+  "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_7": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 8,
+    "evidence": {
+      "observation": "Net pass rate improvement of +75.0% across 8 attempts, with a peak test pass improvement of +3 tests.",
+      "interpretation": "The student is making meaningful progress towards solving the problem, with a consistent improvement in test pass rate and a notable increase in test passes.",
+      "progression": [
+        "Pass rate improved from 0.0% to 75.0% across 8 attempts",
+        "Test passes increased by 3"
+      ],
+      "exploration": [
+        "Code changes were made to address compilation errors and improve test pass rate",
+        "Student modified the code to print the correct output"
+      ],
+      "error_evolution": [
+        "Compilation errors were resolved, and test pass rate improved",
+        "Error evolution indicates that the student is making progress towards solving the problem"
+      ],
+      "stagnation": [
+        "Repeated states occurred in attempts 5-6 and 7-8, but were followed by code changes and improved test pass rate"
+      ],
+      "temporal": [
+        "Total elapsed duration was 261.91s, with a peak test pass improvement of +3 tests"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P5_OVERALL_PROGRESS"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's progress is evident in the consistent improvement in test pass rate and the increase in test passes. The student is making meaningful changes to the code and resolving compilation errors, indicating productive struggle.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 7309
+  },
+  "sess_f4e20c6b-c58a-42c0-aa40-b7f206aa2064_prefix_8": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 9,
+    "evidence": {
+      "observation": "Net pass rate improvement of +100.0% across 9 attempts, with a peak test pass improvement of +4 tests.",
+      "interpretation": "The student's process is meaningfully evolving towards a correct solution, with a clear progression from 0% to 100% pass rate.",
+      "progression": [
+        "Pass rate gained from 0.0% to 25.0% across 5 attempts",
+        "Pass rate gained from 25.0% to 75.0% across 2 attempts",
+        "Pass rate gained from 75.0% to 100.0% across 2 attempts"
+      ],
+      "exploration": [
+        "Code modifications made to address compilation errors and improve performance",
+        "Approach changes made to correctly implement the set data structure"
+      ],
+      "error_evolution": [
+        "Error evolution from compilation errors to runtime errors to logical errors",
+        "Error resolution through systematic hypothesis testing"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes across 2 attempts",
+        "Complete state stagnation across code, errors, and test pass counts was broken with each subsequent attempt"
+      ],
+      "temporal": [
+        "Attempt frequency of 1 attempt per 33.33s, with a total elapsed duration of 300.87s"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE",
+      "P5_OVERALL_PROGRESS"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates a clear progression towards a correct solution, with a net pass rate improvement of +100.0% and a peak test pass improvement of +4 tests. The student's process is meaningfully evolving, with approach changes and error resolution through systematic hypothesis testing.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 8166
+  },
+  "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.6,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "No meaningful progress or regression observed in test pass rate or error messages across attempts 1 and 2.",
+      "interpretation": "The student's approach remains unchanged, and there is no clear indication of productive or unproductive struggle.",
+      "progression": [],
+      "exploration": [
+        "Code similarity is 1.0, indicating no meaningful changes between attempts 1 and 2."
+      ],
+      "error_evolution": [
+        "Error message remains the same, indicating no resolution or evolution of the error."
+      ],
+      "stagnation": [
+        "Repeated state is False, but there is no clear progress or improvement in test pass rate or error resolution."
+      ],
+      "temporal": [
+        "Total elapsed duration is 27.88s, indicating a short trajectory prefix."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY",
+      "UNCERTAIN_CONFLICTING_EVIDENCE"
+    ],
+    "reasoning": "The trajectory prefix is too short to confidently determine the student's struggle state, and there is conflicting evidence of stagnation and lack of progress.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2104
+  },
+  "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "Pass rate remained 0.0% across attempts, but error evolution and code changes indicate productive struggle",
+      "interpretation": "Student is experiencing difficulty, but making meaningful changes to address errors and improve code",
+      "progression": [
+        "Error evolution from InputMismatchException to compilation failure, then to resolved error in attempt 3"
+      ],
+      "exploration": [
+        "Code change from Java to JavaScript in attempt 2, then back to Java in attempt 3"
+      ],
+      "error_evolution": [
+        "Error evolution from InputMismatchException to compilation failure, then to resolved error in attempt 3"
+      ],
+      "stagnation": [
+        "No repeated states or stagnation across attempts"
+      ],
+      "temporal": [
+        "Total elapsed duration: 80.96s, with 1 code change and 1 outcome change"
+      ]
+    },
+    "positive_signals": [
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P5_OVERALL_PROGRESS"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student is experiencing productive struggle, as evidenced by error evolution, code changes, and overall progress towards resolving errors.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 2865
+  },
+  "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "The student has made repeated attempts with identical or near-identical code, resulting in no test suite performance gains or meaningful error evolution.",
+      "interpretation": "The student is experiencing unproductive struggle, characterized by sustained stagnation and lack of meaningful state evolution.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical or near-identical code with identical outcomes across attempts 1-2, 3-4"
+      ],
+      "temporal": [
+        "Total Attempts in Prefix: 4",
+        "Total Elapsed Duration: 127.29s"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated attempts with identical code and lack of test suite performance gains or meaningful error evolution indicate unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 3668
+  },
+  "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "Net pass rate improvement from 0.0% to 100.0% across 5 attempts",
+      "interpretation": "Student demonstrated productive struggle by iteratively addressing errors and improving code",
+      "progression": [
+        "Peak test pass improvement of +4 tests across attempts 4 and 5"
+      ],
+      "exploration": [
+        "Code changes in attempts 3 and 5, with significant improvement in test pass rate"
+      ],
+      "error_evolution": [
+        "Error evolution across attempts 1-5, with resolution of errors in attempts 3 and 5"
+      ],
+      "stagnation": [
+        "No repeated states or stagnation observed across attempts"
+      ],
+      "temporal": [
+        "Total elapsed duration of 187.28s, with no repeated executions"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory demonstrates productive struggle, with iterative improvement in test pass rate and resolution of errors. The student's code changes and exploration of different approaches indicate a systematic and productive process.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 4441
+  },
+  "sess_7e2ace9c-6b5a-41af-b23f-ce3e2d410c91_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "Net pass rate improvement of +100.0% across 6 attempts, with a peak test pass improvement of +4 tests.",
+      "interpretation": "The student demonstrated a productive struggle by making meaningful approach changes, resolving errors, and achieving significant performance gains.",
+      "progression": [
+        "Test pass rate improved from 0.0% to 100.0% across 6 attempts"
+      ],
+      "exploration": [
+        "Code changes at attempts 3 and 5 led to error resolution and performance improvement"
+      ],
+      "error_evolution": [
+        "Error evolution across attempts 1-5, from InputMismatchException to successful execution"
+      ],
+      "stagnation": [
+        "Repeated execution at attempt 6, but with a correct solution"
+      ],
+      "temporal": [
+        "Total elapsed duration of 207.03s, with 2 code changes and 2 outcome changes"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION",
+      "P4_STAGNATION_ESCAPE"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's productive struggle is evident from the significant performance gains, error resolution, and meaningful approach changes. Although there is a repeated execution at attempt 6, it is with a correct solution, indicating a productive struggle.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 5203
+  },
+  "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.6,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "Pass rate remains 0.0% across both attempts, and no test results are available for Attempt #1.",
+      "interpretation": "The student is experiencing compilation errors in both attempts, but the code has changed slightly between attempts.",
+      "progression": [
+        "No test results or pass rate improvement observed"
+      ],
+      "exploration": [
+        "Code modification made between attempts, but no meaningful approach change"
+      ],
+      "error_evolution": [
+        "Compilation error persists across both attempts"
+      ],
+      "stagnation": [
+        "No repeated execution or stagnant state observed"
+      ],
+      "temporal": [
+        "Two attempts with a short elapsed duration"
+      ]
+    },
+    "positive_signals": [
+      "P2_ERROR_EVOLUTION"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The trajectory prefix does not contain enough evidence to confidently distinguish productive from unproductive struggle due to the short duration and lack of test results.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 1783
+  },
+  "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "PRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "Pass rate remained 0.0% across 3 attempts, but error evolution and code changes indicate a productive struggle.",
+      "interpretation": "The student is experiencing difficulty, but their process is evolving towards a correct solution.",
+      "progression": [
+        "Error evolution from compilation error to execution error, indicating a meaningful approach change."
+      ],
+      "exploration": [
+        "Code modification from attempt 1 to 2 and 2 to 3, indicating systematic hypothesis testing."
+      ],
+      "error_evolution": [
+        "Error shifted from compilation error to execution error, indicating a meaningful approach change."
+      ],
+      "stagnation": [
+        "No repeated execution or stagnant state across attempts."
+      ],
+      "temporal": [
+        "Three attempts with increasing elapsed duration, indicating a systematic exploration of the problem."
+      ],
+      "transition_features": {
+        "attempt_1_to_2": {
+          "interaction_type": "OUTCOME_CHANGE",
+          "code_similarity": 0.9953,
+          "error_evolution": "Changed=True, Resolved=True",
+          "performance_trend": "unchanged",
+          "state_stagnation": "Repeated State=False, Consecutive Stagnant Length=0"
+        },
+        "attempt_2_to_3": {
+          "interaction_type": "CODE_CHANGE",
+          "code_similarity": 0.9725,
+          "error_evolution": "Changed=False, Resolved=False",
+          "performance_trend": "unchanged",
+          "state_stagnation": "Repeated State=False, Consecutive Stagnant Length=0"
+        }
+      }
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P2_ERROR_EVOLUTION",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [],
+    "uncertainty_signals": [],
+    "reasoning": "The student's process is evolving towards a correct solution, with meaningful approach changes and systematic hypothesis testing.",
+    "recommended_action": "CONTINUE",
+    "raw_prompt_length": 2453
+  },
+  "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "The student's code has not shown any meaningful progress or improvement in test pass rates across the 4 attempts. The student has repeated the same code with slight modifications, but the overall approach remains unchanged.",
+      "interpretation": "The student is experiencing unproductive struggle due to repeated execution of identical or near-identical code with identical outcomes, and lack of meaningful state evolution.",
+      "progression": [
+        "No test or score progression details"
+      ],
+      "exploration": [
+        "Code modifications made without test suite evaluation feedback, and repeated execution of identical code"
+      ],
+      "error_evolution": [
+        "No error shift or resolution details"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes, and lack of meaningful state evolution"
+      ],
+      "temporal": [
+        "4 attempts with no improvement in test pass rates"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows repeated execution of identical code with identical outcomes, lack of meaningful state evolution, and no improvement in test pass rates. This indicates unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 3117
+  },
+  "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "The student's code has not shown any meaningful progress or improvement in test pass rates across 5 attempts. The student has repeated the same code with identical outcomes, indicating stagnation.",
+      "interpretation": "The student's interaction process demonstrates a lack of meaningful evolution towards a correct solution, indicating unproductive struggle.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes, indicating sustained stagnation"
+      ],
+      "temporal": [
+        "The student has been stuck in a stagnant state for 2 consecutive attempts, with a total elapsed duration of 329.27s"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory prefix shows a lack of progress, repeated execution of identical code, and stagnation, indicating unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 3785
+  },
+  "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "The student has made 3 consecutive attempts with identical code and no test suite evaluation feedback.",
+      "interpretation": "The student is stuck in a loop of repeated execution without addressing the underlying defect.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with no test suite evaluation feedback"
+      ],
+      "temporal": [
+        "3 consecutive attempts with no progress"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows repeated execution of identical code with no test suite evaluation feedback, indicating a lack of meaningful progress or exploration.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 4450
+  },
+  "sess_0f7e58ee-7e60-4830-acbe-4312aa6bfcc8_prefix_6": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 7,
+    "evidence": {
+      "observation": "The student has made repeated execution of identical or near-identical code with identical outcomes across 4 consecutive attempts (Attempt #3 -> #6).",
+      "interpretation": "The student is experiencing sustained stagnation and repetition without meaningful state evolution.",
+      "progression": [
+        "No meaningful test or score progression details"
+      ],
+      "exploration": [
+        "The student made a single code change (Attempt #2 -> #3) but it did not address the underlying defect and was followed by repeated execution of identical code."
+      ],
+      "error_evolution": [
+        "The student encountered the same compilation error repeatedly without addressing the underlying defect."
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes across 4 consecutive attempts."
+      ],
+      "temporal": [
+        "The student has been stuck in a stagnation loop for 4 attempts with a total elapsed duration of 547.21s."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with identical outcomes and lack of meaningful state evolution indicate unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 5117
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "Repeated execution of identical code with identical outcomes across two attempts.",
+      "interpretation": "The student is experiencing stagnation and repetition without meaningful state evolution.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes across two attempts."
+      ],
+      "temporal": [
+        "Attempt frequency: 2 attempts with no progress in 33.59s"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code without any changes or progress indicates unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 1785
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "The student has repeated the same code across three attempts with no changes, resulting in no test pass rate improvement.",
+      "interpretation": "The student is experiencing unproductive struggle due to repeated execution of identical code without addressing the underlying defect.",
+      "progression": [
+        "No test pass rate improvement across three attempts"
+      ],
+      "exploration": [
+        "No meaningful code modifications or approach changes"
+      ],
+      "error_evolution": [
+        "No error evolution or resolution"
+      ],
+      "stagnation": [
+        "Repeated execution of identical code with no changes"
+      ],
+      "temporal": [
+        "Three consecutive attempts with no improvement"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code without any changes or improvements in test pass rate suggests unproductive struggle.",
+    "recommended_action": "CONSIDER_INTERVENTION",
+    "raw_prompt_length": 2577
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.95,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "The student has repeated the same code across 4 attempts with no changes, resulting in no test suite performance gains.",
+      "interpretation": "The student is experiencing unproductive struggle due to sustained stagnation and lack of meaningful state evolution.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes across 4 attempts"
+      ],
+      "temporal": [
+        "The student has been stuck in this state for 82.31 seconds, with 3 repeat executions and 3 repeated states."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with no changes or performance gains indicates unproductive struggle.",
+    "recommended_action": "CONSIDER_INTERVENTION",
+    "raw_prompt_length": 3369
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.95,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "The student has repeated the same code across 5 attempts with no changes, resulting in no test suite performance gains or error evolution.",
+      "interpretation": "The student is experiencing unproductive struggle due to sustained stagnation and repetition.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes across 5 attempts"
+      ],
+      "temporal": [
+        "The student has been stuck in this state for 98.82 seconds with no progress"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION",
+      "U5_REPEATED_FAILED_ATTEMPTS",
+      "U6_REVERSION_CYCLIC"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with no changes or test suite performance gains indicates unproductive struggle.",
+    "recommended_action": "CONSIDER_INTERVENTION",
+    "raw_prompt_length": 4161
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.95,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "The student has repeated the same code with identical outcomes across 6 attempts, resulting in no net pass rate improvement.",
+      "interpretation": "The student is experiencing sustained stagnation and repetition without meaningful state evolution.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes across 6 attempts"
+      ],
+      "temporal": [
+        "5 repeat executions across 6 attempts"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with identical outcomes across 6 attempts indicates sustained stagnation and repetition without meaningful state evolution.",
+    "recommended_action": "CONSIDER_INTERVENTION",
+    "raw_prompt_length": 4954
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_6": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.95,
+    "assessment_attempt": 7,
+    "evidence": {
+      "observation": "The student has repeated the same code with identical outcomes across 7 attempts, resulting in no net pass rate improvement.",
+      "interpretation": "The student is experiencing sustained stagnation, indicating an unproductive struggle.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes across 7 attempts"
+      ],
+      "temporal": [
+        "6 consecutive attempts with repeated execution, 195.93s elapsed duration"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with identical outcomes across 7 attempts indicates sustained stagnation, suggesting an unproductive struggle.",
+    "recommended_action": "CONSIDER_INTERVENTION",
+    "raw_prompt_length": 5746
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_7": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 8,
+    "evidence": {
+      "observation": "The student has repeated the same code with identical outcomes across 6 consecutive attempts, with no meaningful changes or improvements.",
+      "interpretation": "The student is experiencing unproductive struggle, characterized by sustained stagnation and repetition.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes across 6 consecutive attempts"
+      ],
+      "temporal": [
+        "6 consecutive attempts with no meaningful changes or improvements"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with identical outcomes across 6 consecutive attempts, without any meaningful changes or improvements, indicates unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 6477
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_8": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 9,
+    "evidence": {
+      "observation": "The student's code has remained largely unchanged across 6 consecutive attempts, with repeated execution of identical or near-identical code.",
+      "interpretation": "The student is experiencing sustained stagnation, repetition, and lack of meaningful state evolution.",
+      "progression": [
+        "The student's test pass rate improved by +50.0% across the trajectory prefix, but this improvement was not accompanied by meaningful code changes or approach modifications."
+      ],
+      "exploration": [
+        "The student made a small modification to their code in attempt #9, but this change did not result in any improvement in test pass rate."
+      ],
+      "error_evolution": [
+        "The student's error evolution is stagnant, with no changes or resolutions observed across the trajectory prefix."
+      ],
+      "stagnation": [
+        "The student's code has been in a state of repeated execution and stagnation for 6 consecutive attempts."
+      ],
+      "temporal": [
+        "The student has been working on this problem for a total of 750.13s, with a peak test pass improvement of +2 tests."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory prefix is characterized by sustained stagnation, repetition, and lack of meaningful state evolution. While the student's test pass rate improved by +50.0%, this improvement was not accompanied by meaningful code changes or approach modifications.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 7228
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_9": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 10,
+    "evidence": {
+      "observation": "The student has repeated the same code 7 times with no meaningful changes, resulting in no improvement in test pass rate.",
+      "interpretation": "The student is stuck in a loop of repeating the same code without making any meaningful progress or changes.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with no improvement in test pass rate"
+      ],
+      "temporal": [
+        "7 consecutive attempts with no progress"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student has demonstrated a lack of progress and stagnation in their attempts, with 7 consecutive attempts resulting in no improvement in test pass rate.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 7969
+  },
+  "sess_3df5dfba-c40b-4e08-a40c-64342b3503d6_prefix_10": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 11,
+    "evidence": {
+      "observation": "The student has made 8 consecutive repeat executions with no meaningful code changes, resulting in no net pass rate improvement.",
+      "interpretation": "The student is experiencing unproductive struggle due to repeated execution of identical code with no meaningful progress.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with no meaningful progress"
+      ],
+      "temporal": [
+        "8 consecutive repeat executions"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code with no meaningful progress indicates unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 8774
+  },
+  "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.65,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "No net test suite performance gains (Pass Rate: 0.0% in both attempts).",
+      "interpretation": "The student's code modification did not address the underlying issue.",
+      "progression": [
+        "No test or score progression details"
+      ],
+      "exploration": [
+        "Code modification in attempt #2 added a missing cout statement, but it's unclear if this change was meaningful or just a superficial edit."
+      ],
+      "error_evolution": [
+        "Error Evolution: Changed=False, Resolved=False, indicating no meaningful error resolution."
+      ],
+      "stagnation": [
+        "Repeated State=False, Consecutive Stagnant Length=0, indicating no stagnation."
+      ],
+      "temporal": [
+        "Total Attempts in Prefix: 2, Total Elapsed Duration: 93.28s, indicating a short trajectory prefix."
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The trajectory prefix does not contain enough evidence to confidently distinguish productive from unproductive struggle. The student's code modification did not address the underlying issue, and there is no net test suite performance gains.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 1592
+  },
+  "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_2": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 3,
+    "evidence": {
+      "observation": "No net pass rate improvement, repeated execution of identical code with identical outcomes, and lack of meaningful state evolution across attempts.",
+      "interpretation": "The student is experiencing unproductive struggle as they are not making progress towards a correct solution.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with identical outcomes"
+      ],
+      "temporal": [
+        "3 attempts with no improvement"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's attempts show no improvement in test pass rate, and the code changes are minor and do not indicate a meaningful approach change. The repeated execution of identical code with identical outcomes suggests stagnation.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2274
+  },
+  "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_3": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 4,
+    "evidence": {
+      "observation": "The student has made repeated identical code changes without addressing the underlying issue, resulting in no test suite performance gains.",
+      "interpretation": "The student is stuck in a loop of minor modifications without making meaningful progress towards a correct solution.",
+      "progression": [],
+      "exploration": [
+        "The student has made minor changes to the code, such as adding a return statement in attempt 2, but these changes do not address the core issue."
+      ],
+      "error_evolution": [],
+      "stagnation": [
+        "The student has repeated the same code in attempts 3 and 4, indicating a lack of progress."
+      ],
+      "temporal": [
+        "The student has made 4 attempts with no improvement in test suite performance."
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code without addressing the underlying issue and lack of test suite performance gains indicate unproductive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 2945
+  },
+  "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_4": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 5,
+    "evidence": {
+      "observation": "The student has made repeated identical code changes without addressing the underlying issue, resulting in no performance improvement or error evolution.",
+      "interpretation": "The student is stuck in a loop of minor adjustments without making meaningful progress towards a correct solution.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with no improvement or error resolution"
+      ],
+      "temporal": [
+        "2 consecutive repeat executions with no change"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's repeated execution of identical code without any improvement or error resolution indicates a lack of productive struggle.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 3614
+  },
+  "sess_37acefd7-b68d-4ac9-b574-60157405d126_prefix_5": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNPRODUCTIVE",
+    "confidence": 0.85,
+    "assessment_attempt": 6,
+    "evidence": {
+      "observation": "The student's code has not changed significantly across attempts, with a peak code similarity of 0.9979 and a total of 3 repeat executions.",
+      "interpretation": "The student appears to be stuck in a loop of executing the same code without making meaningful changes or progress.",
+      "progression": [],
+      "exploration": [],
+      "error_evolution": [],
+      "stagnation": [
+        "Repeated execution of identical code with no changes or progress"
+      ],
+      "temporal": [
+        "The student has been stuck in this loop for 3 consecutive attempts"
+      ]
+    },
+    "positive_signals": [],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE",
+      "U4_PERFORMANCE_STAGNATION"
+    ],
+    "uncertainty_signals": [],
+    "reasoning": "The student's trajectory shows a lack of meaningful progress or changes in their code, with repeated executions of the same code and no improvement in test pass rates.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 4287
+  },
+  "sess_e7390b18-e9db-4857-93c5-144e28ea666b_prefix_1": {
+    "method": "LLM Trajectory Reasoning",
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "prompt_version": "TASK_2C_SYSTEM_V2",
+    "strict_model_pinning": true,
+    "state": "UNCERTAIN",
+    "confidence": 0.65,
+    "assessment_attempt": 2,
+    "evidence": {
+      "observation": "No test suite evaluation feedback, repeated execution/compilation failure, and minor code modification without addressing core algorithmic flaws.",
+      "interpretation": "The student is attempting to solve the problem but lacks meaningful progress or error resolution.",
+      "progression": [
+        "No test or score progression details"
+      ],
+      "exploration": [
+        "Minor code modification (adding a new vector) without addressing core algorithmic flaws"
+      ],
+      "error_evolution": [
+        "Error remains unresolved (compilation/execution failure)"
+      ],
+      "stagnation": [
+        "Repeated execution/compilation failure without addressing underlying defects"
+      ],
+      "temporal": [
+        "Two attempts with no significant elapsed duration"
+      ]
+    },
+    "positive_signals": [
+      "P1_PERFORMANCE_IMPROVEMENT",
+      "P3_EXPLORATION"
+    ],
+    "negative_signals": [
+      "U1_REPEATED_EXECUTION",
+      "U2_REPEATED_ERROR",
+      "U3_REPEATED_STATE"
+    ],
+    "uncertainty_signals": [
+      "UNCERTAIN_SHORT_TRAJECTORY"
+    ],
+    "reasoning": "The trajectory prefix lacks clear evidence of productive or unproductive struggle. The student is attempting to solve the problem but lacks meaningful progress or error resolution.",
+    "recommended_action": "MONITOR",
+    "raw_prompt_length": 1687
+  }
+}
