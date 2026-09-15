@@ -80,9 +80,13 @@ def root_view(request):
         ]
     })
 
+from hints.annotation_views import AnnotationPrefixesView, SubmitAnnotationView
+
 urlpatterns = [
     path('', root_view, name='root'),
     path('admin/', admin.site.urls),
+    path('api/human-annotation/prefixes/', AnnotationPrefixesView.as_view(), name='human-annotation-prefixes'),
+    path('api/human-annotation/submit/', SubmitAnnotationView.as_view(), name='human-annotation-submit'),
     path('api/struggle-analysis/trajectory/<str:problem_id>/', TrajectoryAnalysisView.as_view(), name='trajectory-analysis'),
     path('api/struggle-analysis/assess/<str:problem_id>/', StruggleAssessmentView.as_view(), name='struggle-assessment'),
     path('api/struggle-analysis/llm-assess/<str:problem_id>/', StruggleLLMAssessmentView.as_view(), name='struggle-llm-assess'),

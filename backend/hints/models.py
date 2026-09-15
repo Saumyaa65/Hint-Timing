@@ -199,3 +199,34 @@ class SolutionShare(models.Model):
     explanation = models.TextField()
     upvotes = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class HumanAnnotation(models.Model):
+    LABEL_CHOICES = [
+        ('PRODUCTIVE', 'Productive'),
+        ('UNPRODUCTIVE', 'Unproductive'),
+        ('UNCERTAIN', 'Uncertain'),
+    ]
+    
+    CONFIDENCE_CHOICES = [
+        ('Low', 'Low'),
+        ('Medium', 'Medium'),
+        ('High', 'High'),
+    ]
+
+    session_id = models.CharField(max_length=100, db_index=True)
+    prefix_number = models.IntegerField(help_text="Prefix index (e.g. 1 for A1->A2, 2 for A1->A2->A3)")
+    annotator_id = models.CharField(max_length=50, db_index=True)  # e.g. Annotator 1, Annotator 2, Annotator 3
+    human_label = models.CharField(max_length=20, choices=LABEL_CHOICES)
+    evidence = models.JSONField(default=list, help_text="List of selected evidence tags")
+    confidence = models.CharField(max_length=10, choices=CONFIDENCE_CHOICES)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ('session_id', 'prefix_number', 'annotator_id')
+        ordering = ['session_id', 'prefix_number']
+
+    def __str__(self):
+        return f"{self.annotator_id} - {self.session_id} (Prefix {self.prefix_number}): {self.human_label}"
+

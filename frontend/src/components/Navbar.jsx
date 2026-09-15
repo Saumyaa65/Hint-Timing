@@ -44,6 +44,7 @@ export default function Navbar({ user, theme, onToggleTheme }) {
   if (user) {
     navLinks.push({ label: 'My Dashboard', path: '/analytics/me' });
     navLinks.push({ label: 'Admin', path: '/admin/analytics' });
+    navLinks.push({ label: 'Annotate', path: '/annotate' });
   }
 
   return (

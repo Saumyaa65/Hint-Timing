@@ -7,6 +7,7 @@ import ProblemList from './pages/ProblemList'
 import ProblemDetail from './pages/ProblemDetail'
 import AdminDashboard from './pages/AdminDashboard'
 import UserAnalyticsDashboard from './pages/UserAnalyticsDashboard'
+import HumanAnnotationInterface from './pages/HumanAnnotationInterface'
 import ProblemSheets from './pages/ProblemSheets'
 import SheetDetail from './pages/SheetDetail'
 import Leaderboard from './pages/Leaderboard'
@@ -68,6 +69,7 @@ export default function App() {
               <Route path="/solutions/:problemId" element={<Solutions />} />
               <Route path="/analytics/me" element={<UserAnalyticsDashboard />} />
               <Route path="/admin/analytics" element={<AdminDashboard />} />
+              <Route path="/annotate" element={<HumanAnnotationInterface />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
