@@ -8,7 +8,7 @@
 ## 🔴 Critical / Must-Have
 
 ### 1. Authentication — Replace Mock with Real Auth
-**Current state:** `auth_views.py` generates random user IDs and mock tokens. No password hashing, no sessions, no JWT.
+**Current state:** `auth_views.py` generates random user IDs and mock tokens. No password hashing, no sessions, no JWT
 
 - [ ] Implement proper user registration with password hashing (bcrypt/argon2)
 - [ ] Add JWT-based authentication (django-rest-framework-simplejwt)

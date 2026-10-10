@@ -135,7 +135,7 @@ class Hint(models.Model):
 class HintDelivery(models.Model):
     hint = models.ForeignKey(Hint, on_delete=models.CASCADE, related_name='deliveries')
     user_id = models.CharField(max_length=255, default='')  # Clerk user ID
-    attempt = models.ForeignKey(Attempt, on_delete=models.CASCADE, related_name='hint_deliveries')
+    attempt = models.ForeignKey(Attempt, on_delete=models.CASCADE, related_name='hint_deliveries', null=True, blank=True)
     is_auto_triggered = models.BooleanField(default=False)
     feedback = models.TextField(null=True, blank=True)
     rating = models.IntegerField(null=True, blank=True)

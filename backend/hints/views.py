@@ -177,10 +177,6 @@ class HintViewSet(viewsets.ViewSet):
         # Get or create user progress
         progress = self._get_user_progress(user_id, problem)
         
-        # Increment attempts count
-        progress.attempts_count += 1
-        logger.info(f"📈 Incremented attempts count: {progress.attempts_count}")
-        
         # Calculate time since last attempt
         time_since_last_attempt = 0
         if progress.last_activity:
@@ -243,27 +239,6 @@ class HintViewSet(viewsets.ViewSet):
             progress.current_hint_level = new_hint_level
             progress.save()
 
-        # Create attempt record
-        attempt = Attempt.objects.create(
-            user_id=user_id,
-            problem=problem,
-            code=user_code,
-            status='failed' if not result['attempt_evaluation'].get('is_correct', False) else 'success',
-            evaluation_details=result['attempt_evaluation'],
-            source='HINT_REQUEST',
-            session_id=session_id
-        )
-        logger.info(f"📝 Created attempt record (ID: {attempt.id}, Status: {attempt.status})")
-
-        # Update failed_attempts_count only if failed, reset on success
-        if not result['attempt_evaluation'].get('is_correct', False):
-            progress.failed_attempts_count += 1
-            logger.info(f"❌ Incremented failed_attempts_count: {progress.failed_attempts_count}")
-        else:
-            progress.failed_attempts_count = 0
-            logger.info(f"✅ Reset failed_attempts_count to 0 (success)")
-        progress.save()
-
         # Create hint record with updated level and type
         hint = Hint.objects.create(
             problem=problem,
@@ -284,11 +259,14 @@ class HintViewSet(viewsets.ViewSet):
         )
         logger.info(f"📝 Created hint evaluation record (ID: {hint_evaluation.id})")
 
+        # Attach to latest existing attempt if one exists (do NOT create new Attempt on hint request)
+        last_attempt = Attempt.objects.filter(user_id=user_id, problem=problem).order_by('-created_at').first()
+
         # Create hint delivery record
         hint_delivery = HintDelivery.objects.create(
             hint=hint,
             user_id=user_id,
-            attempt=attempt,
+            attempt=last_attempt,
             is_auto_triggered=False
         )
         
@@ -308,7 +286,7 @@ class HintViewSet(viewsets.ViewSet):
                 'type': new_hint_type
             },
             'evaluation': result['hint_evaluation'],
-            'attempt_id': attempt.id,
+            'attempt_id': last_attempt.id if last_attempt else None,
             'attempt_evaluation': {
                 'is_correct': result['attempt_evaluation'].get('is_correct', False),
                 'error_pattern': result['attempt_evaluation'].get('error_pattern', ''),

@@ -1108,9 +1108,9 @@ class ResearchDataIntegrityTests(TestCase):
             }, format='json')
             self.assertEqual(res_hint.status_code, 200)
 
-        # Verify Database Attempts
+        # Verify Database Attempts: Hint requests must NOT create new Attempt records
         atts = list(Attempt.objects.filter(session_id=session_id).order_by('created_at'))
-        self.assertEqual(len(atts), 3)
+        self.assertEqual(len(atts), 2)
 
         # Verify same session_id, user_id, correct sources, and timestamps
         for att in atts:
@@ -1120,11 +1120,23 @@ class ResearchDataIntegrityTests(TestCase):
 
         self.assertEqual(atts[0].source, "RUN")
         self.assertEqual(atts[1].source, "SUBMIT")
-        self.assertEqual(atts[2].source, "HINT_REQUEST")
 
         # Chronological timestamps
         self.assertLessEqual(atts[0].created_at, atts[1].created_at)
-        self.assertLessEqual(atts[1].created_at, atts[2].created_at)
+
+        # 4. Request Hint a second time (repeated click)
+        with patch('hints.views.AgentOrchestrator.generate_adaptive_hint', return_value={'generated_hint': 'Another hint.', 'attempt_evaluation': {'is_correct': False}, 'hint_evaluation': mock_eval, 'updated_hint_level': 2}):
+            res_hint2 = client.post('/api/hints/request_hint/', {
+                'user_id': student_id,
+                'problem_id': prob_id,
+                'user_code': 'def solution(): return 3',
+                'session_id': session_id
+            }, format='json')
+            self.assertEqual(res_hint2.status_code, 200)
+
+        # Verify still only 2 attempts exist
+        atts_after_second_hint = list(Attempt.objects.filter(session_id=session_id).order_by('created_at'))
+        self.assertEqual(len(atts_after_second_hint), 2)
 
 
 
