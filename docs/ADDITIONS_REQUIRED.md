@@ -8,24 +8,24 @@
 ## 🔴 Critical / Must-Have
 
 ### 1. Authentication — Replace Mock with Real Auth
-**Current state:** `auth_views.py` generates random user IDs and mock tokens. No password hashing, no sessions, no JWT.
+**Current state:** `auth_views.py` generates random user IDs and mock tokens. No password hashing, no sessions, no JWT
 
 - [ ] Implement proper user registration with password hashing (bcrypt/argon2)
 - [ ] Add JWT-based authentication (django-rest-framework-simplejwt)
-- [ ] Add token refresh mechanism
+- [ ] Add token refresh mechanism.
 - [ ] Protect all API endpoints with authentication middleware
-- [ ] Add OAuth2 support (Google, GitHub login)
+- [ ] Add OAuth2 support (Google, GitHub login).
 - [ ] Frontend: persist JWT in httpOnly cookies (not localStorage)
-- [ ] Add email verification flow
+- [ ] Add email verification flow.
 - [ ] Add password reset / forgot password
 
 ### 2. Database & User Progress Tracking
-**Current state:** `UserProgress` model exists but isn't wired up. Submissions are only stored in localStorage
+**Current state:** `UserProgress` model exists but isn't wired up. Submissions are only stored in localStorage.
 
 - [ ] Wire up `UserProgress` model to track per-problem attempts, completion, and hints used
 - [ ] Create a `history` API endpoint to fetch user attempts from the DB
 - [ ] Connect the frontend History tab to fetch past submissions via the new API instead of `localStorage`
-- [ ] Add user profile page showing stats, heatmap, streak
+- [ ] Add user profile page showing stats, heatmap, streak.
 - [ ] Add a proper "Solved" marker per problem in the problem lists
 - [ ] Sync solved status from backend instead of localStorage
 
