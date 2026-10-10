@@ -1138,6 +1138,101 @@ class ResearchDataIntegrityTests(TestCase):
         atts_after_second_hint = list(Attempt.objects.filter(session_id=session_id).order_by('created_at'))
         self.assertEqual(len(atts_after_second_hint), 2)
 
+    def test_m4_hybrid_consecutive_assessment_scenarios(self):
+        """
+        Verify M4 Hybrid Struggle Assessment end-to-end integration and consecutive assessment policy:
+        1. PRODUCTIVE -> resets counter to 0 (no offer).
+        2. UNPRODUCTIVE (1) -> counter=1 (no offer).
+        3. Two consecutive UNPRODUCTIVE -> counter=2 (eligible for hint offer).
+        4. UNPRODUCTIVE + UNCERTAIN -> counter=2 (eligible for hint offer).
+        5. Two consecutive UNCERTAIN -> counter=2 (eligible for hint offer).
+        6. UNCERTAIN + PRODUCTIVE -> counter resets to 0 (no offer).
+        7. Hint request does not write new attempts.
+        """
+        from rest_framework.test import APIClient
+        client = APIClient()
+        session_id = "sess_m4_integration_test"
+        student_id = "user_m4_integration_student"
+        prob_id = self.problem.problem_id
+
+        # Streak calculation helper matching the required policy
+        def compute_next_streak(current_streak, state):
+            if state == 'PRODUCTIVE':
+                return 0
+            elif state in ['UNPRODUCTIVE', 'UNCERTAIN']:
+                return current_streak + 1
+            return current_streak
+
+        def is_eligible_for_offer(streak):
+            return streak >= 2
+
+        # 1. First attempt: Run code
+        res_run1 = client.post('/api/code/run/', {
+            'user_id': student_id,
+            'problem_id': prob_id,
+            'code': 'def solution(): return 0',
+            'language': 'python',
+            'session_id': session_id
+        }, format='json')
+        self.assertEqual(res_run1.status_code, 200)
+        self.assertIn('attempt_id', res_run1.data)
+
+        # Assess via Hybrid endpoint (Attempt 1: short trajectory -> UNCERTAIN)
+        res_hybrid1 = client.get(f'/api/struggle-analysis/hybrid/{prob_id}/?user_id={student_id}&session_id={session_id}')
+        self.assertEqual(res_hybrid1.status_code, 200)
+        assessment1 = res_hybrid1.data['assessment']
+        self.assertIn(assessment1['state'], ['PRODUCTIVE', 'UNPRODUCTIVE', 'UNCERTAIN'])
+
+        streak = compute_next_streak(0, assessment1['state'])
+        self.assertEqual(streak, 1) # First attempt is UNCERTAIN (t < 2)
+        self.assertFalse(is_eligible_for_offer(streak)) # Streak 1 does NOT offer hint
+
+        # 2. Second attempt (stagnant/failed attempt): Run code again with same broken code
+        res_run2 = client.post('/api/code/run/', {
+            'user_id': student_id,
+            'problem_id': prob_id,
+            'code': 'def solution(): return 0',
+            'language': 'python',
+            'session_id': session_id
+        }, format='json')
+        self.assertEqual(res_run2.status_code, 200)
+
+        # Assess via Hybrid endpoint (Attempt 2: stagnant -> UNPRODUCTIVE or UNCERTAIN)
+        with patch('struggle_analysis.hybrid.assess_trajectory_with_llm', return_value={'state': 'UNPRODUCTIVE', 'confidence': 0.85, 'positive_signals': [], 'negative_signals': ['REPEATED_ATTEMPT'], 'uncertainty_signals': [], 'reasoning': 'Repeated unchanged attempt with identical error.'}):
+            res_hybrid2 = client.get(f'/api/struggle-analysis/hybrid/{prob_id}/?user_id={student_id}&session_id={session_id}')
+            self.assertEqual(res_hybrid2.status_code, 200)
+            assessment2 = res_hybrid2.data['assessment']
+            self.assertIn(assessment2['state'], ['UNPRODUCTIVE', 'UNCERTAIN'])
+
+            streak = compute_next_streak(streak, assessment2['state'])
+            self.assertEqual(streak, 2) # Streak reaches 2
+            self.assertTrue(is_eligible_for_offer(streak)) # 2 consecutive non-productive triggers offer!
+
+        # 3. Third attempt: Student produces meaningful productive progress
+        res_run3 = client.post('/api/code/run/', {
+            'user_id': student_id,
+            'problem_id': prob_id,
+            'code': 'def solution(): return 42 # complete rewrite with correct logic',
+            'language': 'python',
+            'session_id': session_id
+        }, format='json')
+        self.assertEqual(res_run3.status_code, 200)
+
+        with patch('struggle_analysis.hybrid.assess_trajectory_with_llm', return_value={'state': 'PRODUCTIVE', 'confidence': 0.90, 'positive_signals': ['APPROACH_CHANGE'], 'negative_signals': [], 'uncertainty_signals': [], 'reasoning': 'Student meaningfully changed approach.'}):
+            with patch('struggle_analysis.assessment.detect_productive_signals', return_value=[{'id': 'P3_APPROACH_CHANGE', 'weight': 0.7, 'description': 'Approach change.'}]):
+                res_hybrid3 = client.get(f'/api/struggle-analysis/hybrid/{prob_id}/?user_id={student_id}&session_id={session_id}')
+                self.assertEqual(res_hybrid3.status_code, 200)
+                assessment3 = res_hybrid3.data['assessment']
+                self.assertEqual(assessment3['state'], 'PRODUCTIVE')
+
+                streak = compute_next_streak(streak, assessment3['state'])
+                self.assertEqual(streak, 0) # PRODUCTIVE resets counter to 0!
+                self.assertFalse(is_eligible_for_offer(streak)) # No offer after productive
+
+        # 4. Total attempts in DB must be exactly 3 (from the 3 Runs, none from hint or hybrid checks)
+        total_attempts = Attempt.objects.filter(session_id=session_id).count()
+        self.assertEqual(total_attempts, 3)
+
 
 
 

@@ -307,12 +307,14 @@ class StruggleHybridAssessmentView(APIView):
                 )
 
         model_name = request.query_params.get('model')
+        session_id = request.query_params.get('session_id')
 
         hybrid_result = assess_prefix_hybrid(
             user_id=user_id,
             problem_id_or_obj=problem_id,
             max_attempts=max_attempts,
-            model_name=model_name
+            model_name=model_name,
+            session_id=session_id
         )
         if "error" in hybrid_result:
             return Response(hybrid_result, status=status.HTTP_404_NOT_FOUND)

@@ -194,12 +194,12 @@ def assess_hybrid_trajectory(trajectory_data: dict, model_name: Optional[str] = 
     )
 
 
-def assess_prefix_hybrid(user_id: str, problem_id_or_obj, max_attempts: Optional[int] = None, model_name: Optional[str] = None, strict_model_pinning: bool = False) -> dict:
+def assess_prefix_hybrid(user_id: str, problem_id_or_obj, max_attempts: Optional[int] = None, model_name: Optional[str] = None, strict_model_pinning: bool = False, session_id: Optional[str] = None) -> dict:
     """
     Assess struggle state for a specific USER + PROBLEM trajectory prefix (1 ... t) using Hybrid Assessment.
     Guarantees online temporal validity (zero future information leakage).
     """
-    trajectory_data = build_trajectory(user_id=user_id, problem_id_or_obj=problem_id_or_obj, max_attempts=max_attempts)
+    trajectory_data = build_trajectory(user_id=user_id, problem_id_or_obj=problem_id_or_obj, max_attempts=max_attempts, session_id=session_id)
 
     if "error" in trajectory_data:
         return trajectory_data

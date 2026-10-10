@@ -6,6 +6,7 @@ const MonacoEditor = lazy(() => import('../components/MonacoEditor'));
 import problemService from '../services/problemService';
 import hintService from '../services/hintService';
 import codeService from '../services/codeService';
+import struggleService from '../services/struggleService';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -58,6 +59,34 @@ export default function ProblemDetail({ user, theme }) {
   const [isPostingDiscuss, setIsPostingDiscuss] = useState(false);
   const [showNewPostForm, setShowNewPostForm] = useState(false);
   const [sessionId, setSessionId] = useState(null);
+
+  // M4 Struggle Analysis & Adaptive Intervention States
+  const [consecutiveNonProductiveCount, setConsecutiveNonProductiveCount] = useState(0);
+  const [lastEvaluatedAttemptId, setLastEvaluatedAttemptId] = useState(null);
+  const [showStruggleModal, setShowStruggleModal] = useState(false);
+  const [hintOfferError, setHintOfferError] = useState(null);
+  const [isEvaluatingStruggle, setIsEvaluatingStruggle] = useState(false);
+  const [latestStruggleAssessment, setLatestStruggleAssessment] = useState(null);
+
+  // Sync struggle state from sessionStorage whenever sessionId changes
+  useEffect(() => {
+    if (!sessionId) return;
+    try {
+      const saved = sessionStorage.getItem(`hintcode_struggle_${sessionId}`);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        setConsecutiveNonProductiveCount(parsed.consecutiveNonProductiveCount || 0);
+        setLastEvaluatedAttemptId(parsed.lastEvaluatedAttemptId || null);
+        setLatestStruggleAssessment(parsed.latestStruggleAssessment || null);
+      } else {
+        setConsecutiveNonProductiveCount(0);
+        setLastEvaluatedAttemptId(null);
+        setLatestStruggleAssessment(null);
+      }
+    } catch (e) {
+      console.error("Failed to load struggle session state", e);
+    }
+  }, [sessionId]);
 
   useEffect(() => {
     localStorage.setItem('hintcode_split_width', leftWidth);
@@ -288,8 +317,9 @@ export default function ProblemDetail({ user, theme }) {
   };
 
   // Hint requesting
+  // Hint requesting
   const requestHint = async () => {
-    if (!user || !problem) return;
+    if (!user || !problem) return false;
     setActiveTab('hints');
     try {
       setLoadingHint(true);
@@ -307,7 +337,9 @@ export default function ProblemDetail({ user, theme }) {
       if (result && result.hint) {
         setHints(prev => [result.hint, ...prev]);
         toast.success("AI Hint generated successfully!");
+        return true;
       }
+      return false;
     } catch (err) {
       console.error(err);
       if (err?.response?.status === 429) {
@@ -315,6 +347,7 @@ export default function ProblemDetail({ user, theme }) {
       } else {
         toast.error("Failed to generate hint. Please try again.");
       }
+      return false;
     } finally {
       setLoadingHint(false);
     }
@@ -336,6 +369,85 @@ export default function ProblemDetail({ user, theme }) {
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     toast.success("Copied to clipboard!", { style: { fontSize: '12px' } });
+  };
+
+  // Evaluate M4 Hybrid Struggle Assessment on the updated trajectory after Run / Submit
+  const evaluateStruggleState = useCallback(async (attemptId) => {
+    if (!user || !problem || !sessionId || !attemptId) return;
+
+    // Check if we already evaluated this specific attempt ID to prevent duplicate processing
+    const savedState = sessionStorage.getItem(`hintcode_struggle_${sessionId}`);
+    const parsedState = savedState ? JSON.parse(savedState) : null;
+    if (parsedState && parsedState.lastEvaluatedAttemptId === attemptId) {
+      return;
+    }
+
+    try {
+      setIsEvaluatingStruggle(true);
+      const data = await struggleService.assessHybrid(
+        user?.id || 1,
+        problem?.problem_id || problem?.id || id,
+        sessionId
+      );
+
+      const assessment = data?.assessment;
+      if (!assessment || !assessment.state) {
+        return;
+      }
+
+      const state = assessment.state; // 'PRODUCTIVE' | 'UNPRODUCTIVE' | 'UNCERTAIN'
+      setLatestStruggleAssessment(assessment);
+
+      const currentCount = parsedState?.consecutiveNonProductiveCount ?? consecutiveNonProductiveCount;
+
+      let newCount = 0;
+      if (state === 'PRODUCTIVE') {
+        newCount = 0;
+      } else if (state === 'UNPRODUCTIVE' || state === 'UNCERTAIN') {
+        newCount = currentCount + 1;
+      }
+
+      let triggerOffer = false;
+      if (newCount >= 2) {
+        triggerOffer = true;
+        newCount = 0; // Reset consecutive counter to 0 immediately when offer appears
+      }
+
+      setConsecutiveNonProductiveCount(newCount);
+      setLastEvaluatedAttemptId(attemptId);
+
+      if (triggerOffer) {
+        setShowStruggleModal(true);
+        setHintOfferError(null);
+      }
+
+      // Persist state to session storage
+      sessionStorage.setItem(`hintcode_struggle_${sessionId}`, JSON.stringify({
+        consecutiveNonProductiveCount: newCount,
+        lastEvaluatedAttemptId: attemptId,
+        latestStruggleAssessment: assessment
+      }));
+    } catch (err) {
+      console.error("M4 Struggle Assessment evaluation error:", err);
+      // Handled gracefully without fabricating classifications or automatically generating hints.
+    } finally {
+      setIsEvaluatingStruggle(false);
+    }
+  }, [user, problem, sessionId, id, consecutiveNonProductiveCount]);
+
+  const handleAcceptHintOffer = async () => {
+    setHintOfferError(null);
+    const success = await requestHint();
+    if (success) {
+      setShowStruggleModal(false);
+    } else {
+      setHintOfferError("Failed to generate hint. Please retry.");
+    }
+  };
+
+  const handleDeclineHintOffer = () => {
+    setShowStruggleModal(false);
+    setHintOfferError(null);
   };
 
   // Code runs
@@ -363,27 +475,11 @@ export default function ProblemDetail({ user, theme }) {
           solvedList.push(problem.problem_id);
           localStorage.setItem('solvedProblems', JSON.stringify(solvedList));
         }
-      } else {
-        // Failed run: check for auto-trigger
-        try {
-          const autoCheck = await hintService.checkAutoTrigger(
-            user?.id || 1,
-            problem?.problem_id || problem?.id || 1,
-            code || '\n',
-            { title: problem.title, description: problem.description },
-            sessionId
-          );
-          if (autoCheck?.should_trigger && autoCheck.hint) {
-            setHints(prev => [autoCheck.hint, ...prev]);
-            toast("You seem stuck! The AI generated a hint for you.", {
-              icon: '💡',
-              style: { borderRadius: '10px', background: '#333', color: '#fff' }
-            });
-            setActiveTab('hints');
-          }
-        } catch (e) {
-          console.error("Auto-trigger error", e);
-        }
+      }
+
+      // Trigger M4 Struggle Assessment on the updated trajectory
+      if (result && result.attempt_id) {
+        evaluateStruggleState(result.attempt_id);
       }
     } catch (err) {
       console.error(err);
@@ -394,7 +490,7 @@ export default function ProblemDetail({ user, theme }) {
     } finally {
       setLoadingRun(false);
     }
-  }, [user, problem, code, language, customInput, sessionId]);
+  }, [user, problem, code, language, customInput, sessionId, evaluateStruggleState]);
 
   const submitSolution = useCallback(async () => {
     if (!user || !problem) return;
@@ -421,27 +517,11 @@ export default function ProblemDetail({ user, theme }) {
           solvedList.push(problem.problem_id);
           localStorage.setItem('solvedProblems', JSON.stringify(solvedList));
         }
-      } else {
-        // Failed submit: check for auto-trigger
-        try {
-          const autoCheck = await hintService.checkAutoTrigger(
-            user?.id || 1,
-            problem?.problem_id || problem?.id || 1,
-            code || '\n',
-            { title: problem.title, description: problem.description },
-            sessionId
-          );
-          if (autoCheck?.should_trigger && autoCheck.hint) {
-            setHints(prev => [autoCheck.hint, ...prev]);
-            toast("You seem stuck! The AI generated a hint for you.", {
-              icon: '💡',
-              style: { borderRadius: '10px', background: '#333', color: '#fff' }
-            });
-            setActiveTab('hints');
-          }
-        } catch (e) {
-          console.error("Auto-trigger error", e);
-        }
+      }
+
+      // Trigger M4 Struggle Assessment on the updated trajectory
+      if (result && result.attempt_id) {
+        evaluateStruggleState(result.attempt_id);
       }
     } catch (err) {
       console.error(err);
@@ -453,7 +533,7 @@ export default function ProblemDetail({ user, theme }) {
     } finally {
       setIsSubmitting(false);
     }
-  }, [user, problem, code, language, sessionId]);
+  }, [user, problem, code, language, sessionId, evaluateStruggleState]);
 
   // Global Keyboard Shortcuts
   useEffect(() => {
@@ -1422,6 +1502,71 @@ export default function ProblemDetail({ user, theme }) {
         </div>
 
       </div>
+
+      {/* M4 Struggle Intervention Non-Blocking Floating Side Panel */}
+      {showStruggleModal && (
+        <div 
+          className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[calc(100vw-3rem)] bg-[#161b22]/95 border border-amber-500/40 rounded-2xl p-4 shadow-2xl shadow-black/80 ring-1 ring-amber-500/20 backdrop-blur-md animate-slide-up transition-all"
+          role="region"
+          aria-live="polite"
+          aria-label="Adaptive Hint Suggestion"
+        >
+          <div className="flex items-start gap-3">
+            <div className="w-9 h-9 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0 shadow-inner">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <div className="space-y-1 flex-1 min-w-0">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[9px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">
+                  Adaptive Assist
+                </span>
+              </div>
+              <h3 className="text-xs font-bold text-white leading-snug">
+                Would you like a hint?
+              </h3>
+              <p className="text-[11px] text-[#8b949e] leading-relaxed">
+                Struggle analysis noticed repeated difficulties. We can generate a targeted conceptual hint to guide you.
+              </p>
+            </div>
+          </div>
+
+          {hintOfferError && (
+            <div className="mt-2.5 px-3 py-1.5 rounded-lg bg-red-500/10 border border-red-500/20 text-red-300 text-[11px] flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5 text-red-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" strokeWidth={2} />
+                <line x1="12" y1="8" x2="12" y2="12" strokeWidth={2} />
+                <line x1="12" y1="16" x2="12.01" y2="16" strokeWidth={2} />
+              </svg>
+              <span className="truncate">{hintOfferError}</span>
+            </div>
+          )}
+
+          <div className="flex items-center justify-end gap-2.5 mt-3 pt-2.5 border-t border-[#30363d]/60">
+            <button
+              onClick={handleDeclineHintOffer}
+              className="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white bg-[#21262d] hover:bg-[#30363d] rounded-xl transition-all active:scale-[0.98]"
+            >
+              No, I'll continue
+            </button>
+            <button
+              onClick={handleAcceptHintOffer}
+              disabled={loadingHint}
+              className="px-3 py-1.5 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl transition-all shadow-md shadow-indigo-600/25 active:scale-[0.98] inline-flex items-center gap-1.5 disabled:opacity-50"
+            >
+              {loadingHint ? (
+                <>
+                  <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-white" />
+                  <span>Generating...</span>
+                </>
+              ) : (
+                <span>{hintOfferError ? 'Retry Hint' : 'Yes, give me a hint'}</span>
+              )}
+            </button>
+          </div>
+        </div>
+      )}
 
     </div>
   );
