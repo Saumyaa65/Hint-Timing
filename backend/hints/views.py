@@ -49,26 +49,26 @@ class HintViewSet(viewsets.ViewSet):
         return None
 
     def _get_user_progress(self, user_id, problem):
-        """Get or create user progress"""
+        """Get or create user progress, synchronizing attempt counts with database"""
         logger.info(f"👤 Getting user progress for user {user_id} on problem {problem.id}")
-        try:
-            progress = UserProgress.objects.get(
-                user_id=user_id,
-                problem=problem
-            )
-            logger.info(f"✅ Found existing progress: {progress.attempts_count} attempts, {progress.failed_attempts_count} failed")
-            return progress
-        except UserProgress.DoesNotExist:
-            logger.info("📝 Creating new user progress record")
-            progress = UserProgress.objects.create(
-                user_id=user_id,
-                problem=problem,
-                attempts_count=0,
-                failed_attempts_count=0,
-                current_hint_level=1
-            )
-            logger.info(f"✅ Created new progress record for user {user_id}")
-            return progress
+        progress, created = UserProgress.objects.get_or_create(
+            user_id=user_id,
+            problem=problem,
+            defaults={
+                'attempts_count': 0,
+                'failed_attempts_count': 0,
+                'current_hint_level': 1
+            }
+        )
+        attempts = Attempt.objects.filter(user_id=user_id, problem=problem)
+        actual_attempts = attempts.count()
+        actual_failed = attempts.filter(status='failed').count()
+        if progress.attempts_count != actual_attempts or progress.failed_attempts_count != actual_failed:
+            progress.attempts_count = actual_attempts
+            progress.failed_attempts_count = actual_failed
+            progress.save()
+        logger.info(f"✅ Found progress: {progress.attempts_count} attempts, {progress.failed_attempts_count} failed")
+        return progress
 
     def _get_previous_hints(self, user_id, problem):
         """Get previous hints for this user and problem"""
@@ -90,7 +90,7 @@ class HintViewSet(viewsets.ViewSet):
         return attempts
 
     def _create_attempt(self, user_id: str, problem: Problem, user_code: str, source: str = 'HINT_REQUEST', session_id: str = None) -> Attempt:
-        """Create an attempt record for the user"""
+        """Create an attempt record for the user and record progress"""
         logger.info(f"📝 Creating attempt record for user {user_id} on problem {problem.id}")
         
         # Evaluate the attempt
@@ -109,6 +109,10 @@ class HintViewSet(viewsets.ViewSet):
             source=source,
             session_id=session_id
         )
+        
+        # Keep user progress in sync
+        from struggle_analysis.services import handle_attempt
+        handle_attempt(attempt)
         
         logger.info(f"✅ Created attempt record (ID: {attempt.id}, Status: {attempt.status})")
         return attempt
@@ -196,6 +200,62 @@ class HintViewSet(viewsets.ViewSet):
         previous_hints = list(self._get_previous_hints(user_id, problem)[:5])
         previous_hints_text = [hint.hint.content for hint in previous_hints]
 
+        # Extract execution details from latest attempt or run code directly
+        last_attempt = Attempt.objects.filter(user_id=user_id, problem=problem).order_by('-created_at').first()
+        language = request.data.get('language') or (getattr(last_attempt, 'language', None) if last_attempt else 'python') or 'python'
+
+        exec_details = None
+        if last_attempt and last_attempt.evaluation_details and (last_attempt.code or '').strip() == (user_code or '').strip():
+            exec_details = last_attempt.evaluation_details
+        else:
+            try:
+                from .code_views import CodeViewSet
+                code_view = CodeViewSet()
+                exec_details = code_view._execute_code(problem, user_code, language)
+            except Exception as e:
+                logger.warning(f"⚠️ Code execution check during hint request failed: {e}")
+                exec_details = {}
+
+        # Parse exact error and test case results
+        exact_error = ""
+        test_summary = ""
+        passed_tests = 0
+        total_tests = 0
+        failing_test = ""
+        results = []
+        errors = []
+
+        if exec_details:
+            errors = exec_details.get('errors', [])
+            results = exec_details.get('results', [])
+            
+            if errors and len(errors) > 0:
+                first_err = errors[0]
+                exact_error = first_err.get('message', '') if isinstance(first_err, dict) else str(first_err)
+            
+            if results:
+                total_tests = len(results)
+                passed_tests = sum(1 for r in results if r.get('passed'))
+                test_summary = f"{passed_tests}/{total_tests} test cases passed."
+                
+                failed_tc = next((r for r in results if not r.get('passed')), None)
+                if failed_tc:
+                    failing_test = f"Input: {failed_tc.get('input')}, Expected: {failed_tc.get('expected')}, Got: {failed_tc.get('output')}"
+                    if not exact_error:
+                        exact_error = f"Test case failed: Input: {failed_tc.get('input')} | Expected: {failed_tc.get('expected')} | Output: {failed_tc.get('output')}"
+            elif not exact_error and not exec_details.get('success', False):
+                exact_error = exec_details.get('stderr', '') or "Execution failed."
+
+        execution_info = {
+            "exact_error": exact_error,
+            "test_summary": test_summary,
+            "failing_test": failing_test,
+            "passed_tests": passed_tests,
+            "total_tests": total_tests,
+            "results": results,
+            "errors": errors
+        }
+
         # Prepare input for the chain
         chain_input = {
             "problem_description": problem.description,
@@ -208,7 +268,8 @@ class HintViewSet(viewsets.ViewSet):
             "hint_level": progress.current_hint_level,
             "hint_type": "conceptual",
             "user_id": user_id,
-            "problem_id": problem.id
+            "problem_id": problem.id,
+            "execution_info": execution_info
         }
 
         # Run the full agentic loop
@@ -218,7 +279,8 @@ class HintViewSet(viewsets.ViewSet):
             user_code=user_code,
             hint_level=progress.current_hint_level,
             failed_attempts=progress.failed_attempts_count,
-            previous_hints=previous_hints_text
+            previous_hints=previous_hints_text,
+            execution_info=execution_info
         )
 
         # Get updated hint level and type from the chain result
@@ -277,22 +339,33 @@ class HintViewSet(viewsets.ViewSet):
         logger.info(f"📝 Created hint delivery record (ID: {hint_delivery.id})")
 
         # Prepare response in the requested format
+        is_code_correct = result['attempt_evaluation'].get('is_correct', False) or (exec_details and exec_details.get('success', False))
         response_data = {
-            'status': 'success' if result['attempt_evaluation'].get('is_correct', False) else 'failed',
+            'status': 'success' if is_code_correct else 'failed',
             'hint': {
                 'id': hint_delivery.id,
                 'content': result['generated_hint'],
                 'level': new_hint_level,
-                'type': new_hint_type
+                'type': new_hint_type,
+                'exact_error': exact_error,
+                'test_summary': test_summary
             },
+            'exact_error': exact_error,
+            'test_results_summary': test_summary,
+            'passed_test_cases': passed_tests,
+            'total_test_cases': total_tests,
+            'test_results': results,
+            'execution_errors': errors,
             'evaluation': result['hint_evaluation'],
             'attempt_id': last_attempt.id if last_attempt else None,
             'attempt_evaluation': {
-                'is_correct': result['attempt_evaluation'].get('is_correct', False),
+                'is_correct': is_code_correct,
                 'error_pattern': result['attempt_evaluation'].get('error_pattern', ''),
                 'conceptual_gap': result['attempt_evaluation'].get('conceptual_gap', ''),
                 'diagnosis_summary': result['attempt_evaluation'].get('diagnosis_summary', ''),
-                'suggestions': result['attempt_evaluation'].get('suggestions', [])
+                'suggestions': result['attempt_evaluation'].get('suggestions', []),
+                'exact_error': exact_error,
+                'test_summary': test_summary
             },
             'user_progress': {
                 'attempts_count': progress.attempts_count,
@@ -376,7 +449,8 @@ class HintViewSet(viewsets.ViewSet):
                 user_code=user_code,
                 hint_level=progress.current_hint_level,
                 failed_attempts=progress.failed_attempts_count,
-                previous_hints=previous_hints_text
+                previous_hints=previous_hints_text,
+                execution_info=attempt.evaluation_details if isinstance(attempt.evaluation_details, dict) else None
             )
 
             # Check for duplicate hint (avoid delivering same hint as last time)

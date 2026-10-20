@@ -82,11 +82,11 @@ class UserProgress(models.Model):
     hints_requested = models.IntegerField(default=0)
 
     def is_stuck(self):
-        """Check if user is stuck based on inactivity and failed attempts"""
+        """Check if user is stuck based on inactivity and failed attempts, or severe repeated failures"""
         time_threshold = timedelta(minutes=5)
         return (
-            timezone.now() - self.last_activity > time_threshold and
-            self.failed_attempts_count >= 3
+            (timezone.now() - self.last_activity > time_threshold and self.failed_attempts_count >= 3)
+            or self.failed_attempts_count >= 5
         )
 
     def __str__(self):

@@ -54,3 +54,63 @@ class HintSystemTests(TestCase):
         # Verify that orchestrator did not fail and returned expected structure
         self.assertEqual(result["generated_hint"], "Hint text")
         self.assertEqual(result["updated_hint_level"], 1)
+
+    def test_failed_attempts_tracking_and_stuck(self):
+        """Test that failed attempts count is properly recorded and updates stuck status."""
+        from struggle_analysis.services import record_attempt
+        from hints.models import Attempt
+        
+        problem = Problem.objects.create(
+            title="Test Problem 3",
+            problem_id="test-3",
+            description="Test Description 3",
+            difficulty="easy"
+        )
+        
+        # Create 2 failed attempts
+        att1 = Attempt.objects.create(user_id="user_test_99", problem=problem, code="def sol(): pass", status="failed")
+        record_attempt(att1)
+        att2 = Attempt.objects.create(user_id="user_test_99", problem=problem, code="def sol(): return 0", status="failed")
+        progress = record_attempt(att2)
+        
+        self.assertEqual(progress.attempts_count, 2)
+        self.assertEqual(progress.failed_attempts_count, 2)
+        self.assertFalse(progress.is_stuck())
+        
+        # Add 3 more failed attempts to reach 5
+        for i in range(3):
+            att = Attempt.objects.create(user_id="user_test_99", problem=problem, code=f"def sol(): return {i}", status="failed")
+            progress = record_attempt(att)
+            
+        self.assertEqual(progress.attempts_count, 5)
+        self.assertEqual(progress.failed_attempts_count, 5)
+        # Should be considered stuck with 5+ failed attempts
+        self.assertTrue(progress.is_stuck())
+
+    @patch('hints.orchestrator.AttemptAnalyzer')
+    @patch('hints.orchestrator.HintStrategist')
+    @patch('hints.orchestrator.HintGenerator')
+    @patch('hints.orchestrator.HintCritic')
+    def test_hint_level_escalation_with_failures(self, mock_critic, mock_generator, mock_strategist, mock_analyzer):
+        """Test that hint levels adaptively escalate based on failed attempts."""
+        mock_analyzer.return_value.analyze.return_value = {"success": False, "diagnosis_summary": "Logic issue"}
+        mock_strategist.return_value.formulate_strategy.return_value = {"strategy": "approach"}
+        mock_generator.return_value.generate_hint.return_value = "Step-by-step hint"
+        mock_critic.return_value.evaluate_hint.return_value = {
+            "safety_score": 1.0, "helpfulness_score": 1.0, "quality_score": 1.0,
+            "progress_alignment_score": 1.0, "pedagogical_value_score": 1.0
+        }
+        
+        orchestrator = AgentOrchestrator()
+        
+        # 2 failed attempts should escalate from level 1 to level 2
+        res2 = orchestrator.generate_adaptive_hint("desc", "code", hint_level=1, failed_attempts=2)
+        self.assertEqual(res2["updated_hint_level"], 2)
+        
+        # 3 failed attempts should escalate to level 3
+        res3 = orchestrator.generate_adaptive_hint("desc", "code", hint_level=1, failed_attempts=3)
+        self.assertEqual(res3["updated_hint_level"], 3)
+        
+        # 4 failed attempts should escalate to level 4
+        res4 = orchestrator.generate_adaptive_hint("desc", "code", hint_level=1, failed_attempts=4)
+        self.assertEqual(res4["updated_hint_level"], 4)

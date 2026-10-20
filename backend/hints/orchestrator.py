@@ -21,7 +21,8 @@ class AgentOrchestrator:
                                user_code: str, 
                                hint_level: int, 
                                failed_attempts: int,
-                               previous_hints: List[str] = None) -> Dict[str, Any]:
+                               previous_hints: List[str] = None,
+                               execution_info: Dict[str, Any] = None) -> Dict[str, Any]:
         """
         Runs the full agentic loop:
         Attempt -> Diagnosis -> Strategy -> Generation -> Critique
@@ -36,9 +37,9 @@ class AgentOrchestrator:
             logger.warning("⚠️ user_code is empty; substituting empty string.")
             user_code = ""
         
-        # 1. Analyze the attempt
+        # 1. Analyze the attempt with execution context if available
         logger.info("🔍 Step 1: Analyzing Attempt...")
-        diagnosis = self.analyzer.analyze(problem_description, user_code)
+        diagnosis = self.analyzer.analyze(problem_description, user_code, execution_info=execution_info)
         
         # 2. Formulate pedagogical strategy
         logger.info("🧠 Step 2: Formulating Strategy...")
@@ -47,15 +48,54 @@ class AgentOrchestrator:
             hint_level, 
             failed_attempts
         )
+
+        # Determine updated hint level based on failed attempts, progress, and strategist recommendation
+        target_level = hint_level
+        if failed_attempts >= 5:
+            target_level = max(target_level, 5)
+        elif failed_attempts == 4:
+            target_level = max(target_level, 4)
+        elif failed_attempts == 3:
+            target_level = max(target_level, 3)
+        elif failed_attempts == 2:
+            target_level = max(target_level, 2)
+        elif failed_attempts == 1:
+            target_level = max(target_level, 1)
+
+        # If previous hints have been delivered at this level, escalate
+        if previous_hints and len(previous_hints) >= target_level:
+            target_level = min(target_level + 1, 5)
+
+        # Also consider recommendation from strategist if provided
+        rec_level = strategy.get("recommended_hint_level")
+        if isinstance(rec_level, int) and 1 <= rec_level <= 5:
+            target_level = max(target_level, rec_level)
+            
+        updated_hint_level = min(max(target_level, 1), 5)
         
-        # 3. Generate the final hint text
+        # Map level to hint type
+        level_to_type = {
+            1: "socratic",
+            2: "conceptual",
+            3: "approach",
+            4: "directional",
+            5: "structural"
+        }
+        updated_hint_type = strategy.get("strategy") or level_to_type.get(updated_hint_level, "conceptual")
+        
+        # 3. Generate the final hint text incorporating exact execution errors/mistakes
         logger.info("✍️ Step 3: Generating Hint Text...")
+        exact_error = (execution_info or {}).get("exact_error", "None")
+        test_summary = (execution_info or {}).get("test_summary", "None")
+
         hint_text = self.generator.generate_hint(
             problem_description,
             user_code,
             strategy,
             diagnosis.get("diagnosis_summary", ""),
-            previous_hints or []
+            previous_hints or [],
+            exact_error=exact_error,
+            test_summary=test_summary
         )
         
         # 4. Critique the hint
@@ -73,10 +113,10 @@ class AgentOrchestrator:
             "attempt_evaluation": diagnosis,
             "strategy": strategy,
             "hint_evaluation": evaluation,
-            "updated_hint_level": hint_level, # Future: Strategist can update this
-            "updated_hint_type": strategy.get("strategy", "conceptual")
+            "updated_hint_level": updated_hint_level,
+            "updated_hint_type": updated_hint_type
         }
 
-    def evaluate_attempt(self, problem_description: str, user_code: str) -> Dict[str, Any]:
+    def evaluate_attempt(self, problem_description: str, user_code: str, execution_info: Dict[str, Any] = None) -> Dict[str, Any]:
         """Standalone diagnostic step."""
-        return self.analyzer.analyze(problem_description, user_code)
+        return self.analyzer.analyze(problem_description, user_code, execution_info=execution_info)

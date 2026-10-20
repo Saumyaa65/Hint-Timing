@@ -8,6 +8,7 @@ def record_attempt(attempt):
     progress, _ = UserProgress.objects.get_or_create(user_id=attempt.user_id, problem=attempt.problem)
     progress.last_activity = timezone.now()
     progress.attempts_count = Attempt.objects.filter(user_id=attempt.user_id, problem=attempt.problem).count()
+    progress.failed_attempts_count = Attempt.objects.filter(user_id=attempt.user_id, problem=attempt.problem, status='failed').count()
     progress.save()
     return progress
 

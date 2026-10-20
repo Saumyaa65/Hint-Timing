@@ -33,6 +33,7 @@ class HintStrategist(BaseAgent):
         2. "focus_area": What specific part of the code/logic to focus the hint on.
         3. "tone": The encouraging tone to take.
         4. "complexity": The depth of the hint (1-5).
+        5. "recommended_hint_level": Suggested hint level (1-5) based on failed attempts and depth of assistance needed.
         """)
         return prompt | self.llm | self.json_parser
 
